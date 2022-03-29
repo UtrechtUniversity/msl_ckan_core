@@ -7,6 +7,7 @@
         "msl_rock_pore_fluid",
         "msl_rock_inferred_deformation_behavior",
         "msl_author_name",
-        "msl_lab_name"
+        "msl_lab_name",
+        "msl_subdomain"
     ]
 }
