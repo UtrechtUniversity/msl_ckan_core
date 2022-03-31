@@ -118,11 +118,13 @@ Make sure to keep the above order of plugin declaration in the `ckan.ini`. The o
 order of execution of hooks and usage of templates.
 
 ### plugin specific settings
+_Keep in mind that all plugin specific settings should be added within the same block of settings as the 
+`ckan.plugins` section within the `clan.ini`!_
 
 To use the schemas as included within this extension by the scheming plugin the following lines should be added to the 
 `ckan.ini` file:
 
-      scheming.dataset_schemas = ckanext.msl_ckan:schemas/datasets/data_publication.yaml ckanext.msl_ckan:schemas/datasets/labs.json
+      scheming.dataset_schemas = ckanext.msl_ckan:schemas/datasets/data_publication.yml ckanext.msl_ckan:schemas/datasets/labs.json
       scheming.group_schemas = ckanext.msl_ckan:schemas/groups/custom_group_msl_subdomain.json
       scheming.organization_schemas = ckanext.msl_ckan:schemas/organizations/custom_org_institute.json
 
