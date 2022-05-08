@@ -70,6 +70,7 @@
       {% set main_css = h.get_rtl_css() if h.is_rtl_language() else g.main_css %}
       {# strip '/base/' prefix and '.css' suffix #}
       {% asset main_css[6:-4] %}
+
     {% endblock %}
 
     {% block head_extras %}
@@ -87,6 +88,7 @@
       {%- endif %}
     {% endblock %}
     <link rel="stylesheet" href="/epos_msl.css" />
+    <link rel="stylesheet" href="/treejs.css" />
   </head>
 
   {# Allows custom attributes to be added to the <body> tag #}

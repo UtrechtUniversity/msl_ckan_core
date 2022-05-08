@@ -1,7 +1,22 @@
 {% block facet_list %}
+
+
+
     {% set hide_empty = hide_empty or false %}
+
+	{% set subdomain = h.get_request_param('msl_subdomain', default=None) %}
+
     {% with items = items or h.get_facet_items_dict(name, search_facets or c.search_facets) %}
+
 	{% if items or not hide_empty %}
+		{% set hide_sub_facet = False %}
+		{% if subdomain != 'rock_physics' %}
+			{% if title == 'Inferred deformation behavior' or title == 'Pore fluid' or title == 'Ancillary equipment' or title == 'Apparatus' or title == 'Measured property' %}
+				{% set hide_sub_facet = True %}
+			{% endif %}
+		{% endif %}
+
+	{% if not hide_sub_facet %}
 	    {% if within_tertiary %}
 		{% set nav_class = 'nav nav-pills nav-stacked' %}
 		{% set nav_item_class = ' ' %}
@@ -43,6 +58,8 @@
 							{% endif %}
 						{% endif %}
 
+						<p>{{ subdomain }}</p>
+
 					    <li class="{{ nav_item_class or 'nav-item' }}{% if item.active %} active{% endif %}">
 						<a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
 						    <span class="item-label">{{ label_truncated }}</span>
@@ -70,6 +87,7 @@
 		    {% endblock %}
 		</section>
 	    {% endblock %}
+	{% endif %}
 	{% endif %}
     {% endwith %}
 {% endblock %}

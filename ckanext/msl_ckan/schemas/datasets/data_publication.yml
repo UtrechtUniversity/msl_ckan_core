@@ -1,17 +1,18 @@
 scheming_version: 2
-dataset_type: rockphysics
-about: EPOS TCS MSL Rock Physics data publication schema
+dataset_type: data-publication
+about: EPOS TCS MSL data publication schema
 about_url: https://github.com/ckan/ckanext-scheming
 
 # comments
-# version 0.4
+# version 0.5
 
-# changes from 0.3:
-# removed structured naming for authors (YoDa makes use of this, but GFZ does not)
-# removed contributors (YoDa assigns this? If so we will add this again in the next version)
-# msl_pid block became msl_pids because of double naming (i.e. sub element)
-# maintainer (CKAN default field) is not used. We make use contact point as a structured field
-# removed related data publications (offered by YoDa?)
+# changes from 0.4:
+# This schema replaces the separate schemas for dedicated subdomains.
+# It includes all keyword categories from the different domains.
+# Added:
+# - msl_author_identifier_type
+# - msl_contributors block
+# - msl_publication_date translated into 3 fields for year, month, day
 
 
 dataset_fields:
@@ -33,6 +34,13 @@ dataset_fields:
   preset: dataset_slug
   form_placeholder: eg. full resolvable DOI
 
+# subdomain / type field
+- field_name: msl_subdomains
+  label: Sub domains
+  repeating_subfields:
+  - field_name: msl_subdomain
+    label: Sub domain
+
 # MSL
 - field_name: msl_pids
   label: persistent identifier
@@ -50,10 +58,16 @@ dataset_fields:
   display_snippet: link.html
 
 # CUSTOM
-- field_name: msl_publication_date
-  label: Publication date
-  preset: date
- # required: true # not available at YoDa
+- field_name: msl_publication_year
+  label: Publication year
+
+# CUSTOM
+- field_name: msl_publication_month
+  label: Publication month
+
+# CUSTOM
+- field_name: msl_publication_day
+  label: Publication day
 
 # CUSTOM
 # DCAT-mapping: ..
@@ -69,10 +83,28 @@ dataset_fields:
     label: Author name
   - field_name: msl_author_identifier
     label: Author identifier
+  - field_name: msl_author_identifier_type
+    label: Identifier type
   - field_name: msl_author_affiliation
     label: Affiliation
     # TODO: sufficient to allow single affiliation?
 
+# CUSTOM
+# DCAT-mapping: ..
+- field_name: msl_contributors
+  label: Contributors
+  repeating_subfields:
+  - field_name: msl_contributor_name
+    label: Contributor name
+  - field_name: msl_contributor_role
+    label: Contributor role
+  - field_name: msl_contributor_identifier
+    label: Contributor identifier
+  - field_name: msl_contributor_identifier_type
+    label: Identifier type
+  - field_name: msl_contributor_affiliation
+    label: Affiliation
+    # TODO: sufficient to allow single affiliation?
 
 # CUSTOM
 # DCAT-mapping: ..
@@ -149,8 +181,19 @@ dataset_fields:
 - field_name: msl_materials
   label: Materials
   repeating_subfields:
-  - field_name: msl_material
-    label: Material
+  - field_name: msl_material_combined
+    label: Material combined
+  - field_name: msl_material_1
+    label: Material level 1
+  - field_name: msl_material_2
+    label: Material level 2
+  - field_name: msl_material_3
+    label: Material level 3
+  - field_name: msl_material_4
+    label: Material level 4
+  - field_name: msl_material_5
+    label: Material level 5
+
 
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial
@@ -225,7 +268,8 @@ dataset_fields:
   - field_name: msl_contact_electronic_address
     label: Contact email
 
-  # special fields for subdomain rock physics:
+
+# special fields for subdomain rock physics:
 
 # CUSTOM
 # DCAT-mapping: ..
