@@ -12,3 +12,15 @@
 #   output: ckanext-msl_ckan/%(version)s-msl_ckan.css
 #   contents:
 #     - css/msl_ckan.css
+
+#treejs_css:
+#  filters: cssrewrite
+#  output: msl_ckan/treejs.css
+#  contents:
+#    - treejs.css
+
+msl_ckan-js:
+  filter: rjsmin
+  output: ckanext-msl_ckan/%(version)s-msl_ckan.js
+  contents:
+    - jstree.js

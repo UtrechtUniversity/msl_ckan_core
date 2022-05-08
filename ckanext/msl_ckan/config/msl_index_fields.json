@@ -1,6 +1,5 @@
 {
     "special_index_fields": [
-        "msl_material",
         "msl_rock_measured_property",
         "msl_rock_apparatus",
         "msl_rock_ancillary_equipment",
@@ -8,6 +7,11 @@
         "msl_rock_inferred_deformation_behavior",
         "msl_author_name",
         "msl_lab_name",
-        "msl_subdomain"
+        "msl_subdomain",
+        "msl_material_1",
+        "msl_material_2",
+        "msl_material_3",
+        "msl_material_4",
+        "msl_material_5"
     ]
 }

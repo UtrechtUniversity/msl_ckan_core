@@ -181,8 +181,19 @@ dataset_fields:
 - field_name: msl_materials
   label: Materials
   repeating_subfields:
-  - field_name: msl_material
-    label: Material
+  - field_name: msl_material_combined
+    label: Material combined
+  - field_name: msl_material_1
+    label: Material level 1
+  - field_name: msl_material_2
+    label: Material level 2
+  - field_name: msl_material_3
+    label: Material level 3
+  - field_name: msl_material_4
+    label: Material level 4
+  - field_name: msl_material_5
+    label: Material level 5
+
 
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial

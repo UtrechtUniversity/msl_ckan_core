@@ -7,12 +7,11 @@
   "data-publication":
   {
     "msl_subdomain": "Sub domain",
-    "msl_material": "Material",
-    "msl_rock_measured_property": "Measured property",
-    "msl_rock_apparatus": "Apparatus",
-    "msl_rock_ancillary_equipment": "Ancillary equipment",
-    "msl_rock_pore_fluid": "Pore fluid",
-    "msl_rock_inferred_deformation_behavior": "Inferred deformation behavior",
+    "msl_material_1": "Material 1",
+    "msl_material_2": "Material 2",
+    "msl_material_3": "Material 3",
+    "msl_material_4": "Material 4",
+    "msl_material_5": "Material 5",
     "organization":  "Organization"
   },
   "lab":
