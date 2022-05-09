@@ -194,6 +194,47 @@ dataset_fields:
   - field_name: msl_material_5
     label: Material level 5
 
+- field_name: msl_porefluids
+  label: Pore fluids
+  repeating_subfields:
+    - field_name: msl_porefluid_combined
+      label: Pore fluid combined
+    - field_name: msl_porefluid_1
+      label: Porefluid level 1
+    - field_name: msl_porefluid_2
+      label: Porefluid level 2
+    - field_name: msl_porefluid_3
+      label: Porefluid level 3
+
+- field_name: msl_rockphysics
+  label: Rock physics
+  repeating_subfields:
+    - field_name: msl_rockphysic_combined
+      label: Rockphysic combined
+    - field_name: msl_rockphysic_1
+      label: Rockphysic level 1
+    - field_name: msl_rockphysic_2
+      label: Rockphysic level 2
+    - field_name: msl_rockphysic_3
+      label: Rockphysic level 3
+    - field_name: msl_rockphysic_4
+      label: Rockphysic level 4
+
+- field_name: msl_analogue
+  label: Analogue modelling
+  repeating_subfields:
+    - field_name: msl_analogue_combined
+      label: Analogue modelling combined
+    - field_name: msl_analogue_1
+      label: Analogue modelling level 1
+    - field_name: msl_analogue_2
+      label: Analogue modelling level 2
+    - field_name: msl_analogue_3
+      label: Analogue modelling level 3
+    - field_name: msl_analogue_4
+      label: Analogue modelling level 4
+    - field_name: msl_analogue_5
+      label: Analogue modelling level 5
 
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial

@@ -12,6 +12,18 @@
         "msl_material_2",
         "msl_material_3",
         "msl_material_4",
-        "msl_material_5"
+        "msl_material_5",
+        "msl_porefluid_1",
+        "msl_porefluid_2",
+        "msl_porefluid_3",
+        "msl_rockphysic_1",
+        "msl_rockphysic_2",
+        "msl_rockphysic_3",
+        "msl_rockphysic_4",
+        "msl_analogue_1",
+        "msl_analogue_2",
+        "msl_analogue_3",
+        "msl_analogue_4",
+        "msl_analogue_5"
     ]
 }
