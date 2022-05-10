@@ -58,28 +58,42 @@ Add to `<fields>` definitions:
       <field name="msl_hidden_text" type="text" indexed="true" stored="false" multiValued="true"/>
     
       <!-- coming from IPackageController msl_search.MslIndexRepeatedFieldsPlugin::before(index) -->
-      <field name="msl_material" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_rock_measured_property" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_rock_apparatus" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_rock_ancillary_equipment" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_rock_pore_fluid" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_rock_inferred_deformation_behavior" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_author_name" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_author_name_text" type="text" indexed="true" stored="false" multiValued="true"/>
+      <field name="msl_author_name_text" type="text" indexed="true" stored="false" multiValued="true"/>	
       <field name="msl_lab_name" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_lab_name_text" type="text" indexed="true" stored="false" multiValued="true"/>
-      <field name="msl_subdomain" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_lab_name_text" type="text" indexed="true" stored="false" multiValued="true"/>			
+      <field name="msl_subdomain" type="string" indexed="true" stored="true" multiValued="true"/>	
+      
+      <!-- Materials -->
+      <field name="msl_material_1" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_material_2" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_material_3" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_material_4" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_material_5" type="string" indexed="true" stored="true" multiValued="true"/>
+      
+      <!-- Porefluids -->
+      <field name="msl_porefluid_1" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_porefluid_2" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_porefluid_3" type="string" indexed="true" stored="true" multiValued="true"/>
+      
+      <!-- Rock physics -->
+      <field name="msl_rockphysic_1" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_rockphysic_2" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_rockphysic_3" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_rockphysic_4" type="string" indexed="true" stored="true" multiValued="true"/>
+      
+      <!-- Analogue modelling -->
+      <field name="msl_analogue_1" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_analogue_2" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_analogue_3" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_analogue_4" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_analogue_5" type="string" indexed="true" stored="true" multiValued="true"/>
 
 And to the bottom list with `copyField` definitions add:
 
       <!-- customizations MSL-->
       <copyField source="msl_material" dest="text"/>
       <copyField source="msl_hidden_text" dest="text"/>
-      <copyField source="msl_rock_measured_property" dest="text"/>
-      <copyField source="msl_rock_apparatus" dest="text"/>
-      <copyField source="msl_rock_ancillary_equipment" dest="text"/>
-      <copyField source="msl_rock_pore_fluid" dest="text"/>
-      <copyField source="msl_rock_inferred_deformation_behavior" dest="text"/>
       <copyField source="msl_author_name" dest="text"/>
       <copyField source="msl_author_name" dest="msl_author_name_text"/>
       <copyField source="msl_lab_name" dest="text"/>
