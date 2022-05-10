@@ -5,7 +5,7 @@ import json
 
 
 def get_filter_menu():
-    f = open(os.path.join(os.path.dirname(__file__), 'public/test.json'))
+    f = open(os.path.join(os.path.dirname(__file__), 'public/tree.json'))
     data = json.load(f)
 
     return data

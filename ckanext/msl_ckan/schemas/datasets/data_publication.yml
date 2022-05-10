@@ -4,7 +4,16 @@ about: EPOS TCS MSL data publication schema
 about_url: https://github.com/ckan/ckanext-scheming
 
 # comments
-# version 0.5
+# version 0.6
+
+# changes from 0.5:
+# Schema changed to be used with keywords in hierarchy and new keyword lists.
+# specific rock_physics fields removed from schema
+# Added:
+# - msl_materials block
+# - msl_porefluids block
+# - msl_rockphysics block
+# - msl_analogue block
 
 # changes from 0.4:
 # This schema replaces the separate schemas for dedicated subdomains.
@@ -16,8 +25,6 @@ about_url: https://github.com/ckan/ckanext-scheming
 
 
 dataset_fields:
-
-# common fields accross subdomains:
 
 # CKAN
 # DataCite: Title
@@ -176,8 +183,7 @@ dataset_fields:
   form_placeholder: eg. rock physics, analogue materials, etc.
 
 # CUSTOM
-# DCAT-mapping: ..
-# facet
+# used in tree faceting
 - field_name: msl_materials
   label: Materials
   repeating_subfields:
@@ -194,6 +200,8 @@ dataset_fields:
   - field_name: msl_material_5
     label: Material level 5
 
+# CUSTOM
+# used in tree faceting
 - field_name: msl_porefluids
   label: Pore fluids
   repeating_subfields:
@@ -206,6 +214,8 @@ dataset_fields:
     - field_name: msl_porefluid_3
       label: Porefluid level 3
 
+# CUSTOM
+# used in tree faceting
 - field_name: msl_rockphysics
   label: Rock physics
   repeating_subfields:
@@ -220,6 +230,8 @@ dataset_fields:
     - field_name: msl_rockphysic_4
       label: Rockphysic level 4
 
+# CUSTOM
+# used in tree faceting
 - field_name: msl_analogue
   label: Analogue modelling
   repeating_subfields:

@@ -114,9 +114,33 @@
             if(result) {
               node.state.disabled = false;
               node.text = node.text + ' <span class="badge bg-primary rounded-pill">' + result.count + '</span>';
-              //console.log(result.count);
             }
           }
+        } else if(node.extra.type == 'facet') {
+            if(node.extra.filterName in facets) {
+              for (let x = 0; x < facets[node.extra.filterName].items.length; x++) {
+
+                var newNode = {
+                  "text": facets[node.extra.filterName].items[x].display_name,
+                  "id": node.extra.filterName + '-' + x,
+                  "state": {
+                      "opened": false,
+                      "disabled": false,
+                      "selected": false,
+                      "checked": false
+                  },
+                  "extra": {
+                      "type": "filter",
+                      "url": "",
+                      "filterName": node.extra.filterName,
+                      "filterValue": facets[node.extra.filterName].items[x].name
+                  },
+                  "children": []
+                };
+
+                node.children.push(newNode);
+              }
+            }
         }
 
         if(node.children.length > 0) {
@@ -127,12 +151,7 @@
       }
 
       for (let i = 0; i < data.length; i++) {
-
-        if(data[i].children.length > 0) {
-          for (let j = 0; j < data[i].children.length; j++) {
-            processNodes(data[i].children[j]);
-          }
-        }
+        processNodes(data[i]);
       }
 
       $('#jstree').jstree({
