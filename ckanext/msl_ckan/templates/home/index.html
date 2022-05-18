@@ -1,0 +1,63 @@
+{% extends "page.html" %}
+{% set homepage_style = ( g.homepage_style or '1' ) %}
+
+{% block subtitle %}{{ _("Welcome") }}{% endblock %}
+
+{% block maintag %}{% endblock %}
+{% block toolbar %}{% endblock %}
+
+{% block content %}
+  <div class="homepage layout-{{ homepage_style }}">
+    <div id="content" class="container">
+      {{ self.flash() }}
+    </div>
+    {% block primary_content %}
+        <div role="main" style="background-color: #eee;">
+          <div class="container">
+            <div class="row row2">
+              <div class="col-md-6 col2">
+                <div class="card box text-center" style="background-color: #27A468;">
+                    <a href="/data-publication" title="datasets" style="color: white;"><h2>Datasets</h2></a>
+                </div>
+              </div>
+              <div class="col-md-6 col1">
+                <div class="card box">
+                    <div class="card box text-center" style="background-color: #27A468;">
+                    <a href="/lab" title="labs" style="color: white;"><h2>Labs</h2></a>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row2" style="margin-top:20px;">
+              <div class="col-md-6 col2">
+                {% block promoted %}
+                  <div class="module-content box">
+                    <div>
+                      <p><img alt="EPOS" src="https://www.epos-eu.org/themes/epos/logo.svg"></p>
+                      <p><a href="https://www.epos-eu.org">Check</a> the new EPOS ERIC website</p>
+                      <hr>
+                      <p>Click <a href="https://epos-no.uib.no/epos-tna/facilities" target="_blank" rel="nofollow">https://epos-no.uib.no/epos-tna/facilities</a> to go to the EPOS TNA-/Infrastructure portal for an overview of labs currently involved within the MSL network.</p>
+                      <hr>
+                      <p>This is the central data catalog of the EPOS Multi-scale laboratories community. Here you can
+                        find openly published data coming from a wide range of world-class experimental laboratory
+                        infrastructures: from high pressure-temperature rock and fault mechanics and rock physics
+                        facilities, to electron microscopy, micro-beam analysis, analogue modelling and paleomagnetic
+                        laboratories. More information about the Multi-scale laboratories community is to be found at
+                        <a href="https://epos-ip.org/tcs/multi-scale-laboratories" target="_blank" rel="nofollow">https://epos-ip.org/tcs/multi-scale-laboratories</a>.</p>
+                    </div>
+                  </div>
+                {% endblock %}
+              </div>
+              <div class="col-md-6 col1">
+                {% block stats %}
+                  {% snippet 'home/snippets/stats.html' %}
+                {% endblock %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    {% endblock %}
+  </div>
+{% endblock %}

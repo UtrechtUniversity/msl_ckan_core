@@ -1,0 +1,51 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('About') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('About MSL'), named_route='home.about' %}</li>
+{% endblock %}
+
+{% block primary %}
+  <article class="module" role="main">
+    <div class="module-content">
+      {% block about %}
+        <h2>Background</h2>
+        <p>In a world that demands increasing interoperability and collaboration inside the scientific community, solid Earth science laboratories are challenged with finding each other to exchange best practices and re-usable standardized data. Data produced by the various laboratory centres and networks are crucial to serving society’s needs for geo-resources exploration and for protection against geo-hazards. Indeed, to model resource formation and system behaviour during exploitation, we need an understanding from the molecular to the continental scale, based on experimental and analytical data. Therefore, coordination and communication inside the European solid Earth science laboratories, complemented with services to increase curation and access for re-use of laboratory data is needed to effectively contribute to solve the grand challenges facing society.</p>
+        <p>The <strong>EPOS Mult-scale Laboratories community</strong> (<a href="https://epos-ip.org/tcs/multi-scale-laboratories" target="_blank" rel="nofollow">https://epos-ip.org/tcs/multi-scale-laboratories</a>) aims at the collection and harmonization of available and emerging laboratory data on the properties and processes controlling rock system behaviour at multiple scales. As a result, it generates products uniformly accessible and interoperable through services for supporting research activities into Geo-resources and Geo-storage, Geo-hazards and Earth System Evolution.</p>
+        <p>The EPOS Multi-Scale Laboratories community includes a wide range of world-class laboratory infrastructures. The length scales addressed by these infrastructures cover the nano- and micrometre levels (electron microscopy and micro-beam analysis) to the scale of experiments on centimetre and decimetre sized samples, to analogue model experiments simulating the reservoir scale, the basin scale and the plate scale. The MSL community includes at the moment over sixty laboratories, affiliated to eleven institutes in eight European countries. The research infrastructures are grouped into four major sub-domains:</p>
+        <ul>
+            <li>Analogue modelling of geologic processes</li>
+            <li>Rock and melt physical properties</li>
+            <li>Paleomagnetic and magnetic data</li>
+            <li>Geochemical data (rock geochemistry)</li>
+        </ul>
+        <p>Data emerging from the community can be categorized as</p>
+        <p><em>analytical and properties data on</em></p>
+        <ul>
+            <li>volcanic ash from explosive eruptions</li>
+            <li>magmas in the context of eruption and lava-flow hazard evaluation</li>
+            <li>rock systems of key importance in mineral exploration and mining operations</li>
+        </ul>
+        <p><em>experimental data describing</em></p>
+        <ul>
+            <li>rock and fault properties of importance for modelling and forecasting natural and induced subsidence, seismicity and associated hazards</li>
+            <li>rock and fault properties relevant for modelling the containment capacity of rock</li>
+        </ul>
+        <p><em>systems for CO2 energy sources and wastes</em></p>
+        <ul>
+            <li>crustal and upper mantle rheology as needed for modelling sedimentary basin formation and crustal stress distributions</li>
+            <li>the composition, porosity, permeability and frackability of reservoir rocks of interest in relation to unconventional resources and geothermal energy</li>
+        </ul>
+            <p><em>repository of analogue models on tectonic processes, from the plate to the reservoir scale, relevant to the understanding of Earth dynamics, geo-hazards, and geo-energy</em></p>
+            <p><em>paleomagnetic data, that are crucial for</em></p>
+        <ul>
+            <li>understanding the evolution of sedimentary basins and associated resources</li>
+            <li>charting geo-hazard frequency</li>
+        </ul>
+      {% endblock %}
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary %}{% endblock %}
