@@ -74,6 +74,7 @@ body {
 @media (min-width: 1500px) {
     .container {
         width: 1400px;
+    }
 }
 
 #jstree a {
