@@ -19,26 +19,28 @@
   <h1 class="hide-heading">{% block page_heading %}{{ _('Data repositories') }}{% endblock %}</h1>
     <h1>Data repositories</h1>
     {% for i in range(0, c.page.items|length) %}
-    <div class="card mb-12">
-      <div class="row g-0">
-        <div class="col-md-2">
-          <img src="/base/images/placeholder-organization.png" alt="yoda-repository" class="img-responsive media-image">
-        </div>
-        <div class="col-md-10">
-          <div class="card-body">
-            <h5 class="card-title">{{ c.page.items[i].display_name }}</h5>
-            <p class="card-text">
-              {% if c.page.items[i].description %}
-                {{ c.page.items[i].description }}
-              {% else %}
-                &nbsp;
-              {% endif %}
-            </p>
-            <p class="card-text"><small class="text-muted"><a href="{% url_for 'data-publication.search', organization=c.page.items[i].name %}">View datasets</a></small></p>
+      {% if not c.page.items[i].title == 'EPOS Multi-scale Laboratories Thematic Core Service' %}
+      <div class="card mb-12">
+        <div class="row g-0">
+          <div class="col-md-2">
+            <img src="/base/images/placeholder-organization.png" alt="yoda-repository" class="img-responsive media-image">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">{{ c.page.items[i].display_name }}</h5>
+              <p class="card-text">
+                {% if c.page.items[i].description %}
+                  {{ c.page.items[i].description }}
+                {% else %}
+                  &nbsp;
+                {% endif %}
+              </p>
+              <p class="card-text"><small class="text-muted"><a href="{% url_for 'data-publication.search', organization=c.page.items[i].name %}">View datasets</a></small></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      {% endif %}
     {% endfor %}
 
   {#
