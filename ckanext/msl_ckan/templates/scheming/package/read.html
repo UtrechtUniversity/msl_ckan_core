@@ -191,7 +191,7 @@
         {% if pkg.msl_citation %}
         <tr>
           <td>Citation</td>
-          <td>{{ pkg.msl_citation }}</td>
+          <td>{{ pkg.msl_citation|safe }}</td>
         </tr>
         {% endif %}
 
