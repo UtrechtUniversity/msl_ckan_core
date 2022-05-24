@@ -58,7 +58,7 @@
       <p class="filter-list">
         {% for field in facets.fields %}
           {% set search_facets_items = facets.search.get(field)['items'] if facets.search and field in facets.search else [] %}
-          
+
           {% for value in facets.fields[field] %}
             <span class="filtered pill">
               {%- if facets.translated_fields and (field,value) in facets.translated_fields -%}
