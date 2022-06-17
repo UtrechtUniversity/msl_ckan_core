@@ -72,6 +72,13 @@
         </tr>
         {% endif %}
 
+        {% if pkg.msl_handle %}
+        <tr>
+          <td>Handle</td>
+          <td><a href="{{ pkg.msl_handle }}" target="_blank">{{ pkg.msl_handle }}</a></td>
+        </tr>
+        {% endif %}
+
         {% if pkg.license_id %}
         <tr>
           <td>License</td>
