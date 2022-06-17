@@ -49,7 +49,7 @@
         {% if pkg.msl_source %}
         <tr>
           <td>Source</td>
-          <td><a href="{{ pkg.msl_source }}">{{ pkg.msl_source }}</a></td>
+          <td><a href="{{ pkg.msl_source }}" target="_blank">{{ pkg.msl_source }}</a></td>
         </tr>
         {% endif %}
         {% if pkg.msl_publisher %}
@@ -65,18 +65,10 @@
         </tr>
         {% endif %}
 
-        {% if pkg.msl_pids %}
+        {% if pkg.msl_doi %}
         <tr>
-          <td>Persistent identifiers</td>
-          <td>
-            <ul class="fa-ul">
-            {%for i in range(0, pkg.msl_pids|length)%}
-              {% if pkg.msl_pids[i].msl_pid %}
-              <li><i class="fa-li fa fa-id-card"></i>{% if pkg.msl_authors[i].msl_identifier_type %} {{ pkg.msl_authors[i].msl_identifier_type }}: {% endif %}{{ pkg.msl_pids[i].msl_pid }}</li>
-              {% endif %}
-            {% endfor %}
-            </ul>
-          </td>
+          <td>DOI</td>
+          <td><a href="https://doi.org/{{ pkg.msl_doi }}" target="_blank">{{ pkg.msl_doi }}</a></td>
         </tr>
         {% endif %}
 
@@ -98,8 +90,11 @@
                 {% if pkg.msl_authors[i].msl_author_name %}
                   <li><i class="fa-li fa fa-address-book"></i>{{ pkg.msl_authors[i].msl_author_name }}</li>
                 {% endif %}
-                {% if pkg.msl_authors[i].msl_author_identifier %}
-                  <li><i class="fa-li fa fa-id-card"></i>{% if pkg.msl_authors[i].msl_author_identifier_type %} {{ pkg.msl_authors[i].msl_author_identifier_type }}: {% endif %}{{ pkg.msl_authors[i].msl_author_identifier }}</li>
+                {% if pkg.msl_authors[i].msl_author_orcid %}
+                <li><i class="fa-li fa fa-id-card"></i><a href="https://orcid.org/{{ pkg.msl_authors[i].msl_author_orcid }}" target="_blank">{{ pkg.msl_authors[i].msl_author_orcid }}</a></li>
+                {% endif %}
+                {% if pkg.msl_authors[i].msl_author_scopus %}
+                  <li><i class="fa-li fa fa-id-card"></i>{{ pkg.msl_authors[i].msl_author_scopus }}</li>
                 {% endif %}
                 {% if pkg.msl_authors[i].msl_author_affiliation %}
                   <li><i class="fa-li fa fa-building"></i>{{ pkg.msl_authors[i].msl_author_affiliation }}</li>
@@ -125,8 +120,11 @@
                 {% if pkg.msl_contributors[i].msl_contributor_role %}
                   <li><i class="fa-li fa fa-cog"></i>{{ pkg.msl_contributors[i].msl_contributor_role }}</li>
                 {% endif %}
-                {% if pkg.msl_contributors[i].msl_contributor_identifier %}
-                  <li><i class="fa-li fa fa-id-card"></i>{% if pkg.msl_contributors[i].msl_contributor_identifier_type %} {{ pkg.msl_contributors[i].msl_contributor_identifier_type }}: {% endif %}{{ pkg.msl_contributors[i].msl_contributor_identifier }}</li>
+                {% if pkg.msl_contributors[i].msl_contributor_orcid %}
+                <li><i class="fa-li fa fa-id-card"></i><a href="https://orcid.org/{{ pkg.msl_contributors[i].msl_contributor_orcid }}" target="_blank">{{ pkg.msl_contributors[i].msl_contributor_orcid }}</a></li>
+                {% endif %}
+                {% if pkg.msl_contributors[i].msl_contributor_scopus %}
+                  <li><i class="fa-li fa fa-id-card"></i>scopus: {{ pkg.msl_contributors[i].msl_contributor_scopus }}</li>
                 {% endif %}
                 {% if pkg.msl_contributors[i].msl_contributor_affiliation %}
                   <li><i class="fa-li fa fa-building"></i>{{ pkg.msl_contributors[i].msl_contributor_affiliation }}</li>
@@ -147,10 +145,13 @@
             {%for i in range(0, pkg.msl_references|length)%}
               <ul class="fa-ul">
                 {% if pkg.msl_references[i].msl_reference_title %}
-                  <li><i class="fa-li fa fa-share"></i>{{ pkg.msl_references[i].msl_reference_title }}</li>
+                  <li><i class="fa-li fa fa-share"></i>{{ pkg.msl_references[i].msl_reference_title|safe }}</li>
                 {% endif %}
-                {% if pkg.msl_references[i].msl_reference_identifier %}
-                  <li><i class="fa-li fa fa-id-card"></i>{% if pkg.msl_references[i].msl_reference_type %} {{ pkg.msl_references[i].msl_reference_identifier_type }}: {% endif %}{{ pkg.msl_references[i].msl_reference_identifier }}</li>
+                {% if pkg.msl_references[i].msl_reference_doi %}
+                  <li><i class="fa-li fa fa-id-card"></i> <a href="https://doi.org/{{ pkg.msl_references[i].msl_reference_doi }}" target="_blank">{{ pkg.msl_references[i].msl_reference_doi }}</a></li>
+                {% endif %}
+                {% if pkg.msl_references[i].msl_reference_handle %}
+                  <li><i class="fa-li fa fa-id-card"></i>{{ pkg.msl_references[i].msl_reference_handle }}</li>
                 {% endif %}
                 {% if pkg.msl_references[i].msl_reference_type %}
                   <li><i class="fa-li fa fa-tag"></i>{{ pkg.msl_references[i].msl_reference_type }}</li>
