@@ -210,6 +210,42 @@ dataset_fields:
 
 # CUSTOM
 # used in tree faceting
+- field_name: msl_geologicalages
+  label: Geological ages
+  repeating_subfields:
+  - field_name: msl_geologicalage_combined
+    label: Geological age combined
+  - field_name: msl_geologicalage_1
+    label: Geological age level 1
+  - field_name: msl_geologicalage_2
+    label: Geological age level 2
+  - field_name: msl_geologicalage_3
+    label: Geological age level 3
+  - field_name: msl_geologicalage_4
+    label: Geological age level 4
+  - field_name: msl_geologicalage_5
+    label: Geological age level 5
+  - field_name: msl_geologicalage_6
+    label: Geological age level 6
+
+# CUSTOM
+# used in tree faceting
+- field_name: msl_geologicalsettings
+  label: Geological settings
+  repeating_subfields:
+  - field_name: msl_geologicalsetting_combined
+    label: Geological setting combined
+  - field_name: msl_geologicalsetting_1
+    label: Geological setting level 1
+  - field_name: msl_geologicalsetting_2
+    label: Geological setting level 2
+  - field_name: msl_geologicalsetting_3
+    label: Geological setting level 3
+  - field_name: msl_geologicalsetting_4
+    label: Geological setting level 4
+
+# CUSTOM
+# used in tree faceting
 - field_name: msl_porefluids
   label: Pore fluids
   repeating_subfields:

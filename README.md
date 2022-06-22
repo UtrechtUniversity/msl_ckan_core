@@ -87,7 +87,21 @@ Add to `<fields>` definitions:
       <field name="msl_analogue_2" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_analogue_3" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_analogue_4" type="string" indexed="true" stored="true" multiValued="true"/>
-      <field name="msl_analogue_5" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_analogue_5" type="0string" indexed="true" stored="true" multiValued="true"/>
+
+      <!-- Geological age -->
+      <field name="msl_geologicalage_1" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalage_2" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalage_3" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalage_4" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalage_5" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalage_6" type="string" indexed="true" stored="true" multiValued="true"/>
+	
+      <!-- Geological setting -->
+      <field name="msl_geologicalsetting_1" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalsetting_2" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalsetting_3" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_geologicalsetting_4" type="string" indexed="true" stored="true" multiValued="true"/>
 
 And to the bottom list with `copyField` definitions add:
 
