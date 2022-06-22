@@ -219,7 +219,7 @@
         {% endif %}
       {% endfor %}
 
-      {# process analogue modelling #}
+      {# /process analogue modelling #}
       {% for i in range(0, pkg.msl_analogue|length) %}
         {% if pkg.msl_analogue[i].msl_analogue_1 %}
           {% set split = null %}
@@ -276,6 +276,134 @@
             {% if not split[split|length-1] in ns.previous %}
               <li>
                 <a class="tag" href="{% url_for 'data-publication.search', msl_analogue_5=pkg.msl_analogue[i].msl_analogue_5 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {# /process geological setting #}
+      {% for i in range(0, pkg.msl_geologicalsettings|length) %}
+        {% if pkg.msl_geologicalsettings[i].msl_geologicalsetting_1 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalsettings[i].msl_geologicalsetting_1.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalsetting_1=split[split|length-1] %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalsettings[i].msl_geologicalsetting_2 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalsettings[i].msl_geologicalsetting_2.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalsetting_2=pkg.msl_geologicalsettings[i].msl_geologicalsetting_2 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalsettings[i].msl_geologicalsetting_3 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalsettings[i].msl_geologicalsetting_3.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalsetting_3=pkg.msl_geologicalsettings[i].msl_geologicalsetting_3 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalsettings[i].msl_geologicalsetting_4%}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalsettings[i].msl_geologicalsetting_4.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalsetting_4=pkg.msl_geologicalsettings[i].msl_geologicalsetting_4 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {# /process geological age #}
+      {% for i in range(0, pkg.msl_geologicalages|length) %}
+        {% if pkg.msl_geologicalages[i].msl_geologicalage_1 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalages[i].msl_geologicalage_1.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalage_1=split[split|length-1] %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalages[i].msl_geologicalage_2 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalages[i].msl_geologicalage_2.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalage_2=pkg.msl_geologicalages[i].msl_geologicalage_2 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalages[i].msl_geologicalage_3 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalages[i].msl_geologicalage_3.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalage_3=pkg.msl_geologicalages[i].msl_geologicalage_3 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalages[i].msl_geologicalage_4%}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalages[i].msl_geologicalage_4.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalage_4=pkg.msl_geologicalages[i].msl_geologicalage_4 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalages[i].msl_geologicalage_5%}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalages[i].msl_geologicalage_5.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalage_5=pkg.msl_geologicalages[i].msl_geologicalage_5 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geologicalages[i].msl_geologicalage_6%}
+          {% set split = null %}
+          {% set split = pkg.msl_geologicalages[i].msl_geologicalage_6.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geologicalage_6=pkg.msl_geologicalages[i].msl_geologicalage_6 %}">{{ split[split|length-1] }}</a>
               </li>
               {% set ns.previous = ns.previous + [split[split|length-1]] %}
             {% endif %}

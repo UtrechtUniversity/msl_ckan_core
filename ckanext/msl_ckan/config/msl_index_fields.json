@@ -24,6 +24,16 @@
         "msl_analogue_2",
         "msl_analogue_3",
         "msl_analogue_4",
-        "msl_analogue_5"
+        "msl_analogue_5",
+        "msl_geologicalage_1",
+        "msl_geologicalage_2",
+        "msl_geologicalage_3",
+        "msl_geologicalage_4",
+        "msl_geologicalage_5",
+        "msl_geologicalage_6",
+        "msl_geologicalsetting_1",
+        "msl_geologicalsetting_2",
+        "msl_geologicalsetting_3",
+        "msl_geologicalsetting_4"
     ]
 }
