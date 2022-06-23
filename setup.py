@@ -16,7 +16,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # http://packaging.python.org/en/latest/tutorial.html#version
-    version='0.0.1',
+    version='1.0.1',
 
     description='''Extension to enable customization for EPOS MSL CKAN portal.''',
     long_description=long_description,
@@ -70,7 +70,6 @@ setup(
     # have to be included in MANIFEST.in as well.
     include_package_data=True,
     package_data={
-        "msl_ckan.public": ["*.png"]
     },
 
     # Although 'package_data' is the preferred approach, in some case you may
