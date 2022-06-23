@@ -70,7 +70,7 @@ setup(
     # have to be included in MANIFEST.in as well.
     include_package_data=True,
     package_data={
-        "ckanext": ["*.png"]
+        "msl_ckan.public": ["*.png"]
     },
 
     # Although 'package_data' is the preferred approach, in some case you may
