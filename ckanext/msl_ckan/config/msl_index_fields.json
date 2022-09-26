@@ -34,6 +34,14 @@
         "msl_geologicalsetting_1",
         "msl_geologicalsetting_2",
         "msl_geologicalsetting_3",
-        "msl_geologicalsetting_4"
+        "msl_geologicalsetting_4",
+        "msl_paleomagnetism_1",
+        "msl_paleomagnetism_2",
+        "msl_paleomagnetism_3",
+        "msl_paleomagnetism_4",
+        "msl_paleomagnetism_5",
+        "msl_geochemistry_1",
+        "msl_geochemistry_2",
+        "msl_geochemistry_3"
     ]
 }

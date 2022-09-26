@@ -292,6 +292,38 @@ dataset_fields:
     - field_name: msl_analogue_5
       label: Analogue modelling level 5
 
+# CUSTOM
+# used in tree faceting
+- field_name: msl_paleomagnetism
+  label: Paleomagnetism
+  repeating_subfields:
+    - field_name: msl_paleomagnetism_combined
+      label: Paleomagnetism combined
+    - field_name: msl_paleomagnetism_1
+      label: Paleomagnetism level 1
+    - field_name: msl_paleomagnetism_2
+      label: Paleomagnetism level 2
+    - field_name: msl_paleomagnetism_3
+      label: Paleomagnetism level 3
+    - field_name: msl_paleomagnetism_4
+      label: Paleomagnetism level 4
+    - field_name: msl_paleomagnetism_5
+      label: Paleomagnetism level 5
+
+# CUSTOM
+# used in tree faceting
+- field_name: msl_geochemistry
+  label: Geochemistry
+  repeating_subfields:
+    - field_name: msl_geochemistry_combined
+      label: Geochemistry combined
+    - field_name: msl_geochemistry_1
+      label: Geochemistry level 1
+    - field_name: msl_geochemistry_2
+      label: Geochemistry level 2
+    - field_name: msl_geochemistry_3
+      label: Geochemistry level 3
+
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial
 - field_name: msl_spatial_coordinates
