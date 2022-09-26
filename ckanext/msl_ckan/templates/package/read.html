@@ -410,6 +410,110 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+
+      {# /process paleomagnetism #}
+      {% for i in range(0, pkg.msl_paleomagnetism|length) %}
+        {% if pkg.msl_paleomagnetism[i].msl_paleomagnetism_1 %}
+          {% set split = null %}
+          {% set split = pkg.msl_paleomagnetism[i].msl_paleomagnetism_1.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_paleomagnetism_1=split[split|length-1] %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_paleomagnetism[i].msl_paleomagnetism_2 %}
+          {% set split = null %}
+          {% set split = pkg.msl_paleomagnetism[i].msl_paleomagnetism_2.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_paleomagnetism_2=pkg.msl_paleomagnetism[i].msl_paleomagnetism_2 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_paleomagnetism[i].msl_paleomagnetism_3 %}
+          {% set split = null %}
+          {% set split = pkg.msl_paleomagnetism[i].msl_paleomagnetism_3.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_paleomagnetism_3=pkg.msl_paleomagnetism[i].msl_paleomagnetism_3 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_paleomagnetism[i].msl_paleomagnetism_4%}
+          {% set split = null %}
+          {% set split = pkg.msl_paleomagnetism[i].msl_paleomagnetism_4.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_paleomagnetism_4=pkg.msl_paleomagnetism[i].msl_paleomagnetism_4 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_paleomagnetism[i].msl_paleomagnetism_5%}
+          {% set split = null %}
+          {% set split = pkg.msl_paleomagnetism[i].msl_paleomagnetism_5.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_paleomagnetism_5=pkg.msl_paleomagnetism[i].msl_paleomagnetism_5 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {# /process geochemistry #}
+      {% for i in range(0, pkg.msl_geochemistry|length) %}
+        {% if pkg.msl_geochemistry[i].msl_geochemistry_1 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geochemistry[i].msl_geochemistry_1.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geochemistry_1=split[split|length-1] %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geochemistry[i].msl_geochemistry_2 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geochemistry[i].msl_geochemistry_2.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geochemistry_2=pkg.msl_geochemistry[i].msl_geochemistry_2 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_geochemistry[i].msl_geochemistry_3 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geochemistry[i].msl_geochemistry_3.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geochemistry_3=pkg.msl_geochemistry[i].msl_geochemistry_3 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}       
+      {% endfor %}
     </ul>
 
     {% else %}
