@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update schema to contain specific fields for identifiers instead of previously used identifier/identifiertype fields
 - Add publication date field to schema
 - Change templating to work with changes to schema
-- Change schema, views and configs to implement two new vocabularies: geological age and geological setting
+- Change schema, views and configs to implement four new vocabularies: geological age, geological setting, 
+paleomagnetism and geochemistry
 
 ## [1.0.1] - 2022-05-24
 
