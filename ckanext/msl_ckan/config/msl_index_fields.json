@@ -20,6 +20,7 @@
         "msl_rockphysic_2",
         "msl_rockphysic_3",
         "msl_rockphysic_4",
+        "msl_rockphysic_5",
         "msl_analogue_1",
         "msl_analogue_2",
         "msl_analogue_3",
@@ -42,6 +43,11 @@
         "msl_paleomagnetism_5",
         "msl_geochemistry_1",
         "msl_geochemistry_2",
-        "msl_geochemistry_3"
+        "msl_geochemistry_3",
+        "msl_microscopy_1",
+        "msl_microscopy_2",
+        "msl_microscopy_3",
+        "msl_microscopy_4",
+        "msl_microscopy_5"
     ]
 }

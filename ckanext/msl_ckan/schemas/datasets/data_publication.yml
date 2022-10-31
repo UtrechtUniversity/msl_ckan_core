@@ -273,6 +273,8 @@ dataset_fields:
       label: Rockphysic level 3
     - field_name: msl_rockphysic_4
       label: Rockphysic level 4
+    - field_name: msl_rockphysic_5
+      label: Rockphysic level 5
 
 # CUSTOM
 # used in tree faceting
@@ -323,6 +325,24 @@ dataset_fields:
       label: Geochemistry level 2
     - field_name: msl_geochemistry_3
       label: Geochemistry level 3
+
+# CUSTOM
+# used in tree faceting
+- field_name: msl_microscopy
+  label: Microscopy
+  repeating_subfields:
+    - field_name: msl_microscopy_combined
+      label: Microscopy combined
+    - field_name: msl_microscopy_1
+      label: Microscopy level 1
+    - field_name: msl_microscopy_2
+      label: Microscopy level 2
+    - field_name: msl_microscopy_3
+      label: Microscopy level 3
+    - field_name: msl_microscopy_4
+      label: Microscopy level 4
+    - field_name: msl_microscopy_5
+      label: Microscopy level 5
 
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial
