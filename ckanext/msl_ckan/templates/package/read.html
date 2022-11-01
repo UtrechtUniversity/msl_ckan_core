@@ -514,6 +514,70 @@
           {% endif %}
         {% endif %}       
       {% endfor %}
+
+      {# /process microscopy #}
+      {% for i in range(0, pkg.msl_microscopy|length) %}
+        {% if pkg.msl_microscopy[i].msl_microscopy_1 %}
+          {% set split = null %}
+          {% set split = pkg.msl_microscopy[i].msl_microscopy_1.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_microscopy_1=split[split|length-1] %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_microscopy[i].msl_microscopy_2 %}
+          {% set split = null %}
+          {% set split = pkg.msl_microscopy[i].msl_microscopy_2.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_microscopy_2=pkg.msl_microscopy[i].msl_microscopy_2 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_microscopy[i].msl_microscopy_3 %}
+          {% set split = null %}
+          {% set split = pkg.msl_microscopy[i].msl_microscopy_3.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_microscopy_3=pkg.msl_microscopy[i].msl_microscopy_3 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_microscopy[i].msl_microscopy_4%}
+          {% set split = null %}
+          {% set split = pkg.msl_microscopy[i].msl_microscopy_4.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_microscopy_4=pkg.msl_microscopy[i].msl_microscopy_4 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        {% if pkg.msl_microscopy[i].msl_microscopy_5 %}
+          {% set split = null %}
+          {% set split = pkg.msl_microscopy[i].msl_microscopy_5.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_microscopy_5=pkg.msl_microscopy[i].msl_microscopy_5 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
     </ul>
 
     {% else %}
