@@ -81,6 +81,7 @@ Add to `<fields>` definitions:
       <field name="msl_rockphysic_2" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_rockphysic_3" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_rockphysic_4" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_rockphysic_5" type="string" indexed="true" stored="true" multiValued="true"/>
       
       <!-- Analogue modelling -->
       <field name="msl_analogue_1" type="string" indexed="true" stored="true" multiValued="true"/>
@@ -102,6 +103,13 @@ Add to `<fields>` definitions:
       <field name="msl_geologicalsetting_2" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_geologicalsetting_3" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_geologicalsetting_4" type="string" indexed="true" stored="true" multiValued="true"/>
+
+      <!--Microscopy -->
+      <field name="msl_microscopy_1" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_microscopy_2" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_microscopy_3" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_microscopy_4" type="string" indexed="true" stored="true" multiValued="true"/>
+      <field name="msl_microscopy_5" type="string" indexed="true" stored="true" multiValued="true"/>
 
 And to the bottom list with `copyField` definitions add:
 
