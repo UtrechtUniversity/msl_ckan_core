@@ -12,49 +12,102 @@
       {{ self.flash() }}
     </div>
     {% block primary_content %}
-        <div role="main" style="background-color: #eee;">
-          <div class="container">
-            <div class="row row2">
-              <div class="col-md-6 col2">
-                <div class="card box text-center" style="background-color: #27A468;">
-                    <a href="/data-publication" title="datasets" style="color: white;"><h2>Datasets</h2></a>
-                </div>
-              </div>
-              <div class="col-md-6 col1">
-                <div class="card box">
-                    <div class="card box text-center" style="background-color: #27A468;">
-                    <a href="/lab" title="labs" style="color: white;"><h2>Labs</h2></a>
-                </div>
+        <div role="main" style='background-color: #FFF; background-image: url("background_1.jpg"); background-size: cover;'>
+          <div class="container" style="">
+            <div class="row row2" style="min-height: 150px;">
+
+            </div>
+            <div class="row row2" style="">
+              <div class="col-md-4 col-md-offset-8">
+                <div style="background-color: #27A468; padding-bottom: 0px; padding-top: 2px; padding-left: 10px;">
+                    <a href="/data-publication/" title="data-publications" style="color: white;"><h4 id="dataset-count">datasets</h4></a>
+                    <a href="/lab" title="labs" style="color: white;"><h4 id="lab-count">labs</h4></a>
+                    <a href="/organization" title="data-repositories" style="color: white;"><h4 id="datarepo-count" style="padding-bottom: 10px;">data-repositories</h4></a>
                 </div>
               </div>
             </div>
-            <div class="row row2" style="margin-top:20px;">
-              <div class="col-md-6 col2">
-                {% block promoted %}
-                  <div class="module-content box">
-                    <div>
-                      <p><img alt="EPOS" src="https://www.epos-eu.org/themes/epos/logo.svg"></p>
-                      <p><a href="https://www.epos-eu.org">Check</a> the new EPOS ERIC website</p>
-                      <hr>
-                      <p>Click <a href="https://epos-no.uib.no/epos-tna/facilities" target="_blank" rel="nofollow">https://epos-no.uib.no/epos-tna/facilities</a> to go to the EPOS TNA-/Infrastructure portal for an overview of labs currently involved within the MSL network.</p>
-                      <hr>
-                      <p>This is the central data catalog of the EPOS Multi-scale laboratories community. Here you can
-                        find openly published data coming from a wide range of world-class experimental laboratory
-                        infrastructures: from high pressure-temperature rock and fault mechanics and rock physics
-                        facilities, to electron microscopy, micro-beam analysis, analogue modelling and paleomagnetic
-                        laboratories. More information about the Multi-scale laboratories community is to be found at
-                        <a href="https://epos-ip.org/tcs/multi-scale-laboratories" target="_blank" rel="nofollow">https://epos-ip.org/tcs/multi-scale-laboratories</a>.</p>
-                    </div>
-                  </div>
-                {% endblock %}
+
+              {% block scripts %}
+              {{ super() }}
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+            {% endblock %}
+              <script>
+                $.ajax({
+                    url: "/api/3/action/package_search?q=type:data-publication",
+                    type: 'GET',
+                    dataType: 'json', // added data type
+                    success: function(res) {
+                        $("#dataset-count").text(res.result.count + ' datasets');
+                    }
+                });
+
+                $.ajax({
+                    url: "/api/3/action/package_search?q=type:lab",
+                    type: 'GET',
+                    dataType: 'json', // added data type
+                    success: function(res) {
+                        $("#lab-count").text(res.result.count + ' labs');
+                    }
+                });
+
+                $.ajax({
+                    url: "/api/3/action/organization_list",
+                    type: 'GET',
+                    dataType: 'json', // added data type
+                    success: function(res) {
+                        $("#datarepo-count").text(res.result.length -1 + ' data-repositories');
+                    }
+                });
+              </script>
+
+            <div class="row row2" style="display: table;">
+              <div class="col-md-4" style="float: none; display: table-cell; vertical-align: bottom;">
+
               </div>
-              <div class="col-md-6 col1">
-                {% block stats %}
-                  {% snippet 'home/snippets/stats.html' %}
-                {% endblock %}
+              <div class="col-md-4" style="float: none; display: table-cell; vertical-align: bottom;">
+                <div style="background-color: #27A468; padding-bottom: 10px; padding-top: 10px;" class="text-center">
+                    <a href="/data-publication" title="labs" style="color: white;"><h1>data access</h1></a>
+                </div>
               </div>
+
+              <div class="col-md-4" style="float: none; display: table-cell;">
+                <div style="background-color: #27A468; padding-bottom: 5px; padding-top: 2px; padding-left: 10px;">
+                    <p style="color: #FFF;" >
+                      <h3 style="color: #FFF;">Recently added:</h3>
+
+                      <div id="recently-added"></div>
+                      <br>
+                    </p>
+                </div>
+              </div>
+
+            <script>
+                $.ajax({
+                    url: "/api/3/action/package_search?q=type:data-publication&rows=3&sort=msl_publication_date desc",
+                    type: 'GET',
+                    dataType: 'json', // added data type
+                    success: function(res) {
+                        res.result.results.forEach(function (item, index) {
+                          $("#recently-added").append('<a href="/data-publication/' + item.name +'" title="labs" style="color: white;"><h4>' + item.msl_citation + '</h4></a>');
+                        });
+                    }
+                });
+            </script>
+
             </div>
           </div>
+        </div>
+            <div style="background-color: #FFF;">
+              <div class="container" style="background-color: #FFF;">
+                <div class="row row2">
+                  <div class="col-md-12" style="background-color: #FFF;">
+                    <p class="lead" style="margin-left: 10px; margin-right: 10px;">Welcome to the EPOS Multi-Scale Labs data catalogue! This catalogue is the central access point for
+                    Earth scientific laboratory data in Europe. Here you can find data from rock and melt physics,
+                    paleomagnetism, geochemistry, microscopy, tomography and analogue modelling of geological processes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
 
