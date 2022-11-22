@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added 
+- Update filtertree to reflect changes to geochem vocab
+- Adjust typo when adding data repositories
 
 ## [1.1.0] - 2022-11-11
 
