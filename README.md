@@ -111,6 +111,19 @@ Add to `<fields>` definitions:
       <field name="msl_microscopy_4" type="string" indexed="true" stored="true" multiValued="true"/>
       <field name="msl_microscopy_5" type="string" indexed="true" stored="true" multiValued="true"/>
 
+      <!-- Paleomagnetism -->
+	  <field name="msl_paleomagnetism_1" type="string" indexed="true" stored="true" multiValued="true"/>
+	  <field name="msl_paleomagnetism_2" type="string" indexed="true" stored="true" multiValued="true"/>
+	  <field name="msl_paleomagnetism_3" type="string" indexed="true" stored="true" multiValued="true"/>
+	  <field name="msl_paleomagnetism_4" type="string" indexed="true" stored="true" multiValued="true"/>
+	  <field name="msl_paleomagnetism_5" type="string" indexed="true" stored="true" multiValued="true"/>
+
+      <!-- Geochemistry -->
+	  <field name="msl_geochemistry_1" type="string" indexed="true" stored="true" multiValued="true"/>
+	  <field name="msl_geochemistry_2" type="string" indexed="true" stored="true" multiValued="true"/>
+	  <field name="msl_geochemistry_3" type="string" indexed="true" stored="true" multiValued="true"/>
+	  <field name="msl_geochemistry_4" type="string" indexed="true" stored="true" multiValued="true"/>	
+
 And to the bottom list with `copyField` definitions add:
 
       <!-- customizations MSL-->

@@ -325,6 +325,8 @@ dataset_fields:
       label: Geochemistry level 2
     - field_name: msl_geochemistry_3
       label: Geochemistry level 3
+    - field_name: msl_geochemistry_4
+      label: Geochemistry level 4
 
 # CUSTOM
 # used in tree faceting
