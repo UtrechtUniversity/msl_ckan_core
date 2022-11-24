@@ -512,7 +512,19 @@
               {% set ns.previous = ns.previous + [split[split|length-1]] %}
             {% endif %}
           {% endif %}
-        {% endif %}       
+        {% endif %}
+        {% if pkg.msl_geochemistry[i].msl_geochemistry_4 %}
+          {% set split = null %}
+          {% set split = pkg.msl_geochemistry[i].msl_geochemistry_4.split('>') %}
+          {% if split %}
+            {% if not split[split|length-1] in ns.previous %}
+              <li>
+                <a class="tag" href="{% url_for 'data-publication.search', msl_geochemistry_4=pkg.msl_geochemistry[i].msl_geochemistry_4 %}">{{ split[split|length-1] }}</a>
+              </li>
+              {% set ns.previous = ns.previous + [split[split|length-1]] %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
 
       {# /process microscopy #}
