@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed several typos
 - Adjust citation information in recent additions sections
 - Add new background images for index page and cycle backgrounds
+- Update styling of about page
 
 ### Added 
 - Update filtertree to reflect changes to geochem vocab
