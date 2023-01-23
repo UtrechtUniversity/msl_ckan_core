@@ -7,6 +7,9 @@
 {% if multi_title[-1] != 's' %}
   {% set multi_title = multi_title + 's' %}
 {%- endif %}
+{% if multi_title == 'Data-Publications' %}
+  {% set multi_title = 'data publications' %}
+{%- endif %}
 
 {% block breadcrumb_content %}
   <li class="active">{{ h.nav_link(_(multi_title), named_route='%s.search' % dataset_type, highlight_actions = 'new index') }}</li>
