@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update styling of about page
 - Adjust sorting methods in search results overview
 - Split keyword display into originally assigned keywords and detected vocab terms
+- update filtertree with new sorted parts
 
 ## [1.1.0] - 2022-11-11
 
