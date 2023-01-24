@@ -6,14 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Fixed several typos
-- Adjust citation information in recent additions sections
-- Add new background images for index page and cycle backgrounds
-- Update styling of about page
 
 ### Added 
 - Update filtertree to reflect changes to geochem vocab
 - Adjust typo when adding data repositories
+- Fixed several typos
+- Adjust citation information in recent additions sections
+- Add new background images for index page and cycle backgrounds
+- Update styling of about page
+- Adjust sorting methods in search results overview
+- Split keyword display into originally assigned keywords and detected vocab terms
 
 ## [1.1.0] - 2022-11-11
 
