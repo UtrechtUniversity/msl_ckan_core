@@ -1,0 +1,35 @@
+{% extends "page.html" %}
+
+{% block subtitle %}{{ _('Vocabularies') }}{% endblock %}
+
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Vocabularies'), named_route='msl_ckan.vocabularies' %}</li>
+{% endblock %}
+
+{% block primary %}
+    <article class="module" role="main">
+        <div class="module-content">
+            {% block about %}
+                <p>The EPOS multi-scale laboratories community publishes and maintains several vocabularies to
+                    harmonize metadata descriptions and in turn improve findability of the data. Currently the
+                    following vocabularies are available:</p>
+                <ul>
+                    <li>Analogue modelling of geological processes</li>
+                    <li>Geochemistry</li>
+                    <li>Geological age</li>
+                    <li>Geological setting</li>
+                    <li>Materials</li>
+                    <li>Microscopy and tomography</li>
+                    <li>Paleomagnetism</li>
+                    <li>Pore fluids</li>
+                    <li>Rock and melt physics</li>
+                </ul>
+
+            <p>More information and several download formats per vocabulary are available on <a href="https://github.com/UtrechtUniversity/msl_vocabularies" target="_blank">GitHub</a>.</p>
+
+            {% endblock %}
+        </div>
+    </article>
+{% endblock %}}
+
+{% block secondary %}{% endblock %}

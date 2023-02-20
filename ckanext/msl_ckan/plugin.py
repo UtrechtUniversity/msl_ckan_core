@@ -2,6 +2,7 @@ import os
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import json
+from flask import Blueprint, render_template
 
 
 def get_filter_menu():
@@ -12,6 +13,7 @@ def get_filter_menu():
 
 class MslCkanPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
+    plugins.implements(plugins.IBlueprint)
     plugins.implements(plugins.ITemplateHelpers)
 
     # IConfigurer
@@ -23,3 +25,14 @@ class MslCkanPlugin(plugins.SingletonPlugin):
 
     def get_helpers(self):
         return {'msl_ckan_get_filter_menu': get_filter_menu}
+
+    def vocab_view(self):
+        return render_template("vocabs.html")
+
+    def get_blueprint(self):
+        blueprint = Blueprint(self.name, self.__module__)
+        blueprint.template_folder = 'templates'
+
+        blueprint.add_url_rule('/vocabularies', 'vocabularies', self.vocab_view)
+
+        return blueprint

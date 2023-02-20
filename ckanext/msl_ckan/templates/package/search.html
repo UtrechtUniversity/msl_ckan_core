@@ -174,9 +174,9 @@
           },
           plugins: ['checkbox', 'search'],
           "search": {
-                      "case_sensitive": false,
-                      "show_only_matches": true
-                  }
+            "case_sensitive": false,
+            "show_only_matches": true
+          }
       })
       .on("check_node.jstree uncheck_node.jstree", function(e, data) {
           if(data.node.original.extra.type == 'filter') {
