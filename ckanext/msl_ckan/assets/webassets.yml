@@ -1,26 +1,11 @@
-# msl_ckan-js:
-#   filter: rjsmin
-#   output: ckanext-msl_ckan/%(version)s-msl_ckan.js
-#   contents:
-#     - js/msl_ckan.js
-#   extra:
-#     preload:
-#       - base/main
-
-# msl_ckan-css:
-#   filter: cssrewrite
-#   output: ckanext-msl_ckan/%(version)s-msl_ckan.css
-#   contents:
-#     - css/msl_ckan.css
-
-#treejs_css:
-#  filters: cssrewrite
-#  output: msl_ckan/treejs.css
-#  contents:
-#    - treejs.css
-
-msl_ckan-js:
+msl_ckan-jstree:
   filter: rjsmin
-  output: ckanext-msl_ckan/%(version)s-msl_ckan.js
+  output: ckanext-msl_ckan/%(version)s-msl_ckan-jstree.js
   contents:
     - jstree.js
+
+msl_ckan-filter-menu:
+  filter: rjsmin
+  output: ckanext-msl_ckan/%(version)s-msl_ckan-filter-menu.js
+  contents:
+    - filters-menu.js
