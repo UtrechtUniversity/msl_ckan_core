@@ -158,7 +158,7 @@ dataset_fields:
   label: Abstract
   form_snippet: markdown.html
   form_placeholder: abstract of the data publication
-  required: True
+  required: False
 
 # CUSTOM (thus far only provided by CSIC)
 # DCAT-mapping: ..
