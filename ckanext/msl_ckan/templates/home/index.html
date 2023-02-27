@@ -109,7 +109,9 @@
                     dataType: 'json', // added data type
                     success: function(res) {
                         res.result.results.forEach(function (item, index) {
-                          $("#recently-added").append('<a href="/data-publication/' + item.name +'" title="labs" style="color: white;"><h4>' + item.msl_citation.substring(0, item.msl_citation.indexOf("</i>") + 4) + '</h4></a>');
+                          if(item.msl_citation) {
+                            $("#recently-added").append('<a href="/data-publication/' + item.name +'" title="labs" style="color: white;"><h4>' + item.msl_citation.substring(0, item.msl_citation.indexOf("</i>") + 4) + '</h4></a>');
+                          }
                         });
                     }
                 });
