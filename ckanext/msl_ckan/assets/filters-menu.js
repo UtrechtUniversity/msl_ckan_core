@@ -23,13 +23,16 @@
           node.text = node.text + ' <span class="badge bg-primary rounded-pill">' + result.count + '</span>';
         }
       }
-    } else if(node.extra.type == 'facet') {
-        if(node.extra.filterName in facets) {
-          for (let x = 0; x < facets[node.extra.filterName].items.length; x++) {
+    }
+
+
+    if(node.extra.includeFacet) {
+        if(node.extra.facetName in facets) {
+          for (let x = 0; x < facets[node.extra.facetName].items.length; x++) {
 
             var newNode = {
-              "text": facets[node.extra.filterName].items[x].display_name,
-              "id": node.extra.filterName + '-' + x,
+              "text": facets[node.extra.facetName].items[x].display_name,
+              "id": node.extra.facetName + '-' + x,
               "state": {
                   "opened": false,
                   "disabled": false,
@@ -39,8 +42,8 @@
               "extra": {
                   "type": "filter",
                   "url": "",
-                  "filterName": node.extra.filterName,
-                  "filterValue": facets[node.extra.filterName].items[x].name
+                  "filterName": node.extra.facetName,
+                  "filterValue": facets[node.extra.facetName].items[x].name
               },
               "children": []
             };

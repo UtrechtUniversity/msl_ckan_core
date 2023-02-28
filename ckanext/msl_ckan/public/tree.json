@@ -8,10 +8,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_material",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -11951,10 +11951,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_geologicalage",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -12057,7 +12057,7 @@
                                         "children": [
                                             {
                                                 "id": "msl_geologicalage_1645",
-                                                "text": "Upper\/LatePleistocene ",
+                                                "text": "Upper\/LatePleistocene",
                                                 "state": {
                                                     "opened": false,
                                                     "disabled": true,
@@ -12068,7 +12068,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_geologicalage_5",
-                                                    "filterValue": "Phanerozoic>Cenozoic>Quaternary>Pleistocene>Upper\/LatePleistocene "
+                                                    "filterValue": "Phanerozoic>Cenozoic>Quaternary>Pleistocene>Upper\/LatePleistocene"
                                                 },
                                                 "children": []
                                             },
@@ -15037,10 +15037,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_porefluid",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -15433,10 +15433,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_geologicalsetting",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -18302,10 +18302,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_analogue",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -29662,10 +29662,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_geochemistry",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -29995,7 +29995,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2202",
-                        "text": "Carbonate Bomb ",
+                        "text": "Carbonate Bomb",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30006,13 +30006,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Carbonate Bomb "
+                            "filterValue": "Technique>Carbonate Bomb"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2209",
-                        "text": "Colorimetric Analysis ",
+                        "text": "Colorimetric Analysis",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30023,7 +30023,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Colorimetric Analysis "
+                            "filterValue": "Technique>Colorimetric Analysis"
                         },
                         "children": []
                     },
@@ -30080,7 +30080,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2212",
-                        "text": "Elemental Analysis ",
+                        "text": "Elemental Analysis",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30091,7 +30091,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Elemental Analysis "
+                            "filterValue": "Technique>Elemental Analysis"
                         },
                         "children": []
                     },
@@ -30199,7 +30199,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2219",
-                        "text": "Gamma Counting ",
+                        "text": "Gamma Counting",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30210,13 +30210,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Gamma Counting "
+                            "filterValue": "Technique>Gamma Counting"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2220",
-                        "text": "Gas Chromatography ",
+                        "text": "Gas Chromatography",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30227,7 +30227,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Gas Chromatography "
+                            "filterValue": "Technique>Gas Chromatography"
                         },
                         "children": []
                     },
@@ -30318,7 +30318,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2225",
-                        "text": "Image Analysis ",
+                        "text": "Image Analysis",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30329,7 +30329,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Image Analysis "
+                            "filterValue": "Technique>Image Analysis"
                         },
                         "children": []
                     },
@@ -30455,7 +30455,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2234",
-                        "text": "Laser Fluorination ",
+                        "text": "Laser Fluorination",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30466,7 +30466,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Laser Fluorination "
+                            "filterValue": "Technique>Laser Fluorination"
                         },
                         "children": []
                     },
@@ -30505,7 +30505,7 @@
                         "children": [
                             {
                                 "id": "msl_geochemistry_2239",
-                                "text": "Accelerator Mass Spectrometry ",
+                                "text": "Accelerator Mass Spectrometry",
                                 "state": {
                                     "opened": false,
                                     "disabled": true,
@@ -30516,7 +30516,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Technique>Mass Spectrometry>Accelerator Mass Spectrometry "
+                                    "filterValue": "Technique>Mass Spectrometry>Accelerator Mass Spectrometry"
                                 },
                                 "children": []
                             },
@@ -30918,7 +30918,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2262",
-                        "text": "Penfield Method ",
+                        "text": "Penfield Method",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30929,13 +30929,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Penfield Method "
+                            "filterValue": "Technique>Penfield Method"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2261",
-                        "text": "Point-Counting ",
+                        "text": "Point-Counting",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30946,13 +30946,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Point-Counting "
+                            "filterValue": "Technique>Point-Counting"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2264",
-                        "text": "Potentiometry ",
+                        "text": "Potentiometry",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -30963,7 +30963,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Potentiometry "
+                            "filterValue": "Technique>Potentiometry"
                         },
                         "children": []
                     },
@@ -31020,7 +31020,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2269",
-                        "text": "Rapid Rock ",
+                        "text": "Rapid Rock",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -31031,13 +31031,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Rapid Rock "
+                            "filterValue": "Technique>Rapid Rock"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2266",
-                        "text": "Refractometer ",
+                        "text": "Refractometer",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -31048,13 +31048,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Refractometer "
+                            "filterValue": "Technique>Refractometer"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2267",
-                        "text": "Rock Eval Pyrolysis ",
+                        "text": "Rock Eval Pyrolysis",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -31065,7 +31065,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Technique>Rock Eval Pyrolysis "
+                            "filterValue": "Technique>Rock Eval Pyrolysis"
                         },
                         "children": []
                     },
@@ -32086,7 +32086,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2330",
-                        "text": "arsenic ",
+                        "text": "arsenic",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -32097,7 +32097,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Measured property>arsenic "
+                            "filterValue": "Measured property>arsenic"
                         },
                         "children": []
                     },
@@ -34000,7 +34000,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2442",
-                        "text": "indium ",
+                        "text": "indium",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -34011,13 +34011,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Measured property>indium "
+                            "filterValue": "Measured property>indium"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2441",
-                        "text": "iodine ",
+                        "text": "iodine",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -34028,7 +34028,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Measured property>iodine "
+                            "filterValue": "Measured property>iodine"
                         },
                         "children": []
                     },
@@ -36838,7 +36838,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2592",
-                        "text": "oxygen ",
+                        "text": "oxygen",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -36849,7 +36849,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Measured property>oxygen "
+                            "filterValue": "Measured property>oxygen"
                         },
                         "children": [
                             {
@@ -36865,7 +36865,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>oxygen >cap_delta_O17 - deviation from the Earth-Moon line of O17\/O16 and O18\/O16 ratios"
+                                    "filterValue": "Measured property>oxygen>cap_delta_O17 - deviation from the Earth-Moon line of O17\/O16 and O18\/O16 ratios"
                                 },
                                 "children": []
                             },
@@ -36882,7 +36882,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>oxygen >delta_O17 calculated as (O17\/O16_sample \/ O17\/O16_std - 1)*1000"
+                                    "filterValue": "Measured property>oxygen>delta_O17 calculated as (O17\/O16_sample \/ O17\/O16_std - 1)*1000"
                                 },
                                 "children": []
                             },
@@ -36899,7 +36899,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>oxygen >delta_O18 calculated as (O18\/O16_sample \/ O18\/O16_std - 1)*1000"
+                                    "filterValue": "Measured property>oxygen>delta_O18 calculated as (O18\/O16_sample \/ O18\/O16_std - 1)*1000"
                                 },
                                 "children": []
                             },
@@ -36916,7 +36916,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>oxygen >dioxygen"
+                                    "filterValue": "Measured property>oxygen>dioxygen"
                                 },
                                 "children": []
                             },
@@ -36933,7 +36933,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>oxygen >hydroxide"
+                                    "filterValue": "Measured property>oxygen>hydroxide"
                                 },
                                 "children": []
                             },
@@ -36950,7 +36950,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>oxygen >ratio of oxygen isotopes O17 to O16"
+                                    "filterValue": "Measured property>oxygen>ratio of oxygen isotopes O17 to O16"
                                 },
                                 "children": []
                             },
@@ -36967,7 +36967,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>oxygen >ratio of oxygen isotopes O18 to O16"
+                                    "filterValue": "Measured property>oxygen>ratio of oxygen isotopes O18 to O16"
                                 },
                                 "children": []
                             }
@@ -36992,7 +36992,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2615",
-                        "text": "pH ",
+                        "text": "pH",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -37003,13 +37003,13 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Measured property>pH "
+                            "filterValue": "Measured property>pH"
                         },
                         "children": []
                     },
                     {
                         "id": "msl_geochemistry_2616",
-                        "text": "phosphorus ",
+                        "text": "phosphorus",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -37020,7 +37020,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Measured property>phosphorus "
+                            "filterValue": "Measured property>phosphorus"
                         },
                         "children": [
                             {
@@ -37036,7 +37036,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>phosphorus >phosphate"
+                                    "filterValue": "Measured property>phosphorus>phosphate"
                                 },
                                 "children": []
                             },
@@ -37053,7 +37053,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>phosphorus >phosphorous, organic"
+                                    "filterValue": "Measured property>phosphorus>phosphorous, organic"
                                 },
                                 "children": []
                             },
@@ -37070,7 +37070,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>phosphorus >phosphorus oxide"
+                                    "filterValue": "Measured property>phosphorus>phosphorus oxide"
                                 },
                                 "children": []
                             },
@@ -37087,7 +37087,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>phosphorus >phosphorus trioxide"
+                                    "filterValue": "Measured property>phosphorus>phosphorus trioxide"
                                 },
                                 "children": []
                             }
@@ -37269,7 +37269,7 @@
                     },
                     {
                         "id": "msl_geochemistry_2628",
-                        "text": "protactinium ",
+                        "text": "protactinium",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -37280,7 +37280,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_geochemistry_2",
-                            "filterValue": "Measured property>protactinium "
+                            "filterValue": "Measured property>protactinium"
                         },
                         "children": [
                             {
@@ -37296,7 +37296,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>protactinium >excess protactinium Pa231"
+                                    "filterValue": "Measured property>protactinium>excess protactinium Pa231"
                                 },
                                 "children": []
                             },
@@ -37313,7 +37313,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_geochemistry_3",
-                                    "filterValue": "Measured property>protactinium >protactinium isotope Pa231"
+                                    "filterValue": "Measured property>protactinium>protactinium isotope Pa231"
                                 },
                                 "children": [
                                     {
@@ -37329,7 +37329,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_geochemistry_4",
-                                            "filterValue": "Measured property>protactinium >protactinium isotope Pa231>protactinium isotope Pa231, reported as activity"
+                                            "filterValue": "Measured property>protactinium>protactinium isotope Pa231>protactinium isotope Pa231, reported as activity"
                                         },
                                         "children": []
                                     },
@@ -37346,7 +37346,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_geochemistry_4",
-                                            "filterValue": "Measured property>protactinium >protactinium isotope Pa231>ratio of protactinium isotope Pa231 to thorium isotope Th230"
+                                            "filterValue": "Measured property>protactinium>protactinium isotope Pa231>ratio of protactinium isotope Pa231 to thorium isotope Th230"
                                         },
                                         "children": []
                                     },
@@ -37363,7 +37363,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_geochemistry_4",
-                                            "filterValue": "Measured property>protactinium >protactinium isotope Pa231>ratio of protactinium isotope Pa231 to uranium isotope U235, reported as activity"
+                                            "filterValue": "Measured property>protactinium>protactinium isotope Pa231>ratio of protactinium isotope Pa231 to uranium isotope U235, reported as activity"
                                         },
                                         "children": []
                                     }
@@ -40621,10 +40621,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_microscopy",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -42141,7 +42141,7 @@
                                     },
                                     {
                                         "id": "msl_microscopy_2908",
-                                        "text": "cone beam CT ",
+                                        "text": "cone beam CT",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -42152,7 +42152,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Technique>imaging (3D)>computed tomography (CT)>cone beam CT "
+                                            "filterValue": "Technique>imaging (3D)>computed tomography (CT)>cone beam CT"
                                         },
                                         "children": []
                                     },
@@ -42192,7 +42192,7 @@
                                     },
                                     {
                                         "id": "msl_microscopy_2909",
-                                        "text": "fan beam CT ",
+                                        "text": "fan beam CT",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -42203,7 +42203,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Technique>imaging (3D)>computed tomography (CT)>fan beam CT "
+                                            "filterValue": "Technique>imaging (3D)>computed tomography (CT)>fan beam CT"
                                         },
                                         "children": []
                                     },
@@ -42779,7 +42779,7 @@
                 "children": [
                     {
                         "id": "msl_microscopy_2950",
-                        "text": "deformation microstructure ",
+                        "text": "deformation microstructure",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -42790,7 +42790,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_microscopy_2",
-                            "filterValue": "Analyzed feature>deformation microstructure "
+                            "filterValue": "Analyzed feature>deformation microstructure"
                         },
                         "children": [
                             {
@@ -42806,7 +42806,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure"
+                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure"
                                 },
                                 "children": [
                                     {
@@ -42822,7 +42822,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>breccia microstructure"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>breccia microstructure"
                                         },
                                         "children": []
                                     },
@@ -42839,7 +42839,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>fault gouge microstructure"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>fault gouge microstructure"
                                         },
                                         "children": [
                                             {
@@ -42855,7 +42855,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>fault gouge microstructure>P-foliation"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>fault gouge microstructure>P-foliation"
                                                 },
                                                 "children": []
                                             },
@@ -42872,13 +42872,13 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>fault gouge microstructure>R1 shear"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>fault gouge microstructure>R1 shear"
                                                 },
                                                 "children": []
                                             },
                                             {
                                                 "id": "msl_microscopy_2963",
-                                                "text": "Riedel shear microstructure ",
+                                                "text": "Riedel shear microstructure",
                                                 "state": {
                                                     "opened": false,
                                                     "disabled": true,
@@ -42889,7 +42889,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>fault gouge microstructure>Riedel shear microstructure "
+                                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>fault gouge microstructure>Riedel shear microstructure"
                                                 },
                                                 "children": []
                                             },
@@ -42906,7 +42906,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>fault gouge microstructure>Y shear"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>fault gouge microstructure>Y shear"
                                                 },
                                                 "children": []
                                             }
@@ -42914,7 +42914,7 @@
                                     },
                                     {
                                         "id": "msl_microscopy_2960",
-                                        "text": "fault microstructure ",
+                                        "text": "fault microstructure",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -42925,7 +42925,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>fault microstructure "
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>fault microstructure"
                                         },
                                         "children": []
                                     },
@@ -42942,7 +42942,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>intergranular crack"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>intergranular crack"
                                         },
                                         "children": []
                                     },
@@ -42959,7 +42959,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>intergranular slip"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>intergranular slip"
                                         },
                                         "children": []
                                     },
@@ -42976,7 +42976,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>intragranular crack"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>intragranular crack"
                                         },
                                         "children": [
                                             {
@@ -42992,7 +42992,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>intragranular crack>intragranular crack density"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>intragranular crack>intragranular crack density"
                                                 },
                                                 "children": []
                                             },
@@ -43009,7 +43009,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>intragranular crack>intragranular crack distribution"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>intragranular crack>intragranular crack distribution"
                                                 },
                                                 "children": []
                                             },
@@ -43026,7 +43026,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>intragranular crack>intragranular crack orientation"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>intragranular crack>intragranular crack orientation"
                                                 },
                                                 "children": []
                                             }
@@ -43045,7 +43045,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>joint"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>joint"
                                         },
                                         "children": []
                                     },
@@ -43062,7 +43062,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>pseudotachylite microstructure"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>pseudotachylite microstructure"
                                         },
                                         "children": []
                                     },
@@ -43079,7 +43079,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>shear fracture"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>shear fracture"
                                         },
                                         "children": []
                                     },
@@ -43096,7 +43096,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>slickenline"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>slickenline"
                                         },
                                         "children": []
                                     },
@@ -43113,7 +43113,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>slickenside"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>slickenside"
                                         },
                                         "children": []
                                     },
@@ -43130,7 +43130,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >brittle microstructure>transgranular crack"
+                                            "filterValue": "Analyzed feature>deformation microstructure>brittle microstructure>transgranular crack"
                                         },
                                         "children": []
                                     }
@@ -43149,12 +43149,12 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure"
+                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure"
                                 },
                                 "children": [
                                     {
                                         "id": "msl_microscopy_2973",
-                                        "text": "deformation lamellae ",
+                                        "text": "deformation lamellae",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -43165,7 +43165,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>deformation lamellae "
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>deformation lamellae"
                                         },
                                         "children": [
                                             {
@@ -43181,7 +43181,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>deformation lamellae >fine extinction band (FEB) width sub-5 micron"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>deformation lamellae>fine extinction band (FEB) width sub-5 micron"
                                                 },
                                                 "children": []
                                             },
@@ -43198,7 +43198,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>deformation lamellae >short-wavelength undulatory extinction"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>deformation lamellae>short-wavelength undulatory extinction"
                                                 },
                                                 "children": []
                                             }
@@ -43217,7 +43217,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>deformation twin"
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>deformation twin"
                                         },
                                         "children": []
                                     },
@@ -43234,7 +43234,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>dislocation"
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>dislocation"
                                         },
                                         "children": [
                                             {
@@ -43250,7 +43250,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>dislocation>Burger's vector"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>dislocation>Burger's vector"
                                                 },
                                                 "children": []
                                             },
@@ -43267,7 +43267,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>dislocation>dislocation density"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>dislocation>dislocation density"
                                                 },
                                                 "children": []
                                             },
@@ -43284,7 +43284,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>dislocation>glide plane"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>dislocation>glide plane"
                                                 },
                                                 "children": []
                                             }
@@ -43303,7 +43303,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>localized extinction band (LEB)"
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>localized extinction band (LEB)"
                                         },
                                         "children": []
                                     },
@@ -43320,7 +43320,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>stacking fault"
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>stacking fault"
                                         },
                                         "children": []
                                     },
@@ -43337,7 +43337,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>subgrains"
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>subgrains"
                                         },
                                         "children": [
                                             {
@@ -43353,13 +43353,13 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>subgrains>core and mantle subgrain structure"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>subgrains>core and mantle subgrain structure"
                                                 },
                                                 "children": []
                                             },
                                             {
                                                 "id": "msl_microscopy_2984",
-                                                "text": "subgrain boundary orientations ",
+                                                "text": "subgrain boundary orientations",
                                                 "state": {
                                                     "opened": false,
                                                     "disabled": true,
@@ -43370,7 +43370,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>subgrains>subgrain boundary orientations "
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>subgrains>subgrain boundary orientations"
                                                 },
                                                 "children": []
                                             },
@@ -43387,7 +43387,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>subgrains>subgrain misorientations"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>subgrains>subgrain misorientations"
                                                 },
                                                 "children": []
                                             },
@@ -43404,7 +43404,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>subgrains>subgrain size"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>subgrains>subgrain size"
                                                 },
                                                 "children": []
                                             },
@@ -43421,7 +43421,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>subgrains>subgrain size hierarchy"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>subgrains>subgrain size hierarchy"
                                                 },
                                                 "children": []
                                             }
@@ -43440,7 +43440,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>undulose extinction"
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>undulose extinction"
                                         },
                                         "children": []
                                     },
@@ -43457,12 +43457,12 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>wide extinction band (WEB)"
+                                            "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>wide extinction band (WEB)"
                                         },
                                         "children": [
                                             {
                                                 "id": "msl_microscopy_2977",
-                                                "text": "intragranular deformation band ",
+                                                "text": "intragranular deformation band",
                                                 "state": {
                                                     "opened": false,
                                                     "disabled": true,
@@ -43473,7 +43473,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>wide extinction band (WEB)>intragranular deformation band "
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>wide extinction band (WEB)>intragranular deformation band"
                                                 },
                                                 "children": []
                                             },
@@ -43490,7 +43490,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >crystal plastic microstructure>wide extinction band (WEB)>intragranular kink band"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>crystal plastic microstructure>wide extinction band (WEB)>intragranular kink band"
                                                 },
                                                 "children": []
                                             }
@@ -43511,7 +43511,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure"
+                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure"
                                 },
                                 "children": [
                                     {
@@ -43527,7 +43527,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>boudinage microstructure"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>boudinage microstructure"
                                         },
                                         "children": []
                                     },
@@ -43544,7 +43544,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>cleavage"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>cleavage"
                                         },
                                         "children": []
                                     },
@@ -43561,7 +43561,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>crenulation cleavage"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>crenulation cleavage"
                                         },
                                         "children": []
                                     },
@@ -43578,7 +43578,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformation band"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformation band"
                                         },
                                         "children": [
                                             {
@@ -43594,7 +43594,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformation band>cataclastic band microstructure"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformation band>cataclastic band microstructure"
                                                 },
                                                 "children": []
                                             },
@@ -43611,7 +43611,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformation band>compaction band microstructure"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformation band>compaction band microstructure"
                                                 },
                                                 "children": []
                                             },
@@ -43628,7 +43628,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformation band>dilation band microstructure"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformation band>dilation band microstructure"
                                                 },
                                                 "children": []
                                             },
@@ -43645,7 +43645,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformation band>phyllosilicate deformation band microstructure"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformation band>phyllosilicate deformation band microstructure"
                                                 },
                                                 "children": []
                                             },
@@ -43662,7 +43662,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformation band>shear band microstructure"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformation band>shear band microstructure"
                                                 },
                                                 "children": []
                                             },
@@ -43679,7 +43679,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformation band>solution and cementation band microstructure"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformation band>solution and cementation band microstructure"
                                                 },
                                                 "children": []
                                             }
@@ -43698,7 +43698,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>deformed porphyroclast"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>deformed porphyroclast"
                                         },
                                         "children": []
                                     },
@@ -43715,7 +43715,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>foliation"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>foliation"
                                         },
                                         "children": []
                                     },
@@ -43732,7 +43732,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>mantled porphyroclasts"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>mantled porphyroclasts"
                                         },
                                         "children": [
                                             {
@@ -43748,7 +43748,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>mantled porphyroclasts>complex porphyroclasts"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>mantled porphyroclasts>complex porphyroclasts"
                                                 },
                                                 "children": []
                                             },
@@ -43765,7 +43765,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>mantled porphyroclasts>delta type porphyroclasts"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>mantled porphyroclasts>delta type porphyroclasts"
                                                 },
                                                 "children": []
                                             },
@@ -43782,13 +43782,13 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>mantled porphyroclasts>phi type porphyroclasts"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>mantled porphyroclasts>phi type porphyroclasts"
                                                 },
                                                 "children": []
                                             },
                                             {
                                                 "id": "msl_microscopy_3022",
-                                                "text": "sigma type porphyroclasts ",
+                                                "text": "sigma type porphyroclasts",
                                                 "state": {
                                                     "opened": false,
                                                     "disabled": true,
@@ -43799,7 +43799,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>mantled porphyroclasts>sigma type porphyroclasts "
+                                                    "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>mantled porphyroclasts>sigma type porphyroclasts"
                                                 },
                                                 "children": []
                                             }
@@ -43818,7 +43818,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>mica fish"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>mica fish"
                                         },
                                         "children": []
                                     },
@@ -43835,7 +43835,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>microfold"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>microfold"
                                         },
                                         "children": []
                                     },
@@ -43852,7 +43852,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>S-C foliation"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>S-C foliation"
                                         },
                                         "children": []
                                     },
@@ -43869,7 +43869,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>schistosity"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>schistosity"
                                         },
                                         "children": []
                                     },
@@ -43886,7 +43886,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >generic deformation microstructure>shear band foliation"
+                                            "filterValue": "Analyzed feature>deformation microstructure>generic deformation microstructure>shear band foliation"
                                         },
                                         "children": []
                                     }
@@ -43905,7 +43905,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure"
+                                    "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure"
                                 },
                                 "children": [
                                     {
@@ -43921,7 +43921,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>fluid inclusion planes"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>fluid inclusion planes"
                                         },
                                         "children": []
                                     },
@@ -43938,7 +43938,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>grain indentation"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>grain indentation"
                                         },
                                         "children": []
                                     },
@@ -43955,7 +43955,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>microstylolites"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>microstylolites"
                                         },
                                         "children": []
                                     },
@@ -43972,7 +43972,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>overgrowths"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>overgrowths"
                                         },
                                         "children": []
                                     },
@@ -43989,7 +43989,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>sealed fracture"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>sealed fracture"
                                         },
                                         "children": []
                                     },
@@ -44006,7 +44006,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>solution cleavage"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>solution cleavage"
                                         },
                                         "children": []
                                     },
@@ -44023,7 +44023,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>solution seam"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>solution seam"
                                         },
                                         "children": []
                                     },
@@ -44040,7 +44040,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>strain cap"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>strain cap"
                                         },
                                         "children": []
                                     },
@@ -44057,7 +44057,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>strain or pressure shadow"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>strain or pressure shadow"
                                         },
                                         "children": []
                                     },
@@ -44074,7 +44074,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>surface dissolution and precipitation features"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>surface dissolution and precipitation features"
                                         },
                                         "children": [
                                             {
@@ -44090,7 +44090,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>surface dissolution and precipitation features>growth features"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>surface dissolution and precipitation features>growth features"
                                                 },
                                                 "children": []
                                             },
@@ -44107,7 +44107,7 @@
                                                     "type": "filter",
                                                     "url": "",
                                                     "filterName": "msl_microscopy_5",
-                                                    "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>surface dissolution and precipitation features>solution pits and ledges"
+                                                    "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>surface dissolution and precipitation features>solution pits and ledges"
                                                 },
                                                 "children": []
                                             }
@@ -44126,7 +44126,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>deformation microstructure >pressure solution microstructure>vein"
+                                            "filterValue": "Analyzed feature>deformation microstructure>pressure solution microstructure>vein"
                                         },
                                         "children": []
                                     }
@@ -44426,7 +44426,7 @@
                             },
                             {
                                 "id": "msl_microscopy_3035",
-                                "text": "recrystallized grains ",
+                                "text": "recrystallized grains",
                                 "state": {
                                     "opened": false,
                                     "disabled": true,
@@ -44437,7 +44437,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Analyzed feature>grain aggregate microstructure>recrystallized grains "
+                                    "filterValue": "Analyzed feature>grain aggregate microstructure>recrystallized grains"
                                 },
                                 "children": []
                             },
@@ -45231,7 +45231,7 @@
                                     },
                                     {
                                         "id": "msl_microscopy_3053",
-                                        "text": "structural classification ",
+                                        "text": "structural classification",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -45242,7 +45242,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Analyzed feature>mineralogy and composition>qualitative rock classification>structural classification "
+                                            "filterValue": "Analyzed feature>mineralogy and composition>qualitative rock classification>structural classification"
                                         },
                                         "children": []
                                     }
@@ -45666,7 +45666,7 @@
                     },
                     {
                         "id": "msl_microscopy_3130",
-                        "text": "inferred mechanisms ",
+                        "text": "inferred mechanisms",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -45677,7 +45677,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_microscopy_2",
-                            "filterValue": "Inferred parameter>inferred mechanisms "
+                            "filterValue": "Inferred parameter>inferred mechanisms"
                         },
                         "children": [
                             {
@@ -45693,7 +45693,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Inferred parameter>inferred mechanisms >inferred deformation mechanisms"
+                                    "filterValue": "Inferred parameter>inferred mechanisms>inferred deformation mechanisms"
                                 },
                                 "children": []
                             },
@@ -45710,12 +45710,12 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Inferred parameter>inferred mechanisms >inferred recrystallization mechanisms"
+                                    "filterValue": "Inferred parameter>inferred mechanisms>inferred recrystallization mechanisms"
                                 },
                                 "children": [
                                     {
                                         "id": "msl_microscopy_3135",
-                                        "text": "geometric dynamic recrystallization ",
+                                        "text": "geometric dynamic recrystallization",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -45726,7 +45726,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Inferred parameter>inferred mechanisms >inferred recrystallization mechanisms>geometric dynamic recrystallization "
+                                            "filterValue": "Inferred parameter>inferred mechanisms>inferred recrystallization mechanisms>geometric dynamic recrystallization"
                                         },
                                         "children": []
                                     },
@@ -45743,7 +45743,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Inferred parameter>inferred mechanisms >inferred recrystallization mechanisms>grain boundary bulging"
+                                            "filterValue": "Inferred parameter>inferred mechanisms>inferred recrystallization mechanisms>grain boundary bulging"
                                         },
                                         "children": []
                                     },
@@ -45760,7 +45760,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Inferred parameter>inferred mechanisms >inferred recrystallization mechanisms>grain boundary migration"
+                                            "filterValue": "Inferred parameter>inferred mechanisms>inferred recrystallization mechanisms>grain boundary migration"
                                         },
                                         "children": []
                                     },
@@ -45777,7 +45777,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_microscopy_4",
-                                            "filterValue": "Inferred parameter>inferred mechanisms >inferred recrystallization mechanisms>subgrain rotation"
+                                            "filterValue": "Inferred parameter>inferred mechanisms>inferred recrystallization mechanisms>subgrain rotation"
                                         },
                                         "children": []
                                     }
@@ -45941,7 +45941,7 @@
                             },
                             {
                                 "id": "msl_microscopy_3128",
-                                "text": "inferred permeability ",
+                                "text": "inferred permeability",
                                 "state": {
                                     "opened": false,
                                     "disabled": true,
@@ -45952,7 +45952,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_microscopy_3",
-                                    "filterValue": "Inferred parameter>inferred properties>inferred permeability "
+                                    "filterValue": "Inferred parameter>inferred properties>inferred permeability"
                                 },
                                 "children": []
                             },
@@ -46005,10 +46005,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_paleomagnetism",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -49584,10 +49584,10 @@
             "checked": false
         },
         "extra": {
-            "type": "node",
+            "type": "filter",
             "url": "",
-            "filterName": "",
-            "filterValue": ""
+            "filterName": "msl_has_rockphysic",
+            "filterValue": "true"
         },
         "children": [
             {
@@ -50639,7 +50639,7 @@
                                 "children": [
                                     {
                                         "id": "msl_rockphysic_788",
-                                        "text": "conductivity cell ",
+                                        "text": "conductivity cell",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -50650,7 +50650,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_rockphysic_4",
-                                            "filterValue": "Apparatus>general sample characterization>electrical property determination>conductivity cell "
+                                            "filterValue": "Apparatus>general sample characterization>electrical property determination>conductivity cell"
                                         },
                                         "children": []
                                     },
@@ -50845,7 +50845,7 @@
                                     },
                                     {
                                         "id": "msl_rockphysic_780",
-                                        "text": "porosity meter: Archimedes method ",
+                                        "text": "porosity meter: Archimedes method",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -50856,7 +50856,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_rockphysic_4",
-                                            "filterValue": "Apparatus>general sample characterization>porosity and density determination>porosity meter: Archimedes method "
+                                            "filterValue": "Apparatus>general sample characterization>porosity and density determination>porosity meter: Archimedes method"
                                         },
                                         "children": []
                                     },
@@ -51280,7 +51280,7 @@
                     },
                     {
                         "id": "msl_rockphysic_827",
-                        "text": "in-line fluid property measurement ",
+                        "text": "in-line fluid property measurement",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -51291,12 +51291,12 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_rockphysic_2",
-                            "filterValue": "Ancillary equipment>in-line fluid property measurement "
+                            "filterValue": "Ancillary equipment>in-line fluid property measurement"
                         },
                         "children": [
                             {
                                 "id": "msl_rockphysic_830",
-                                "text": "Coriolis meter ",
+                                "text": "Coriolis meter",
                                 "state": {
                                     "opened": false,
                                     "disabled": true,
@@ -51307,13 +51307,13 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Ancillary equipment>in-line fluid property measurement >Coriolis meter "
+                                    "filterValue": "Ancillary equipment>in-line fluid property measurement>Coriolis meter"
                                 },
                                 "children": []
                             },
                             {
                                 "id": "msl_rockphysic_829",
-                                "text": "flow meter ",
+                                "text": "flow meter",
                                 "state": {
                                     "opened": false,
                                     "disabled": true,
@@ -51324,7 +51324,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Ancillary equipment>in-line fluid property measurement >flow meter "
+                                    "filterValue": "Ancillary equipment>in-line fluid property measurement>flow meter"
                                 },
                                 "children": []
                             },
@@ -51341,7 +51341,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Ancillary equipment>in-line fluid property measurement >in-line pH meter"
+                                    "filterValue": "Ancillary equipment>in-line fluid property measurement>in-line pH meter"
                                 },
                                 "children": []
                             },
@@ -51358,7 +51358,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Ancillary equipment>in-line fluid property measurement >relative humidity meter"
+                                    "filterValue": "Ancillary equipment>in-line fluid property measurement>relative humidity meter"
                                 },
                                 "children": []
                             }
@@ -51643,7 +51643,7 @@
                     },
                     {
                         "id": "msl_rockphysic_923",
-                        "text": "anisotropy ",
+                        "text": "anisotropy",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -51654,7 +51654,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_rockphysic_2",
-                            "filterValue": "Measured property>anisotropy "
+                            "filterValue": "Measured property>anisotropy"
                         },
                         "children": [
                             {
@@ -51670,7 +51670,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>anisotropy >elastic anisotropy"
+                                    "filterValue": "Measured property>anisotropy>elastic anisotropy"
                                 },
                                 "children": []
                             },
@@ -51687,7 +51687,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>anisotropy >permeability anisotropy"
+                                    "filterValue": "Measured property>anisotropy>permeability anisotropy"
                                 },
                                 "children": []
                             },
@@ -51704,7 +51704,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>anisotropy >seismic anisotropy"
+                                    "filterValue": "Measured property>anisotropy>seismic anisotropy"
                                 },
                                 "children": []
                             },
@@ -51721,7 +51721,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>anisotropy >strength anisotropy"
+                                    "filterValue": "Measured property>anisotropy>strength anisotropy"
                                 },
                                 "children": []
                             }
@@ -51762,7 +51762,7 @@
                             },
                             {
                                 "id": "msl_rockphysic_876",
-                                "text": "pore fluid composition ",
+                                "text": "pore fluid composition",
                                 "state": {
                                     "opened": false,
                                     "disabled": true,
@@ -51773,7 +51773,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>coupled  mechanical-chemical effects>pore fluid composition "
+                                    "filterValue": "Measured property>coupled  mechanical-chemical effects>pore fluid composition"
                                 },
                                 "children": []
                             },
@@ -51815,7 +51815,7 @@
                     },
                     {
                         "id": "msl_rockphysic_877",
-                        "text": "coupled mechanical-hydrological effects ",
+                        "text": "coupled mechanical-hydrological effects",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -51826,7 +51826,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_rockphysic_2",
-                            "filterValue": "Measured property>coupled mechanical-hydrological effects "
+                            "filterValue": "Measured property>coupled mechanical-hydrological effects"
                         },
                         "children": []
                     },
@@ -52518,7 +52518,7 @@
                     },
                     {
                         "id": "msl_rockphysic_862",
-                        "text": "friction - controlled stress ",
+                        "text": "friction - controlled stress",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -52529,7 +52529,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_rockphysic_2",
-                            "filterValue": "Measured property>friction - controlled stress "
+                            "filterValue": "Measured property>friction - controlled stress"
                         },
                         "children": [
                             {
@@ -52545,7 +52545,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>friction - controlled stress >slip rate"
+                                    "filterValue": "Measured property>friction - controlled stress>slip rate"
                                 },
                                 "children": []
                             }
@@ -52930,7 +52930,7 @@
                     },
                     {
                         "id": "msl_rockphysic_833",
-                        "text": "strength ",
+                        "text": "strength",
                         "state": {
                             "opened": false,
                             "disabled": true,
@@ -52941,7 +52941,7 @@
                             "type": "filter",
                             "url": "",
                             "filterName": "msl_rockphysic_2",
-                            "filterValue": "Measured property>strength "
+                            "filterValue": "Measured property>strength"
                         },
                         "children": [
                             {
@@ -52957,7 +52957,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >hydrostatic compressive strength (s1=s2=s3)"
+                                    "filterValue": "Measured property>strength>hydrostatic compressive strength (s1=s2=s3)"
                                 },
                                 "children": []
                             },
@@ -52974,7 +52974,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >plastic flow strength"
+                                    "filterValue": "Measured property>strength>plastic flow strength"
                                 },
                                 "children": [
                                     {
@@ -52990,7 +52990,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_rockphysic_4",
-                                            "filterValue": "Measured property>strength >plastic flow strength>plastic flow law stress exponent"
+                                            "filterValue": "Measured property>strength>plastic flow strength>plastic flow law stress exponent"
                                         },
                                         "children": []
                                     }
@@ -53009,7 +53009,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >residual strength"
+                                    "filterValue": "Measured property>strength>residual strength"
                                 },
                                 "children": []
                             },
@@ -53026,7 +53026,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >shear strength"
+                                    "filterValue": "Measured property>strength>shear strength"
                                 },
                                 "children": []
                             },
@@ -53043,7 +53043,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >tensile strength"
+                                    "filterValue": "Measured property>strength>tensile strength"
                                 },
                                 "children": []
                             },
@@ -53060,7 +53060,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >torsion strength"
+                                    "filterValue": "Measured property>strength>torsion strength"
                                 },
                                 "children": []
                             },
@@ -53077,7 +53077,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >triaxial compressive strength (s1>s2=s3)"
+                                    "filterValue": "Measured property>strength>triaxial compressive strength (s1>s2=s3)"
                                 },
                                 "children": []
                             },
@@ -53094,7 +53094,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >true tension strength"
+                                    "filterValue": "Measured property>strength>true tension strength"
                                 },
                                 "children": []
                             },
@@ -53111,7 +53111,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >true triaxial strength (s1>s2>s3)"
+                                    "filterValue": "Measured property>strength>true triaxial strength (s1>s2>s3)"
                                 },
                                 "children": []
                             },
@@ -53128,7 +53128,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >unconfined compressive strength (UCS)"
+                                    "filterValue": "Measured property>strength>unconfined compressive strength (UCS)"
                                 },
                                 "children": []
                             },
@@ -53145,7 +53145,7 @@
                                     "type": "filter",
                                     "url": "",
                                     "filterName": "msl_rockphysic_3",
-                                    "filterValue": "Measured property>strength >yield strength"
+                                    "filterValue": "Measured property>strength>yield strength"
                                 },
                                 "children": []
                             }
@@ -53666,7 +53666,7 @@
                                 "children": [
                                     {
                                         "id": "msl_rockphysic_948",
-                                        "text": "deviatoric strain tensor ",
+                                        "text": "deviatoric strain tensor",
                                         "state": {
                                             "opened": false,
                                             "disabled": true,
@@ -53677,7 +53677,7 @@
                                             "type": "filter",
                                             "url": "",
                                             "filterName": "msl_rockphysic_4",
-                                            "filterValue": "Inferred deformation behavior>deformation behaviour>strain tensor>deviatoric strain tensor "
+                                            "filterValue": "Inferred deformation behavior>deformation behaviour>strain tensor>deviatoric strain tensor"
                                         },
                                         "children": []
                                     },
@@ -54040,10 +54040,12 @@
             "checked": false
         },
         "extra": {
-            "type": "facet",
+            "type": "filter",
             "url": "",
-            "filterName": "msl_lab_name",
-            "filterValue": ""
+            "filterName": "msl_has_lab",
+            "filterValue": "true",
+            "includeFacet": true,
+            "facetName": "msl_lab_name"
         },
         "children": []
     },
@@ -54056,10 +54058,12 @@
             "checked": false
         },
         "extra": {
-            "type": "facet",
+            "type": "filter",
             "url": "",
-            "filterName": "organization",
-            "filterValue": ""
+            "filterName": "msl_has_organization",
+            "filterValue": "true",
+            "includeFacet": true,
+            "facetName": "organization"
         },
         "children": []
     }

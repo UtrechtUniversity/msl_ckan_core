@@ -208,6 +208,9 @@ dataset_fields:
   - field_name: msl_material_5
     label: Material level 5
 
+- field_name: msl_has_material
+  label: Has material
+
 # CUSTOM
 # used in tree faceting
 - field_name: msl_geologicalages
@@ -228,6 +231,9 @@ dataset_fields:
   - field_name: msl_geologicalage_6
     label: Geological age level 6
 
+- field_name: msl_has_geologicalage
+  label: Has geological age
+
 # CUSTOM
 # used in tree faceting
 - field_name: msl_geologicalsettings
@@ -244,6 +250,9 @@ dataset_fields:
   - field_name: msl_geologicalsetting_4
     label: Geological setting level 4
 
+- field_name: msl_has_geologicalsetting
+  label: Has geological setting
+
 # CUSTOM
 # used in tree faceting
 - field_name: msl_porefluids
@@ -257,6 +266,9 @@ dataset_fields:
       label: Porefluid level 2
     - field_name: msl_porefluid_3
       label: Porefluid level 3
+
+- field_name: msl_has_porefluid
+  label: Has pore fluid
 
 # CUSTOM
 # used in tree faceting
@@ -276,6 +288,9 @@ dataset_fields:
     - field_name: msl_rockphysic_5
       label: Rockphysic level 5
 
+- field_name: msl_has_rockphysic
+  label: Has rock physic
+
 # CUSTOM
 # used in tree faceting
 - field_name: msl_analogue
@@ -293,6 +308,9 @@ dataset_fields:
       label: Analogue modelling level 4
     - field_name: msl_analogue_5
       label: Analogue modelling level 5
+
+- field_name: msl_has_analogue
+  label: Has analogue modelling
 
 # CUSTOM
 # used in tree faceting
@@ -312,6 +330,9 @@ dataset_fields:
     - field_name: msl_paleomagnetism_5
       label: Paleomagnetism level 5
 
+- field_name: msl_has_paleomagnetism
+  label: Has paleomagnetism
+
 # CUSTOM
 # used in tree faceting
 - field_name: msl_geochemistry
@@ -327,6 +348,9 @@ dataset_fields:
       label: Geochemistry level 3
     - field_name: msl_geochemistry_4
       label: Geochemistry level 4
+
+- field_name: msl_has_geochemistry
+  label: Has geochemistry
 
 # CUSTOM
 # used in tree faceting
@@ -345,6 +369,9 @@ dataset_fields:
       label: Microscopy level 4
     - field_name: msl_microscopy_5
       label: Microscopy level 5
+
+- field_name: msl_has_microscopy
+  label: Has microscopy
 
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial
@@ -430,6 +457,14 @@ dataset_fields:
     label: File extension
   - field_name: msl_timestamp
     label: Timestamp
+
+# CUSTOM
+- field_name: msl_has_lab
+  label: Has lab
+
+# CUSTOM
+- field_name: msl_has_organization
+  label: Has organization
 
 resource_fields:
 - field_name: url
