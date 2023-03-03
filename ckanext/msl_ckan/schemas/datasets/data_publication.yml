@@ -213,6 +213,27 @@ dataset_fields:
 
 # CUSTOM
 # used in tree faceting
+- field_name: msl_materials_original
+  label: Materials
+  repeating_subfields:
+  - field_name: msl_material_combined_original
+    label: Material combined
+  - field_name: msl_material_1_original
+    label: Material level 1
+  - field_name: msl_material_2_original
+    label: Material level 2
+  - field_name: msl_material_3_original
+    label: Material level 3
+  - field_name: msl_material_4_original
+    label: Material level 4
+  - field_name: msl_material_5_original
+    label: Material level 5
+
+- field_name: msl_has_material_original
+  label: Has material
+
+# CUSTOM
+# used in tree faceting
 - field_name: msl_geologicalages
   label: Geological ages
   repeating_subfields:
@@ -236,6 +257,29 @@ dataset_fields:
 
 # CUSTOM
 # used in tree faceting
+- field_name: msl_geologicalages_original
+  label: Geological ages
+  repeating_subfields:
+  - field_name: msl_geologicalage_combined_original
+    label: Geological age combined
+  - field_name: msl_geologicalage_1_original
+    label: Geological age level 1
+  - field_name: msl_geologicalage_2_original
+    label: Geological age level 2
+  - field_name: msl_geologicalage_3_original
+    label: Geological age level 3
+  - field_name: msl_geologicalage_4_original
+    label: Geological age level 4
+  - field_name: msl_geologicalage_5_original
+    label: Geological age level 5
+  - field_name: msl_geologicalage_6_original
+    label: Geological age level 6
+
+- field_name: msl_has_geologicalage_original
+  label: Has geological age
+
+# CUSTOM
+# used in tree faceting
 - field_name: msl_geologicalsettings
   label: Geological settings
   repeating_subfields:
@@ -255,6 +299,25 @@ dataset_fields:
 
 # CUSTOM
 # used in tree faceting
+- field_name: msl_geologicalsettings_original
+  label: Geological settings
+  repeating_subfields:
+  - field_name: msl_geologicalsetting_combined_original
+    label: Geological setting combined
+  - field_name: msl_geologicalsetting_1_original
+    label: Geological setting level 1
+  - field_name: msl_geologicalsetting_2_original
+    label: Geological setting level 2
+  - field_name: msl_geologicalsetting_3_original
+    label: Geological setting level 3
+  - field_name: msl_geologicalsetting_4_original
+    label: Geological setting level 4
+
+- field_name: msl_has_geologicalsetting_original
+  label: Has geological setting
+
+# CUSTOM
+# used in tree faceting
 - field_name: msl_porefluids
   label: Pore fluids
   repeating_subfields:
@@ -268,6 +331,23 @@ dataset_fields:
       label: Porefluid level 3
 
 - field_name: msl_has_porefluid
+  label: Has pore fluid
+
+# CUSTOM
+# used in tree faceting
+- field_name: msl_porefluids_original
+  label: Pore fluids
+  repeating_subfields:
+    - field_name: msl_porefluid_combined_original
+      label: Pore fluid combined
+    - field_name: msl_porefluid_1_original
+      label: Porefluid level 1
+    - field_name: msl_porefluid_2_original
+      label: Porefluid level 2
+    - field_name: msl_porefluid_3_original
+      label: Porefluid level 3
+
+- field_name: msl_has_porefluid_original
   label: Has pore fluid
 
 # CUSTOM
@@ -293,6 +373,27 @@ dataset_fields:
 
 # CUSTOM
 # used in tree faceting
+- field_name: msl_rockphysics_original
+  label: Rock physics
+  repeating_subfields:
+    - field_name: msl_rockphysic_combined_original
+      label: Rockphysic combined
+    - field_name: msl_rockphysic_1_original
+      label: Rockphysic level 1
+    - field_name: msl_rockphysic_2_original
+      label: Rockphysic level 2
+    - field_name: msl_rockphysic_3_original
+      label: Rockphysic level 3
+    - field_name: msl_rockphysic_4_original
+      label: Rockphysic level 4
+    - field_name: msl_rockphysic_5_original
+      label: Rockphysic level 5
+
+- field_name: msl_has_rockphysic_original
+  label: Has rock physic
+
+# CUSTOM
+# used in tree faceting
 - field_name: msl_analogue
   label: Analogue modelling
   repeating_subfields:
@@ -310,6 +411,27 @@ dataset_fields:
       label: Analogue modelling level 5
 
 - field_name: msl_has_analogue
+  label: Has analogue modelling
+
+# CUSTOM
+# used in tree faceting
+- field_name: msl_analogue_original
+  label: Analogue modelling
+  repeating_subfields:
+    - field_name: msl_analogue_combined_original
+      label: Analogue modelling combined
+    - field_name: msl_analogue_1_original
+      label: Analogue modelling level 1
+    - field_name: msl_analogue_2_original
+      label: Analogue modelling level 2
+    - field_name: msl_analogue_3_original
+      label: Analogue modelling level 3
+    - field_name: msl_analogue_4_original
+      label: Analogue modelling level 4
+    - field_name: msl_analogue_5_original
+      label: Analogue modelling level 5
+
+- field_name: msl_has_analogue_original
   label: Has analogue modelling
 
 # CUSTOM
@@ -335,6 +457,27 @@ dataset_fields:
 
 # CUSTOM
 # used in tree faceting
+- field_name: msl_paleomagnetism_original
+  label: Paleomagnetism
+  repeating_subfields:
+    - field_name: msl_paleomagnetism_combined_original
+      label: Paleomagnetism combined
+    - field_name: msl_paleomagnetism_1_original
+      label: Paleomagnetism level 1
+    - field_name: msl_paleomagnetism_2_original
+      label: Paleomagnetism level 2
+    - field_name: msl_paleomagnetism_3_original
+      label: Paleomagnetism level 3
+    - field_name: msl_paleomagnetism_4_original
+      label: Paleomagnetism level 4
+    - field_name: msl_paleomagnetism_5_original
+      label: Paleomagnetism level 5
+
+- field_name: msl_has_paleomagnetism_original
+  label: Has paleomagnetism
+
+# CUSTOM
+# used in tree faceting
 - field_name: msl_geochemistry
   label: Geochemistry
   repeating_subfields:
@@ -350,6 +493,25 @@ dataset_fields:
       label: Geochemistry level 4
 
 - field_name: msl_has_geochemistry
+  label: Has geochemistry
+
+# CUSTOM
+# used in tree faceting
+- field_name: msl_geochemistry_original
+  label: Geochemistry
+  repeating_subfields:
+    - field_name: msl_geochemistry_combined_original
+      label: Geochemistry combined
+    - field_name: msl_geochemistry_1_original
+      label: Geochemistry level 1
+    - field_name: msl_geochemistry_2_original
+      label: Geochemistry level 2
+    - field_name: msl_geochemistry_3_original
+      label: Geochemistry level 3
+    - field_name: msl_geochemistry_4_original
+      label: Geochemistry level 4
+
+- field_name: msl_has_geochemistry_original
   label: Has geochemistry
 
 # CUSTOM
@@ -371,6 +533,27 @@ dataset_fields:
       label: Microscopy level 5
 
 - field_name: msl_has_microscopy
+  label: Has microscopy
+
+# CUSTOM
+# used in tree faceting
+- field_name: msl_microscopy_original
+  label: Microscopy
+  repeating_subfields:
+    - field_name: msl_microscopy_combined_original
+      label: Microscopy combined
+    - field_name: msl_microscopy_1_original
+      label: Microscopy level 1
+    - field_name: msl_microscopy_2_original
+      label: Microscopy level 2
+    - field_name: msl_microscopy_3_original
+      label: Microscopy level 3
+    - field_name: msl_microscopy_4_original
+      label: Microscopy level 4
+    - field_name: msl_microscopy_5_original
+      label: Microscopy level 5
+
+- field_name: msl_has_microscopy_original
   label: Has microscopy
 
 # CUSTOM -> will become standard CKAN (extension)

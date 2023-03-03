@@ -77,7 +77,14 @@ body {
     }
 }
 
-#jstree a {
+#jstree-interpreted a {
+    white-space: normal !important;
+    height: auto;
+    padding: 1px 2px;
+    padding-right: 24px;
+}
+
+#jstree-original a {
     white-space: normal !important;
     height: auto;
     padding: 1px 2px;
@@ -87,4 +94,8 @@ body {
 a.tag:hover {
     background-color: #27A468;
     color: white;
+}
+
+label.no-after:after {
+    content: none;
 }

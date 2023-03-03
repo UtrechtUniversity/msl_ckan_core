@@ -5,11 +5,19 @@ import json
 from flask import Blueprint, render_template
 
 
-def get_filter_menu():
-    f = open(os.path.join(os.path.dirname(__file__), 'public/tree.json'))
+def get_filter_menu_interpreted():
+    f = open(os.path.join(os.path.dirname(__file__), 'public/interpreted.json'))
     data = json.load(f)
 
     return data
+
+
+def get_filter_menu_original():
+    f = open(os.path.join(os.path.dirname(__file__), 'public/original.json'))
+    data = json.load(f)
+
+    return data
+
 
 class MslCkanPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -23,7 +31,10 @@ class MslCkanPlugin(plugins.SingletonPlugin):
         toolkit.add_resource('assets', 'ckanext-msl_ckan')
 
     def get_helpers(self):
-        return {'msl_ckan_get_filter_menu': get_filter_menu}
+        return {
+            'msl_ckan_get_filter_menu_interpreted': get_filter_menu_interpreted,
+            'msl_ckan_get_filter_menu_original': get_filter_menu_original
+        }
 
     def vocab_view(self):
         return render_template("vocabs.html")

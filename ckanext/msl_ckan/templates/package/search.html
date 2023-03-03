@@ -80,6 +80,8 @@
 
 {% block secondary_content %}
   <div class="filters">
+
+
     {% if dataset_type == 'data-publication' %}
 
     <div class="input-group search-input-group" style="padding: 30px;">
@@ -91,9 +93,17 @@
       </span>
     </div>
 
-    <h1 style="margin-top: 0px; padding-left: 30px;">Filters</h1>
+    <div class="row">
+      <h1 style="margin-top: 0px; padding-left: 30px; float:left">Filters</h1>
+      <div style="float:right; padding-right: 30px; padding-top: 10px;">
+        <input type="checkbox" id="filterTreeToggle" checked">
+        <label class="no-after" for="filterTreeToggle">Interpreted keywords</label>
+        <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="We assign vocabulary terms by attempting to match them to free assigned keywords, data publication title and abstract contents. More information about the used vocabularies can be found at the vocabulary page." id="test"></i>
+      </div>
+    </div>
 
-    <div id="jstree"></div>
+    <div id="jstree-interpreted"></div>
+    <div id="jstree-original" style="display: none;"></div>
 
     {% block scripts %}
       {{ super() }}
@@ -103,7 +113,8 @@
     {% asset 'ckanext-msl_ckan/msl_ckan-filter-menu' %}
 
     <script>
-      var data = {{ h.msl_ckan_get_filter_menu()|tojson }};
+      var dataInterpreted = {{ h.msl_ckan_get_filter_menu_interpreted()|tojson }};
+      var dataOriginal = {{ h.msl_ckan_get_filter_menu_original()|tojson }};
       var facets = {{ search_facets|tojson }}
       var activeFilters = {{ fields_grouped|tojson }}
       var activeNodes = [];
