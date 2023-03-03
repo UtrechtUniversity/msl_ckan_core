@@ -34,13 +34,25 @@
   {% if pkg.type == 'data-publication' %}
     <table class="table">
       <tbody>
-        {% if pkg.msl_subdomains %}
+        {% if pkg.msl_subdomains_original %}
         <tr class="d-flex">
           <td class="col-md-4">Sub domains</td>
           <td class="col-md-8">
             <ul class="fa-ul">
-              {%for i in range(0, pkg.msl_subdomains|length)%}
-                <li><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains[i].msl_subdomain }}</li>
+              {%for i in range(0, pkg.msl_subdomains_original|length)%}
+                <li><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_original[i].msl_subdomain_original }}</li>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+        {% endif %}
+        {% if pkg.msl_subdomains_interpreted %}
+        <tr class="d-flex">
+          <td class="col-md-4">Sub domains interpreted</td>
+          <td class="col-md-8">
+            <ul class="fa-ul">
+              {%for i in range(0, pkg.msl_subdomains_interpreted|length)%}
+                <li><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_interpreted[i].msl_subdomain_interpreted }}</li>
               {% endfor %}
             </ul>
           </td>
