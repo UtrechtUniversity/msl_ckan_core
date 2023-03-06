@@ -195,5 +195,7 @@ $(document).ready(function () {
             $('#jstree-original').show();
         }
     });
+
+    $('[data-toggle=tooltip]').tooltip();
 });
 

@@ -66,13 +66,13 @@
       {% endfor %}
     </ul>
     <div style="margin-top: 10px;">
-      <p>MSL data catalogue interpreted keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="We assign vocabulary terms by attempting to match them to free assigned keywords, data publication title and abstract contents. More information about the used vocabularies can be found at the vocabulary page." id='example'></i></p>
+      <p>MSL data catalogue interpreted keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="We assign vocabulary terms by attempting to match them to free assigned keywords, data publication title and abstract contents. More information about the used vocabularies can be found at the vocabulary page." id='tooltip-interpreted-keywords'></i></p>
       {% block scripts %}
         {{ super() }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
         <script>
           $(document).ready(function() {
-            $('#example').tooltip();
+            $('[data-toggle=tooltip]').tooltip();
           });
         </script>
       {% endblock %}
