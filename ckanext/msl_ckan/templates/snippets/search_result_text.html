@@ -39,6 +39,9 @@ Example:
   {% if print_type[-1] != 's' %}
     {% set print_type = print_type + 's' %}
   {%- endif %}
+  {% if print_type == 'data-publications' %}
+    {% set print_type = 'data publications' %}
+  {%- endif %}
 
   {% set text_no_query_plural = '{number} ' + print_type + ' found' %}
   {% set text_no_query_none_plural = 'No ' + print_type + ' found' %}

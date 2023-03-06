@@ -12,7 +12,7 @@
       {{ self.flash() }}
     </div>
     {% block primary_content %}
-        <div role="main" style='background-color: #FFF; background-image: url("background_1.jpg"); background-size: cover;'>
+        <div id="main-div" role="main" style='background-color: #FFF; background-image: url("background_1.jpg"); background-size: 100% auto;'>
           <div class="container" style="">
             <div class="row row2" style="min-height: 150px;">
 
@@ -22,7 +22,7 @@
                 <div style="background-color: #27A468; padding-bottom: 0px; padding-top: 2px; padding-left: 10px;">
                     <a href="/data-publication/" title="data-publications" style="color: white;"><h4 id="dataset-count">datasets</h4></a>
                     <a href="/lab" title="labs" style="color: white;"><h4 id="lab-count">labs</h4></a>
-                    <a href="/organization" title="data-repositories" style="color: white;"><h4 id="datarepo-count" style="padding-bottom: 10px;">data-repositories</h4></a>
+                    <a href="/organization" title="data repositories" style="color: white;"><h4 id="datarepo-count" style="padding-bottom: 10px;">data repositories</h4></a>
                 </div>
               </div>
             </div>
@@ -31,6 +31,27 @@
               {{ super() }}
               <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
             {% endblock %}
+              <script>
+                var backgrounds = [
+                  'background_1.jpg',
+                  'background_4.jpg',
+                  'background_5.jpg',
+                  'background_6.jpg',
+                  'background_7.jpg'
+                ];
+
+                var i = 1;
+
+                setInterval(function() {
+                  $('#main-div').css('background-image', 'url(' + backgrounds[i] + ')');
+                  i++;
+
+                  if (i == backgrounds.length) {
+                    i = 0;
+                  }
+                }, 6000);
+              </script>
+
               <script>
                 $.ajax({
                     url: "/api/3/action/package_search?q=type:data-publication",
@@ -55,7 +76,7 @@
                     type: 'GET',
                     dataType: 'json', // added data type
                     success: function(res) {
-                        $("#datarepo-count").text(res.result.length -1 + ' data-repositories');
+                        $("#datarepo-count").text(res.result.length -1 + ' data repositories');
                     }
                 });
               </script>
@@ -88,7 +109,9 @@
                     dataType: 'json', // added data type
                     success: function(res) {
                         res.result.results.forEach(function (item, index) {
-                          $("#recently-added").append('<a href="/data-publication/' + item.name +'" title="labs" style="color: white;"><h4>' + item.msl_citation + '</h4></a>');
+                          if(item.msl_citation) {
+                            $("#recently-added").append('<a href="/data-publication/' + item.name +'" title="labs" style="color: white;"><h4>' + item.msl_citation.substring(0, item.msl_citation.indexOf("</i>") + 4) + '</h4></a>');
+                          }
                         });
                     }
                 });

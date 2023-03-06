@@ -10,6 +10,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added 
 - Update filtertree to reflect changes to geochem vocab
 - Adjust typo when adding data repositories
+- Fixed several typos
+- Adjust citation information in recent additions sections
+- Add new background images for index page and cycle backgrounds
+- Update styling of about page
+- Adjust sorting methods in search results overview
+- Split keyword display into originally assigned keywords and detected vocab terms
+- update filtertree with new sorted parts
+- Add vocabulary section
+- Change breadcrump for data publications
+- Add search option for filters
+- Relocate javascript files to webassets
+- Change schema and views to work with empty description/notes field
+- Add top level filtering and display document count
+- Change schemas etc. to store and work with interpreted/original keywords
+- Add tooltips to explain vocabularies and keyword detection
 
 ## [1.1.0] - 2022-11-11
 
