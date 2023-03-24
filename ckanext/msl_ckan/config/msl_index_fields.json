@@ -111,6 +111,7 @@
         "msl_microscopy_5_original",
         "msl_has_microscopy_original",
         "msl_has_lab",
-        "msl_has_organization"
+        "msl_has_organization",
+        "msl_download_link"
     ]
 }
