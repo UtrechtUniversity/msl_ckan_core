@@ -62,7 +62,8 @@ Add to `<fields>` definitions:
 	<field name="msl_author_name_text" type="text" indexed="true" stored="false" multiValued="true"/>	
 	<field name="msl_lab_name" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_lab_name_text" type="text" indexed="true" stored="false" multiValued="true"/>			
-	<field name="msl_subdomain" type="string" indexed="true" stored="true" multiValued="true"/>	
+	<field name="msl_subdomain" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="msl_download_link" type="string" indexed="true" stored="true" multiValued="true"/>
 	
 	<!-- Materials -->
 	<field name="msl_material_1" type="string" indexed="true" stored="true" multiValued="true"/>
