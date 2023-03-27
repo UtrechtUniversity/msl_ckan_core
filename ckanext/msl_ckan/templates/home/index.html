@@ -12,7 +12,7 @@
       {{ self.flash() }}
     </div>
     {% block primary_content %}
-        <div id="main-div" role="main" style='background-color: #FFF; background-image: url("background_1.jpg"); background-size: 100% auto;'>
+        <div id="main-div" role="main" style='background-color: #FFF; background-image: url("background_1.jpg"); background-size: 100% auto; transition: background 1s linear;'>
           <div class="container" style="">
             <div class="row row2" style="min-height: 150px;">
 
@@ -62,7 +62,7 @@
                   if (i == backgrounds.length) {
                     i = 0;
                   }
-                }, 6000);
+                }, 10000);
               </script>
 
               <script>
