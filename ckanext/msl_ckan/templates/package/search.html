@@ -95,10 +95,21 @@
 
     <div class="row">
       <h1 style="margin-top: 0px; padding-left: 30px; float:left">Filters</h1>
-      <div style="float:right; padding-right: 30px; padding-top: 10px;">
-        <input type="checkbox" id="filterTreeToggle" checked">
-        <label class="no-after" for="filterTreeToggle">Interpreted keywords</label>
-        <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="left" title="We assign vocabulary terms by attempting to match them to free assigned keywords, data publication title and abstract contents. More information about the used vocabularies can be found at the vocabulary page." id="tooltip-keyword-toggle"></i>
+    </div>
+
+    <div class="row">
+      <div style="float:left; padding-top: 5px; padding-left: 30px;">
+        <input type="checkbox" id="filterTreeToggleInterpreted" checked="checked">
+        <label class="no-after" for="filterTreeToggleInterpreted">MSL enriched keywords</label>
+        <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="left" title="MSL enriched keywords include those originally assigned by the authors, synonymous terms to these, parent terms, and MSL vocabulary terms corresponding to words used in the data publication title and abstract. In enriching keyword sets like this, MSL strives to make datasets more findable. See anything odd? Contact us here. MSL vocabularies available on GitHub." id="tooltip-keyword-toggle-interpreted"></i>
+      </div>
+    </div>
+
+    <div class="row">
+      <div style="float:left; padding-top: 5px; padding-left: 30px;">
+        <input type="checkbox" id="filterTreeToggleOriginal" checked="">
+        <label class="no-after" for="filterTreeToggleOriginal">Originally assigned keywords</label>
+        <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="left" title="Lists only keywords originally assigned by the authors, and terms that are synonymous to these, as included in MSL vocabularies available on GitHub." id="tooltip-keyword-toggle-original"></i>
       </div>
     </div>
 
