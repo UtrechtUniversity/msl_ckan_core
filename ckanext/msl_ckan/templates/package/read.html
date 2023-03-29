@@ -54,7 +54,7 @@
 
     {% set ns = namespace(previous=[]) %}
 
-    <p>Originally assigned keywords</p>
+    <p>Originally assigned keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Lists only keywords originally assigned by the authors, and terms that are synonymous to these, as included in MSL vocabularies available on GitHub. See also top tab ‘vocabularies’." id='tooltip-original-keywords'></i></p>
     <ul class="tag-list well">
       {% for tag in tags %}
         {% if not tag.display_name in ns.previous %}

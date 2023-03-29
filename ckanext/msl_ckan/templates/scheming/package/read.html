@@ -13,6 +13,16 @@
       {%endfor%}
     </p>
     {% endif %}
+
+    {% if pkg.msl_publication_year %}
+      <p>
+          {{ pkg.msl_publication_year }}{% if pkg.msl_publication_month %}-{{ pkg.msl_publication_month }}{% endif %}
+          {% if pkg.msl_publisher %}
+            || {{ pkg.msl_publisher }}
+          {% endif %}
+      </p>
+    {% endif %}
+
   {% endif %}
 
   {%- if not dataset_type -%}
@@ -24,7 +34,7 @@
   {% if (h.scheming_field_by_name(schema.dataset_fields, 'notes') or
     h.scheming_field_by_name(schema.dataset_fields, 'notes_translated')) and
     pkg.notes%}
-    <div class="notes embedded-content">
+    <div class="notes embedded-content" style="border-bottom: 1px solid #ddd;">
       {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
     </div>
   {% endif %}
@@ -105,18 +115,6 @@
                 {% endif %}
               </ul>
             {% endfor %}
-          </td>
-        </tr>
-        {% endif %}
-
-        {% if pkg.msl_publication_year %}
-        <tr>
-          <td>Publication date</td>
-          <td>
-            {% if pkg.msl_publication_day %} {{ pkg.msl_publication_day }}-{% endif %}{% if pkg.msl_publication_month %}{{ pkg.msl_publication_month }}-{% endif %}{{ pkg.msl_publication_year }}
-            {% if pkg.msl_publisher %}
-              || {{ pkg.msl_publisher }}
-            {% endif %}
           </td>
         </tr>
         {% endif %}
