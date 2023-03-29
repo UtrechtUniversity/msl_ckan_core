@@ -56,11 +56,13 @@
             }
         }
 
+        /*
         if(original) {
           if(node.state.disabled) {
             nodes.splice(i, 1);
           }
         }
+        */
 
         if(node.children.length > 0) {
             processNodes(node.children, original);
