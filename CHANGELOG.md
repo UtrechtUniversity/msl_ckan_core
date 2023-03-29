@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added 
-- Add msl_download_link field to solr indexing
+### Added
 
+## [1.3.0] - 2023-03-29
+- Add msl_download_link field to solr indexing
+- Several UI changes
 
 ## [1.2.0] - 2023-03-08
 
