@@ -65,8 +65,26 @@
         {% endif %}
       {% endfor %}
     </ul>
-    <div style="margin-top: 10px;">
-      <p>MSL data catalogue interpreted keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="We assign vocabulary terms by attempting to match them to free assigned keywords, data publication title and abstract contents. More information about the used vocabularies can be found at the vocabulary page." id='tooltip-interpreted-keywords'></i></p>
+
+    {% if pkg.msl_subdomains_original %}
+    <table class="table" style="margin-bottom: 0px;">
+      <tbody>
+        <tr class="d-flex" style="border-bottom: 1px solid #ddd">
+          <td class="col-md-4">Originally assigned sub domains</td>
+          <td class="col-md-8">
+            <ul class="fa-ul">
+              {%for i in range(0, pkg.msl_subdomains_original|length)%}
+                <li><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_original[i].msl_subdomain_original }}</li>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    {% endif %}
+
+    <div style="">
+      <p>MSL enriched keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="MSL enriched keywords include those originally assigned by the authors, synonymous terms to these, parent terms, and MSL vocabulary terms corresponding to words used in the data publication title and abstract. In enriching keyword sets like this, MSL strives to make datasets more findable. See anything odd? Contact us here. MSL vocabularies available on GitHub." id='tooltip-interpreted-keywords'></i></p>
       {% block scripts %}
         {{ super() }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
