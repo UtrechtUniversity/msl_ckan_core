@@ -13,6 +13,16 @@
       {%endfor%}
     </p>
     {% endif %}
+
+    {% if pkg.msl_publication_year %}
+      <p>
+          {{ pkg.msl_publication_year }}{% if pkg.msl_publication_month %}-{{ pkg.msl_publication_month }}{% endif %}
+          {% if pkg.msl_publisher %}
+            || {{ pkg.msl_publisher }}
+          {% endif %}
+      </p>
+    {% endif %}
+
   {% endif %}
 
   {%- if not dataset_type -%}
@@ -24,7 +34,7 @@
   {% if (h.scheming_field_by_name(schema.dataset_fields, 'notes') or
     h.scheming_field_by_name(schema.dataset_fields, 'notes_translated')) and
     pkg.notes%}
-    <div class="notes embedded-content">
+    <div class="notes embedded-content" style="border-bottom: 1px solid #ddd;">
       {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
     </div>
   {% endif %}
@@ -34,21 +44,9 @@
   {% if pkg.type == 'data-publication' %}
     <table class="table">
       <tbody>
-        {% if pkg.msl_subdomains_original %}
-        <tr class="d-flex">
-          <td class="col-md-4">Sub domains</td>
-          <td class="col-md-8">
-            <ul class="fa-ul">
-              {%for i in range(0, pkg.msl_subdomains_original|length)%}
-                <li><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_original[i].msl_subdomain_original }}</li>
-              {% endfor %}
-            </ul>
-          </td>
-        </tr>
-        {% endif %}
         {% if pkg.msl_subdomains_interpreted %}
         <tr class="d-flex">
-          <td class="col-md-4">Sub domains interpreted <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Based on the interpreted keywords, interpreted sub domains are added based on the originating vocabularies." id='tooltip-interpreted-subdomains'></i></td>
+          <td class="col-md-4">MSL enriched subdomains <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Based on the MSL enriched keywords, enriched sub domains are added based on the originating vocabularies." id='tooltip-interpreted-subdomains'></i></td>
           <td class="col-md-8">
             <ul class="fa-ul">
               {%for i in range(0, pkg.msl_subdomains_interpreted|length)%}
@@ -68,12 +66,6 @@
         <tr>
           <td>Source publisher</td>
           <td>{{ pkg.msl_publisher }}</td>
-        </tr>
-        {% endif %}
-        {% if pkg.msl_publication_year %}
-        <tr>
-          <td>Publication date</td>
-          <td>{% if pkg.msl_publication_day %} {{ pkg.msl_publication_day }}-{% endif %}{% if pkg.msl_publication_month %}{{ pkg.msl_publication_month }}-{% endif %}{{ pkg.msl_publication_year }}</td>
         </tr>
         {% endif %}
 

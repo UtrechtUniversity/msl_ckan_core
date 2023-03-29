@@ -56,11 +56,13 @@
             }
         }
 
+        /*
         if(original) {
           if(node.state.disabled) {
             nodes.splice(i, 1);
           }
         }
+        */
 
         if(node.children.length > 0) {
             processNodes(node.children, original);
@@ -167,32 +169,50 @@ $(document).ready(function () {
     var checked = localStorage.getItem('interpretedFilters');
     if(checked !== null) {
         if(checked === 'false' ) {
-            $("#filterTreeToggle").removeAttr('checked');
+            $("#filterTreeToggleInterpreted").prop('checked', false);
+            $("#filterTreeToggleOriginal").prop('checked', 'checked');
             $('#jstree-interpreted').hide();
             $('#jstree-original').show();
         } else {
-            $("#filterTreeToggle").prop('checked', 'checked');
+            $("#filterTreeToggleInterpreted").prop('checked', 'checked');
+            $("#filterTreeToggleOriginal").prop('checked', false);
         }
     }
 
     $("#field-giant-search-filters").keyup(function () {
         var searchString = $(this).val();
-        if($("#filterTreeToggle").is(':checked')) {
+        if($("#filterTreeToggleInterpreted").is(':checked')) {
             $('#jstree-interpreted').jstree('search', searchString);
         } else {
             $('#jstree-original').jstree('search', searchString);
         }
     });
 
-    $("#filterTreeToggle").change(function () {
+    $("#filterTreeToggleInterpreted").change(function () {
         if(this.checked) {
             localStorage.setItem('interpretedFilters', true);
+            $("#filterTreeToggleOriginal").prop('checked', false);
             $('#jstree-interpreted').show();
             $('#jstree-original').hide();
         } else {
             localStorage.setItem('interpretedFilters', false);
+            $("#filterTreeToggleOriginal").prop('checked', 'checked');
             $('#jstree-interpreted').hide();
             $('#jstree-original').show();
+        }
+    });
+
+    $("#filterTreeToggleOriginal").change(function () {
+        if(this.checked) {
+            localStorage.setItem('interpretedFilters', false);
+            $("#filterTreeToggleInterpreted").prop('checked', false);
+            $('#jstree-interpreted').hide();
+            $('#jstree-original').show();
+        } else {
+            localStorage.setItem('interpretedFilters', true);
+            $("#filterTreeToggleInterpreted").prop('checked', 'checked');
+            $('#jstree-interpreted').show();
+            $('#jstree-original').hide();
         }
     });
 

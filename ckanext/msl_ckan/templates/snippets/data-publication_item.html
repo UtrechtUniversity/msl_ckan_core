@@ -55,6 +55,9 @@ Example:
                 {% endif %}
               {%endfor%}
             {% endif %}
+            {% if package.msl_publication_date %}
+              ({{ package.msl_publication_year }}{% if package.msl_publication_month %}-{{ package.msl_publication_month }}{% endif %})
+            {% endif %}
           </p>
         {% block notes %}
           {% if notes %}

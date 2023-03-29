@@ -12,7 +12,7 @@
       {{ self.flash() }}
     </div>
     {% block primary_content %}
-        <div id="main-div" role="main" style='background-color: #FFF; background-image: url("background_1.jpg"); background-size: 100% auto;'>
+        <div id="main-div" role="main" style='background-color: #FFF; background-image: url("background_1.jpg"); background-size: 100% auto; transition: background 1s linear;'>
           <div class="container" style="">
             <div class="row row2" style="min-height: 150px;">
 
@@ -23,6 +23,19 @@
                     <a href="/data-publication/" title="data-publications" style="color: white;"><h4 id="dataset-count">datasets</h4></a>
                     <a href="/lab" title="labs" style="color: white;"><h4 id="lab-count">labs</h4></a>
                     <a href="/organization" title="data repositories" style="color: white;"><h4 id="datarepo-count" style="padding-bottom: 10px;">data repositories</h4></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="row row2" style="">
+              <div class="col-md-4 col-md-offset-8">
+                <div style="background-color: #27A468; padding-bottom: 5px; padding-top: 2px; padding-left: 10px;">
+                    <p style="color: #FFF;" >
+                      <h3 style="color: #FFF;">Recently added:</h3>
+
+                      <div id="recently-added"></div>
+                      <br>
+                    </p>
                 </div>
               </div>
             </div>
@@ -49,7 +62,7 @@
                   if (i == backgrounds.length) {
                     i = 0;
                   }
-                }, 6000);
+                }, 10000);
               </script>
 
               <script>
@@ -81,24 +94,22 @@
                 });
               </script>
 
-            <div class="row row2" style="display: table;">
+            <div class="row row2" style="display: table; padding-top: 10px; height: 100%;">
               <div class="col-md-4" style="float: none; display: table-cell; vertical-align: bottom;">
-
               </div>
+
               <div class="col-md-4" style="float: none; display: table-cell; vertical-align: bottom;">
                 <div style="background-color: #27A468; padding-bottom: 10px; padding-top: 10px;" class="text-center">
                     <a href="/data-publication" title="labs" style="color: white;"><h1>data access</h1></a>
                 </div>
               </div>
 
-              <div class="col-md-4" style="float: none; display: table-cell;">
-                <div style="background-color: #27A468; padding-bottom: 5px; padding-top: 2px; padding-left: 10px;">
-                    <p style="color: #FFF;" >
-                      <h3 style="color: #FFF;">Recently added:</h3>
-
-                      <div id="recently-added"></div>
-                      <br>
-                    </p>
+              <div class="col-md-4" style="float: none; display: table-cell; height: 100%; background-color: #white;;">
+                <div style="background-color: #27A468; height: 100%; padding-top: 10px; padding-left: 10px;">
+                      <h4 style="color: #FFF;">
+                        This data catalogue is undergoing continuous development. If you find an error, please
+                        contact us <a href="mailto:info@epos-nl.nl" style="color: white; text-decoration: underline;">here</a>.
+                      </h4>
                 </div>
               </div>
 
@@ -124,9 +135,11 @@
               <div class="container" style="background-color: #FFF;">
                 <div class="row row2">
                   <div class="col-md-12" style="background-color: #FFF;">
-                    <p class="lead" style="margin-left: 10px; margin-right: 10px;">Welcome to the EPOS Multi-Scale Labs data catalogue! This catalogue is the central access point for
-                    Earth scientific laboratory data in Europe. Here you can find data from rock and melt physics,
-                    paleomagnetism, geochemistry, microscopy, tomography and analogue modelling of geological processes.</p>
+                    <p class="lead" style="margin-left: 10px; margin-right: 10px; margin-top: 10px;">
+                      Welcome to the EPOS Multi-Scale Labs data catalogue! This catalogue is the central access point for
+                      Earth scientific laboratory data in Europe. Here you can find data from rock and melt physics,
+                      paleomagnetism, geochemistry, microscopy, tomography and analogue modelling of geological processes.
+                    </p>
                   </div>
                 </div>
               </div>

@@ -27,7 +27,19 @@
           </div>
           <div class="col-md-10">
             <div class="card-body">
-              <h5 class="card-title">{{ c.page.items[i].display_name }}</h5>
+              <h5 class="card-title">
+                {% if c.page.items[i].display_name == '4TU' %}
+                  4TU.ResearchData
+                {% elif c.page.items[i].display_name == 'gfz potsdam' %}
+                  GFZ data services
+                {% elif c.page.items[i].display_name == 'yoda repository' %}
+                  Yoda data services
+                {% elif c.page.items[i].display_name == 'csic' %}
+                  Digital.CSIC
+                {% else %}
+                  {{ c.page.items[i].display_name }}
+                {% endif %}
+              </h5>
               <p class="card-text">
                 {% if c.page.items[i].description %}
                   {{ c.page.items[i].description }}
