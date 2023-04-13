@@ -36,9 +36,9 @@
         %}
         {% set sorting = [
           (_('Relevance'), 'score desc, metadata_modified desc'),
-          (_('Name Ascending'), 'msl_citation asc'),
-          (_('Name Descending'), 'msl_citation desc'),
-          (_('Last Modified'), 'msl_publication_date desc'),
+          (_('Author Ascending'), 'msl_citation asc'),
+          (_('Author Descending'), 'msl_citation desc'),
+          (_('Publication date'), 'msl_publication_date desc'),
           (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
         %}
         {% snippet 'snippets/search_form.html', form_id='dataset-search-form', type=dataset_type, query=q, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, placeholder=_('Search ' + multi_title) + '...', facets=facets, show_empty=request.params, error=query_error, fields=fields %}
@@ -54,7 +54,7 @@
   </section>
 
   {% block package_search_results_api %}
-    
+
   {% endblock %}
 {% endblock %}
 
