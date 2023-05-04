@@ -87,15 +87,25 @@
         whole_node : false,  // to avoid checking the box just clicking the node
         tie_selection : false // for checking without selecting and selecting without checking
       },
-      plugins: ['checkbox', 'search'],
+      state: {
+        "key": "jstree-interpreted",
+        filter : function (state) {
+            delete state.checkbox;
+            return state;
+        }
+      },
+      plugins: ['checkbox', 'search', 'state'],
         "search": {
         "case_sensitive": false,
         "show_only_matches": true
       }
   })
-  .on("check_node.jstree uncheck_node.jstree", function(e, data) {
+  .on('state_ready.jstree', function() {
+    $('#jstree-interpreted').on("check_node.jstree uncheck_node.jstree", function(e, data) {
       if(data.node.original.extra.type == 'filter') {
         if(e.type == "check_node") {
+          console.log(e, data);
+
           var url = new URL(window.location.href);
           var urlParams = new URLSearchParams(url.search);
 
@@ -111,6 +121,8 @@
 
         window.location.href = url.toString();
       }
+    });
+
   }).bind('ready.jstree', function (event, data) {
     for (let i = 0; i < activeNodes.length; i++) {
       data.instance._open_to(activeNodes[i]);
@@ -132,30 +144,39 @@ $('#jstree-original').jstree({
         whole_node : false,  // to avoid checking the box just clicking the node
         tie_selection : false // for checking without selecting and selecting without checking
       },
-      plugins: ['checkbox', 'search'],
+      state: {
+        "key": "jstree-original",
+        filter : function (state) {
+            delete state.checkbox;
+            return state;
+        }
+      },
+      plugins: ['checkbox', 'search', 'state'],
         "search": {
         "case_sensitive": false,
         "show_only_matches": true
       }
   })
-  .on("check_node.jstree uncheck_node.jstree", function(e, data) {
-      if(data.node.original.extra.type == 'filter') {
-        if(e.type == "check_node") {
-          var url = new URL(window.location.href);
-          var urlParams = new URLSearchParams(url.search);
+  .on('state_ready.jstree', function() {
+      $('#jstree-original').on("check_node.jstree uncheck_node.jstree", function(e, data) {
+          if(data.node.original.extra.type == 'filter') {
+            if(e.type == "check_node") {
+              var url = new URL(window.location.href);
+              var urlParams = new URLSearchParams(url.search);
 
-          urlParams.append(data.node.original.extra.filterName, data.node.original.extra.filterValue);
-          url.search = urlParams.toString();
-        } else if (e.type == "uncheck_node") {
-          var url = new URL(window.location.href);
-          var urlParams = new URLSearchParams(url.search);
+              urlParams.append(data.node.original.extra.filterName, data.node.original.extra.filterValue);
+              url.search = urlParams.toString();
+            } else if (e.type == "uncheck_node") {
+              var url = new URL(window.location.href);
+              var urlParams = new URLSearchParams(url.search);
 
-          urlParams.remove(data.node.original.extra.filterName, data.node.original.extra.filterValue);
-          url.search = urlParams.toString();
-        }
+              urlParams.remove(data.node.original.extra.filterName, data.node.original.extra.filterValue);
+              url.search = urlParams.toString();
+            }
 
-        window.location.href = url.toString();
-      }
+            window.location.href = url.toString();
+          }
+      });
   }).bind('ready.jstree', function (event, data) {
     for (let i = 0; i < activeNodes.length; i++) {
       data.instance._open_to(activeNodes[i]);
