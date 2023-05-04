@@ -74,6 +74,12 @@
             </span>
           {% endfor %}
         {% endfor %}
+
+        {% if facets.fields|length > 1 %}
+          <span class="filtered pill" style="background-color: red;">
+            <a href="/data-publication" class="remove">Remove all filters <i class="fa fa-times"></i></a>
+          </span>
+        {% endif %}
       </p>
       <a class="show-filters btn btn-default">{{ _('Filter Results') }}</a>
     {% endif %}
