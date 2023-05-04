@@ -94,6 +94,13 @@
       </div>
     </div>
 
+    <div class="row">
+      <div style="padding-left: 30px; padding-right: 24px; float: right;">
+        <a href="#" style="color: black;" id="expand_all" title="expand all nodes"><i class="fa fa-level-down" aria-hidden="true"></i> expand all</a>
+        <a href="#" style="color: black;" id="close_all" title="close all nodes"><i class="fa fa-level-up" aria-hidden="true"></i> close all</a>
+      </div>
+    </div>
+
     <div id="jstree-interpreted"></div>
     <div id="jstree-original" style="display: none;"></div>
 
@@ -111,7 +118,6 @@
       var activeFilters = {{ fields_grouped|tojson }}
       var activeNodes = [];
     </script>
-
 
 
     {% else %}

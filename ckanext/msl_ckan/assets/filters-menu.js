@@ -216,6 +216,22 @@ $(document).ready(function () {
         }
     });
 
+    $('#expand_all').click(function () {
+        if($("#filterTreeToggleInterpreted").is(':checked')) {
+            $('#jstree-interpreted').jstree('open_all');
+        } else {
+            $('#jstree-original').jstree('open_all');
+        }
+    });
+
+    $('#close_all').click(function () {
+        if($("#filterTreeToggleInterpreted").is(':checked')) {
+            $('#jstree-interpreted').jstree('close_all');
+        } else {
+            $('#jstree-original').jstree('close_all');
+        }
+    });
+
     $('[data-toggle=tooltip]').tooltip();
 });
 
