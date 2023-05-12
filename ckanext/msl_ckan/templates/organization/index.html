@@ -23,7 +23,11 @@
       <div class="card mb-12">
         <div class="row g-0">
           <div class="col-md-2">
-            <img src="/base/images/placeholder-organization.png" alt="yoda-repository" class="img-responsive media-image">
+            {% if c.page.items[i].image_url %}
+              <img src="{{ c.page.items[i].image_url }}" alt="logo" class="img-responsive media-image">
+            {% else %}
+              <img src="/base/images/placeholder-organization.png" alt="placeholder" class="img-responsive media-image">
+            {% endif %}
           </div>
           <div class="col-md-10">
             <div class="card-body">
@@ -36,6 +40,7 @@
                   Yoda data services
                 {% elif c.page.items[i].display_name == 'csic' %}
                   Digital.CSIC
+
                 {% else %}
                   {{ c.page.items[i].display_name }}
                 {% endif %}
