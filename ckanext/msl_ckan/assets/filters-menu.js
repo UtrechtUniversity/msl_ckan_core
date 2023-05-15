@@ -104,8 +104,6 @@
     $('#jstree-interpreted').on("check_node.jstree uncheck_node.jstree", function(e, data) {
       if(data.node.original.extra.type == 'filter') {
         if(e.type == "check_node") {
-          console.log(e, data);
-
           var url = new URL(window.location.href);
           var urlParams = new URLSearchParams(url.search);
 
@@ -212,28 +210,64 @@ $(document).ready(function () {
     $("#filterTreeToggleInterpreted").change(function () {
         if(this.checked) {
             localStorage.setItem('interpretedFilters', true);
-            $("#filterTreeToggleOriginal").prop('checked', false);
-            $('#jstree-interpreted').show();
-            $('#jstree-original').hide();
+            searchParams = new URLSearchParams(window.location.search)
+
+            if(searchParams.size > 0) {
+                let text = 'Your currently selected filters will be removed when you switch trees.';
+                if(confirm(text)) {
+                    window.location.href = "../data-publication";
+                }
+            } else {
+                $("#filterTreeToggleOriginal").prop('checked', false);
+                $('#jstree-interpreted').show();
+                $('#jstree-original').hide();
+            }
         } else {
             localStorage.setItem('interpretedFilters', false);
-            $("#filterTreeToggleOriginal").prop('checked', 'checked');
-            $('#jstree-interpreted').hide();
-            $('#jstree-original').show();
+            searchParams = new URLSearchParams(window.location.search)
+
+            if(searchParams.size > 0) {
+                let text = 'Your currently selected filters will be removed when you switch trees.';
+                if(confirm(text)) {
+                    window.location.href = "../data-publication";
+                }
+            } else {
+                $("#filterTreeToggleOriginal").prop('checked', 'checked');
+                $('#jstree-interpreted').hide();
+                $('#jstree-original').show();
+            }
         }
     });
 
     $("#filterTreeToggleOriginal").change(function () {
         if(this.checked) {
             localStorage.setItem('interpretedFilters', false);
-            $("#filterTreeToggleInterpreted").prop('checked', false);
-            $('#jstree-interpreted').hide();
-            $('#jstree-original').show();
+            searchParams = new URLSearchParams(window.location.search)
+
+            if(searchParams.size > 0) {
+                let text = 'Your currently selected filters will be removed when you switch trees.';
+                if(confirm(text)) {
+                    window.location.href = "../data-publication";
+                }
+            } else {
+                $("#filterTreeToggleInterpreted").prop('checked', false);
+                $('#jstree-interpreted').hide();
+                $('#jstree-original').show();
+            }
         } else {
             localStorage.setItem('interpretedFilters', true);
-            $("#filterTreeToggleInterpreted").prop('checked', 'checked');
-            $('#jstree-interpreted').show();
-            $('#jstree-original').hide();
+            searchParams = new URLSearchParams(window.location.search)
+
+            if(searchParams.size > 0) {
+                let text = 'Your currently selected filters will be removed when you switch trees.';
+                if(confirm(text)) {
+                    window.location.href = "../data-publication";
+                }
+            } else {
+                $("#filterTreeToggleInterpreted").prop('checked', 'checked');
+                $('#jstree-interpreted').show();
+                $('#jstree-original').hide();
+            }
         }
     });
 
