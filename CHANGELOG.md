@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Several small UI changes
+- rename search ordering options
+- change facet names
+- change color of disables nodes in tree(s)
+- add expand and close all buttons to tree(s)
+- add logos to data repositories
+- redirect users when switching trees while filters have been aplied before
+- enable facet count(s) in original keyword tree
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing
