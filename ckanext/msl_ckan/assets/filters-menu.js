@@ -22,9 +22,9 @@
 
             if(result) {
               node.state.disabled = false;
-              if(!original) {
+              //if(!original) {
                 node.text = node.text + ' <span class="badge bg-primary rounded-pill">' + result.count + '</span>';
-              }
+              //}
             }
           }
         }
