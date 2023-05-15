@@ -91,6 +91,10 @@ body {
     padding-right: 24px;
 }
 
+.jstree-disabled {
+    color: #b3b3b3 !important;
+}
+
 a.tag:hover {
     background-color: #27A468;
     color: white;

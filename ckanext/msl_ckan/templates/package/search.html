@@ -36,9 +36,9 @@
         %}
         {% set sorting = [
           (_('Relevance'), 'score desc, metadata_modified desc'),
-          (_('Name Ascending'), 'msl_citation asc'),
-          (_('Name Descending'), 'msl_citation desc'),
-          (_('Last Modified'), 'msl_publication_date desc'),
+          (_('Author Ascending'), 'msl_citation asc'),
+          (_('Author Descending'), 'msl_citation desc'),
+          (_('Publication date'), 'msl_publication_date desc'),
           (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
         %}
         {% snippet 'snippets/search_form.html', form_id='dataset-search-form', type=dataset_type, query=q, sorting=sorting, sorting_selected=sort_by_selected, count=page.item_count, placeholder=_('Search ' + multi_title) + '...', facets=facets, show_empty=request.params, error=query_error, fields=fields %}
@@ -54,26 +54,7 @@
   </section>
 
   {% block package_search_results_api %}
-    <section class="module">
-      <div class="module-content">
-        {% block package_search_results_api_inner %}
-          <small>
-            {% set api_link = h.link_to(_('API'), h.url_for(controller='api', action='get_api', ver=3)) %}
-            {% set api_doc_link = h.link_to(_('API Docs'), 'http://docs.ckan.org/en/{0}/api/'.format(g.ckan_doc_version)) %}
-            {% if g.dumps_url -%}
-              {% set dump_link = h.link_to(_('full {format} dump').format(format=g.dumps_format), g.dumps_url) %}
-              {% trans %}
-              You can also access this registry using the {{ api_link }} (see {{ api_doc_link }}) or download a {{ dump_link }}.
-          {% endtrans %}
-            {% else %}
-          {% trans %}
-          You can also access this registry using the {{ api_link }} (see {{ api_doc_link}}).
-          {% endtrans %}
-            {%- endif %}
-          </small>
-        {% endblock %}
-      </div>
-    </section>
+
   {% endblock %}
 {% endblock %}
 
@@ -113,6 +94,13 @@
       </div>
     </div>
 
+    <div class="row">
+      <div style="padding-left: 30px; padding-right: 24px; float: right;">
+        <a href="#" style="color: black;" id="expand_all" title="expand all nodes"><i class="fa fa-level-down" aria-hidden="true"></i> expand all</a>
+        <a href="#" style="color: black;" id="close_all" title="close all nodes"><i class="fa fa-level-up" aria-hidden="true"></i> close all</a>
+      </div>
+    </div>
+
     <div id="jstree-interpreted"></div>
     <div id="jstree-original" style="display: none;"></div>
 
@@ -130,7 +118,6 @@
       var activeFilters = {{ fields_grouped|tojson }}
       var activeNodes = [];
     </script>
-
 
 
     {% else %}
