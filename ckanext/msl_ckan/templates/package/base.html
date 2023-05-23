@@ -17,8 +17,39 @@
     {% else %}
       <li>{% link_for pkg.type, named_route=pkg.type ~ '.search' %}</li>
     {% endif %}
-    <li{{ self.breadcrumb_content_selected() }}>{% link_for dataset|truncate(30), named_route=pkg.type ~ '.read', id=pkg.name %}</li>
+      <li{{ self.breadcrumb_content_selected() }}>{% link_for dataset|truncate(30), named_route=pkg.type ~ '.read', id=pkg.name %}</li>
+
+    <script>
+      try {
+        var url = new URL(document.referrer);
+      } catch(e) {
+
+      }
+
+      if(url) {
+        if(url.pathname == '/data-publication/') {
+          var breadcrumb = document.getElementsByClassName("breadcrumb")[0];
+
+          breadcrumb.textContent = '';
+
+          var listItem = document.createElement('li');
+          var link = document.createElement('a');
+          var symbol = document.createElement('i');
+
+          symbol.setAttribute('class', 'fa fa-caret-left');
+
+          link.setAttribute('href', url.href);
+          link.textContent = ' back to search results';
+
+          listItem.appendChild(link);
+
+          link.insertBefore(symbol, link.firstChild);
+
+          breadcrumb.appendChild(listItem);
+        }
+      }
+    </script>
   {% else %}
-    <li>{% link_for _(dataset_type.title()), named_route=dataset_type ~ '.search' %}</li>
+      <li>{% link_for _(dataset_type.title()), named_route=dataset_type ~ '.search' %}</li>
   {% endif %}
 {% endblock %}
