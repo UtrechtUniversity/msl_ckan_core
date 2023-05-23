@@ -14,9 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - change color of disables nodes in tree(s)
 - add expand and close all buttons to tree(s)
 - add logos to data repositories
-- redirect users when switching trees while filters have been aplied before
+- redirect users when switching trees while filters have been applied before
 - enable facet count(s) in original keyword tree
 - new organization schema replacing ckan default version to add custom fields
+- replace breadcrumb on detail page with back to search results page if user originates from search results
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing
