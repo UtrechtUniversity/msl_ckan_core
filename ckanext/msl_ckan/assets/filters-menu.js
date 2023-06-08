@@ -22,9 +22,7 @@
 
             if(result) {
               node.state.disabled = false;
-              //if(!original) {
                 node.text = node.text + ' <span class="badge bg-primary rounded-pill">' + result.count + '</span>';
-              //}
             }
           }
         }
@@ -55,14 +53,6 @@
               }
             }
         }
-
-        /*
-        if(original) {
-          if(node.state.disabled) {
-            nodes.splice(i, 1);
-          }
-        }
-        */
 
         if(node.children.length > 0) {
             processNodes(node.children, original);
@@ -284,6 +274,63 @@ $(document).ready(function () {
             $('#jstree-interpreted').jstree('close_all');
         } else {
             $('#jstree-original').jstree('close_all');
+        }
+    });
+
+    $("#hide_empty_terms").change(function () {
+        if(this.checked) {
+            if($("#filterTreeToggleInterpreted").is(':checked')) {
+                $('#jstree-interpreted').jstree().get_json('#', {
+                  flat: true
+                }).forEach(element => {
+                    if(element.state.disabled) {
+                        $('#jstree-interpreted').jstree().hide_node(element);
+                    }
+                });
+            } else {
+                $('#jstree-original').jstree().get_json('#', {
+                  flat: true
+                }).forEach(element => {
+                    if(element.state.disabled) {
+                        $('#jstree-original').jstree().hide_node(element);
+                    }
+                });
+
+                $('#jstree-original').jstree().get_json('#', {
+                  flat: true
+                }).forEach(element => {
+                    if(!element.state.disabled) {
+                        var parent = element.parent;
+
+                        if(parent) {
+                            while(parent) {
+                                $('#jstree-original').jstree().show_node(parent);
+                                parent = parent.parent;
+                            }
+                        }
+
+                        $('#jstree-original').jstree().show_node(element);
+                    }
+                });
+            }
+        } else {
+            if($("#filterTreeToggleInterpreted").is(':checked')) {
+                $('#jstree-interpreted').jstree().get_json('#', {
+                  flat: true
+                }).forEach(element => {
+                    if(element.state.disabled) {
+                        $('#jstree-interpreted').jstree().show_node(element);
+                    }
+                });
+            } else {
+                $('#jstree-original').jstree().get_json('#', {
+                  flat: true
+                }).forEach(element => {
+                    if(element.state.disabled) {
+                        $('#jstree-original').jstree().show_node(element);
+                    }
+                });
+            }
         }
     });
 
