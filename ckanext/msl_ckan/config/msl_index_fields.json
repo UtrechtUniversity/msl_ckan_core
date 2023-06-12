@@ -112,6 +112,12 @@
         "msl_has_microscopy_original",
         "msl_has_lab",
         "msl_has_organization",
-        "msl_download_link"
+        "msl_download_link",
+        "msl_enriched_keyword_label",
+        "msl_enriched_keyword_uri",
+        "msl_enriched_keyword_vocab_uri",
+        "msl_original_keyword_label",
+        "msl_original_keyword_uri",
+        "msl_original_keyword_vocab_uri"
     ]
 }

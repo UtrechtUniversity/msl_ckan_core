@@ -663,6 +663,28 @@ dataset_fields:
 - field_name: msl_has_organization
   label: Has organization
 
+# CUSTOM
+- field_name: msl_enriched_keywords
+  label: Interpretedd keywords
+  repeating_subfields:
+    - field_name: msl_enriched_keyword_label
+      label: Keyword label
+    - field_name: msl_enriched_keyword_uri
+      label: Keyword uri
+    - field_name: msl_enriched_keyword_vocab_uri
+      label: Vocabualry uri
+
+# CUSTOM
+- field_name: msl_original_keywords
+  label: Original keywords
+  repeating_subfields:
+    - field_name: msl_original_keyword_label
+      label: Keyword label
+    - field_name: msl_original_keyword_uri
+      label: Keyword uri
+    - field_name: msl_original_keyword_vocab_uri
+      label: Vocabualry uri
+
 resource_fields:
 - field_name: url
   label: URL
