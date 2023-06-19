@@ -67,7 +67,7 @@
                 {% if value == 'true' %}
                   {{facets.titles[field]}}
                 {% else %}
-                  {{ value }}
+                  {{ h.msl_ckan_get_label_for_uri(value) }}
                 {% endif %}
               {%- endif %}
               <a href="{{ facets.remove_field(field, value) }}" class="remove" title="{{ _('Remove') }}"><i class="fa fa-times"></i></a>
