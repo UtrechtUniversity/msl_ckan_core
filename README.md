@@ -65,134 +65,50 @@ Add to `<fields>` definitions:
 	<field name="msl_subdomain" type="string" indexed="true" stored="true" multiValued="true"/>
     <field name="msl_download_link" type="string" indexed="true" stored="true" multiValued="true"/>
 	
-	<!-- Materials -->
-	<field name="msl_material_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_4" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_5" type="string" indexed="true" stored="true" multiValued="true"/>	
-	<field name="msl_has_material" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_material_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_material_5_original" type="string" indexed="true" stored="true" multiValued="true"/>	
+	<!-- Materials -->	
+	<field name="msl_has_material" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_material_original" type="string" indexed="true" stored="false" />
 	
-	<!-- Porefluids -->
-	<field name="msl_porefluid_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_porefluid_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_porefluid_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_has_porefluid" type="string" indexed="true" stored="false" />	
-	
-	<field name="msl_porefluid_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_porefluid_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_porefluid_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
+	<!-- Porefluids -->	
+	<field name="msl_has_porefluid" type="string" indexed="true" stored="false" />		
 	<field name="msl_has_porefluid_original" type="string" indexed="true" stored="false" />	
 	
-	<!-- Rock physics -->
-	<field name="msl_rockphysic_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_4" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_5" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_has_rockphysic" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_rockphysic_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_rockphysic_5_original" type="string" indexed="true" stored="true" multiValued="true"/>
+	<!-- Rock physics -->	
+	<field name="msl_has_rockphysic" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_rockphysic_original" type="string" indexed="true" stored="false" />	
 	
-	<!-- Analogue modelling -->
-	<field name="msl_analogue_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_4" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_5" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_has_analogue" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_analogue_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_analogue_5_original" type="string" indexed="true" stored="true" multiValued="true"/>
+	<!-- Analogue modelling -->	
+	<field name="msl_has_analogue" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_analogue_original" type="string" indexed="true" stored="false" />
 	
-	<!-- Geological age -->
-	<field name="msl_geologicalage_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_4" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_5" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_6" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_has_geologicalage" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_geologicalage_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_5_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalage_6_original" type="string" indexed="true" stored="true" multiValued="true"/>
+	<!-- Geological age -->	
+	<field name="msl_has_geologicalage" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_geologicalage_original" type="string" indexed="true" stored="false" />
 	
-	<!-- Geological setting -->
-	<field name="msl_geologicalsetting_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalsetting_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalsetting_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalsetting_4" type="string" indexed="true" stored="true" multiValued="true"/>
+	<!-- Geological setting -->	
 	<field name="msl_has_geologicalsetting" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_geologicalsetting_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalsetting_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalsetting_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geologicalsetting_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_has_geologicalsetting_original" type="string" indexed="true" stored="false" />
 	
-	<!-- Paleomagnetism -->
-	<field name="msl_paleomagnetism_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_4" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_5" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_has_paleomagnetism" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_paleomagnetism_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_paleomagnetism_5_original" type="string" indexed="true" stored="true" multiValued="true"/>
+	<!-- Paleomagnetism -->	
+	<field name="msl_has_paleomagnetism" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_paleomagnetism_original" type="string" indexed="true" stored="false" />
 	
-	<!-- Geochemistry -->
-	<field name="msl_geochemistry_1" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geochemistry_2" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geochemistry_3" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geochemistry_4" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_has_geochemistry" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_geochemistry_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geochemistry_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geochemistry_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_geochemistry_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
+	<!-- Geochemistry -->	
+	<field name="msl_has_geochemistry" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_geochemistry_original" type="string" indexed="true" stored="false" />
 	
 	<!--Microscopy -->
-    <field name="msl_microscopy_1" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_2" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_3" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_4" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_5" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_has_microscopy" type="string" indexed="true" stored="false" />
-	
-	<field name="msl_microscopy_1_original" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_2_original" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_3_original" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_4_original" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_microscopy_5_original" type="string" indexed="true" stored="true" multiValued="true"/>
+	<field name="msl_has_microscopy" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_microscopy_original" type="string" indexed="true" stored="false" />
+
+    <!-- Keyword fields -->
+    <field name="msl_enriched_keyword_label" type="string" indexed="true" stored="true" multiValued="true"/>
+	<field name="msl_enriched_keyword_uri" type="string" indexed="true" stored="true" multiValued="true"/>
+	<field name="msl_enriched_keyword_vocab_uri" type="string" indexed="true" stored="true" multiValued="true"/>
+	
+	<field name="msl_original_keyword_label" type="string" indexed="true" stored="true" multiValued="true"/>
+	<field name="msl_original_keyword_uri" type="string" indexed="true" stored="true" multiValued="true"/>
+	<field name="msl_original_keyword_vocab_uri" type="string" indexed="true" stored="true" multiValued="true"/>
 	
 	<!-- fields for top level facets labs/organizations -->
 	<field name="msl_has_lab" type="string" indexed="true" stored="false" />
