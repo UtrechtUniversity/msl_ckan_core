@@ -156,6 +156,12 @@ make the correct links to the other extensions/plugins the following lines shoul
 Make sure to keep the above order of plugin declaration in the `ckan.ini`. The order of plugin loading determines the 
 order of execution of hooks and usage of templates.
 
+## general settings
+
+the following line should be added to within the [app:main] section:
+
+      search.facets.limit = 10000
+
 ### plugin specific settings
 _Keep in mind that all plugin specific settings should be added within the same block of settings as the 
 `ckan.plugins` section within the `clan.ini`!_
