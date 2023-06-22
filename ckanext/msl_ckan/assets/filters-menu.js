@@ -279,58 +279,62 @@ $(document).ready(function () {
 
     $("#hide_empty_terms").change(function () {
         if(this.checked) {
-            if($("#filterTreeToggleInterpreted").is(':checked')) {
-                $('#jstree-interpreted').jstree().get_json('#', {
-                  flat: true
-                }).forEach(element => {
-                    if(element.state.disabled) {
-                        $('#jstree-interpreted').jstree().hide_node(element);
-                    }
-                });
-            } else {
-                $('#jstree-original').jstree().get_json('#', {
-                  flat: true
-                }).forEach(element => {
-                    if(element.state.disabled) {
-                        $('#jstree-original').jstree().hide_node(element);
-                    }
-                });
+            localStorage.setItem('hideEmptyTerms', true);
 
-                $('#jstree-original').jstree().get_json('#', {
-                  flat: true
-                }).forEach(element => {
-                    if(!element.state.disabled) {
-                        var parent = element.parent;
+            //set interpreted/enriched tree
+            $('#jstree-interpreted').jstree().get_json('#', {
+              flat: true
+            }).forEach(element => {
+                if(element.state.disabled) {
+                    $('#jstree-interpreted').jstree().hide_node(element);
+                }
+            });
 
-                        if(parent) {
-                            while(parent) {
-                                $('#jstree-original').jstree().show_node(parent);
-                                parent = parent.parent;
-                            }
+            //set original tree
+            $('#jstree-original').jstree().get_json('#', {
+              flat: true
+            }).forEach(element => {
+                if(element.state.disabled) {
+                    $('#jstree-original').jstree().hide_node(element);
+                }
+            });
+
+            $('#jstree-original').jstree().get_json('#', {
+              flat: true
+            }).forEach(element => {
+                if(!element.state.disabled) {
+                    var parent = element.parent;
+
+                    if(parent) {
+                        while(parent) {
+                            $('#jstree-original').jstree().show_node(parent);
+                            parent = parent.parent;
                         }
+                    }
 
-                        $('#jstree-original').jstree().show_node(element);
-                    }
-                });
-            }
+                    $('#jstree-original').jstree().show_node(element);
+                }
+            });
         } else {
-            if($("#filterTreeToggleInterpreted").is(':checked')) {
-                $('#jstree-interpreted').jstree().get_json('#', {
-                  flat: true
-                }).forEach(element => {
-                    if(element.state.disabled) {
-                        $('#jstree-interpreted').jstree().show_node(element);
-                    }
-                });
-            } else {
-                $('#jstree-original').jstree().get_json('#', {
-                  flat: true
-                }).forEach(element => {
-                    if(element.state.disabled) {
-                        $('#jstree-original').jstree().show_node(element);
-                    }
-                });
-            }
+            localStorage.setItem('hideEmptyTerms', false);
+
+            //set interpreted/enriched tree
+            $('#jstree-interpreted').jstree().get_json('#', {
+              flat: true
+            }).forEach(element => {
+                if(element.state.disabled) {
+                    $('#jstree-interpreted').jstree().show_node(element);
+                }
+            });
+
+            //set original tree
+            $('#jstree-original').jstree().get_json('#', {
+              flat: true
+            }).forEach(element => {
+                if(element.state.disabled) {
+                    $('#jstree-original').jstree().show_node(element);
+                }
+            });
         }
     });
 
