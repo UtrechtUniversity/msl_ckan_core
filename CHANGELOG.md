@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - new organization schema replacing ckan default version to add custom fields
 - replace breadcrumb on detail page with back to search results page if user originates from search results
 - add checkbox to hide empty nodes from filter tree(s)
+- change schema, configurations and views to remove specific vocabulary fields in schema. 
+Replaced by original and enriched repeatable fields with keyword URI and vocabulary URIs
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing
