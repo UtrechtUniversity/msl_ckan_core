@@ -19,6 +19,16 @@ def get_filter_menu_original():
     return data
 
 
+def get_label_for_uri(uri):
+    f = open(os.path.join(os.path.dirname(__file__), 'public/uri-labels.json'))
+    data = json.load(f)
+
+    if uri in data:
+        return data[uri]
+    else:
+        return uri
+
+
 class MslCkanPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IBlueprint)
@@ -33,7 +43,8 @@ class MslCkanPlugin(plugins.SingletonPlugin):
     def get_helpers(self):
         return {
             'msl_ckan_get_filter_menu_interpreted': get_filter_menu_interpreted,
-            'msl_ckan_get_filter_menu_original': get_filter_menu_original
+            'msl_ckan_get_filter_menu_original': get_filter_menu_original,
+            'msl_ckan_get_label_for_uri': get_label_for_uri
         }
 
     def vocab_view(self):
