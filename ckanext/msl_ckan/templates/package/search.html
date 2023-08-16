@@ -15,6 +15,16 @@
   <li class="active">{{ h.nav_link(_(multi_title), named_route='%s.search' % dataset_type, highlight_actions = 'new index') }}</li>
 {% endblock %}
 
+{% block top_warning %}
+{% if dataset_type == 'data-publication' %}
+  <div class="row wrapper no-nav" style="min-height: 0; margin-bottom: 15px;">
+    <div style="padding-left: 45px; padding-bottom: 5px; padding-top: 5px;">
+        This data catalogue is undergoing continuous development. If you find an error, please contact
+        us <a href="mailto:epos.msl.data@uu.nl" style="color: black; text-decoration: underline;">here</a>.
+    </div>
+  </div>
+{% endif %}
+{% endblock %}
 
 {% block primary_content %}
   <section class="module">
