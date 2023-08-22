@@ -46,7 +46,7 @@
       <tbody>
         {% if pkg.msl_subdomains_interpreted %}
         <tr class="d-flex">
-          <td class="col-md-4">MSL enriched subdomains <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Based on the MSL enriched keywords, enriched sub domains are added based on the originating vocabularies." id='tooltip-interpreted-subdomains'></i></td>
+          <td class="col-md-4">MSL enriched sub domains <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Based on the MSL enriched keywords, enriched sub domains are added based on the originating vocabularies." id='tooltip-interpreted-subdomains'></i></td>
           <td class="col-md-8">
             <ul class="fa-ul">
               {%for i in range(0, pkg.msl_subdomains_interpreted|length)%}
