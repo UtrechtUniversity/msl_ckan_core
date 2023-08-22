@@ -2,6 +2,7 @@
     "special_index_fields": [
         "msl_author_name",
         "msl_lab_name",
+        "msl_lab_id",
         "msl_subdomain",
         "msl_has_material",
         "msl_has_material_original",

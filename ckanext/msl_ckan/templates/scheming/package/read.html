@@ -285,7 +285,7 @@
       </tbody>
     </table>
   {% elif pkg.type == 'lab' %}
-    <a href="{% url_for 'data-publication.search', msl_lab_name=pkg.title %}">View datasets associated with lab.</a>
+    <a href="{% url_for 'data-publication.search', msl_lab_id=pkg.name %}">View datasets associated with lab.</a>
   {% else %}
     {% snippet "scheming/package/snippets/additional_info.html", pkg_dict=pkg, dataset_type=dataset_type, schema=schema %}
   {% endif %}
