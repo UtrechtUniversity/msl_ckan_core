@@ -9,3 +9,9 @@ msl_ckan-filter-menu:
   output: ckanext-msl_ckan/%(version)s-msl_ckan-filter-menu.js
   contents:
     - filters-menu.js
+
+msl_ckan-popovers:
+  filter: rjsmin
+  output: ckanext-msl_ckan/%(version)s-msl_ckan-popovers.js
+  contents:
+    - popovers.js
