@@ -56,6 +56,7 @@
   {% block search_facets %}
     {% if facets %}
       <p class="filter-list">
+        {% set counter = {"count":0} %}
         {% for field in facets.fields %}
           {% set search_facets_items = facets.search.get(field)['items'] if facets.search and field in facets.search else [] %}
 
@@ -72,10 +73,11 @@
               {%- endif %}
               <a href="{{ facets.remove_field(field, value) }}" class="remove" title="{{ _('Remove') }}"><i class="fa fa-times"></i></a>
             </span>
+          {% if counter.update({'count': counter.count + 1}) %}{% endif %}
           {% endfor %}
         {% endfor %}
-
-        {% if facets.fields|length > 1 %}
+        
+        {% if counter.count > 1 %}
           <span class="filtered pill" style="background-color: red;">
             <a href="/data-publication" class="remove">Remove all filters <i class="fa fa-times"></i></a>
           </span>
