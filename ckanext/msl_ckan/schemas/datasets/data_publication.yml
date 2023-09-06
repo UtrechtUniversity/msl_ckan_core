@@ -379,6 +379,8 @@ dataset_fields:
       label: Vocabulary uri
     - field_name: msl_enriched_keyword_associated_subdomains
       label: Associated subdomains
+    - field_name: msl_enriched_keyword_match_locations
+      label: Match locations
 
 # CUSTOM
 - field_name: msl_original_keywords

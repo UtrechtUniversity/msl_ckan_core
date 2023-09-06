@@ -6,13 +6,25 @@ $(document).ready(function() {
     placement: "bottom",
     trigger: "hover",
     html: true,
+    sanitize: false,
     title: 'keyword information',
     content: function() {
         let identifier = this.id;
         let uri = this.dataset.uri;
 
         if($('#' + identifier + '-cache').html().length > 0) {
-          return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>";
+            if(this.dataset.sources) {
+                matchSources = JSON.parse(this.dataset.sources);
+                if(matchSources.length > 0) {
+                    return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>" +
+                    "<hr>" +
+                    "<div>Match origins: " + matchSources.join(", ") + "</div>";
+                } else {
+                    return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>";
+                }
+            } else {
+                return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>";
+            }
         }
 
         $.ajax({
@@ -29,30 +41,41 @@ $(document).ready(function() {
             return true;
           },
           success: function(res) {
-            content = "";
-            content += "name: ";
-            content += res.name;
-            content += "<br>uri: ";
-            content += res.uri;
-            content += "<br>parent: ";
+            content = "<table class=\"table table-condensed\">";
+            content += "<tr><td class=\"w-auto\">name</td><td>" + res.name + "</td></tr>";
+            content += "<tr><td class=\"w-auto\">indicators</td><td>";
+            res.synonyms.forEach((synonym) => {
+              content += '"' + synonym.name + '" ';
+            });
+            content += "</td></tr>";
+            content += "<tr><td class=\"w-auto\">parent term</td><td>";
             if(res.parent) {
               content += res.parent.name;
             } else {
               content += 'none';
             }
-            content += '<br>synonyms: ';
-            res.synonyms.forEach((synonym) => {
-              content += '"' + synonym.name + '" ';
-            });
-            content += '<br>vocabulary name: ';
-            content += res.vocabulary.name;
+            content += "</td></tr>";
+            content += "<tr><td class=\"w-auto\">occurs in vocabulary</td><td>" + res.vocabulary.name + "</td></tr>";
+            content += "<tr><td class=\"w-auto\">uri</td><td>" + res.uri + "</td></tr>";
+            content += "</table>";
 
             $('#' + identifier + '-cache').html(content);
             $('#' + identifier + '-popover-content').html(content);
           }
         });
 
-        return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></div>";
+        if(this.dataset.sources) {
+            matchSources = JSON.parse(this.dataset.sources);
+            if(matchSources.length > 0) {
+                return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></i></div>" +
+                "<hr>" +
+                "<div>Match origins: " + matchSources.join(", ") + "</div>";
+            } else {
+                return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></i></div>";
+            }
+        } else {
+            return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></i></div>";
+        }
     }
   });
 
