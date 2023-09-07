@@ -182,6 +182,10 @@ To use the included index fields configuration:
 
       mslindexfields.field_config = ckanext.msl_ckan:config/msl_index_fields.json
 
+For retrieving keyword information an endpoint for the service must be defined:
+
+      mslvocabularies.endpoint_root = http://epos.test:89/api/vocabularies (Sample url)
+
 ## Adjusting settings within CKAN
 Some texts and settings have to be adjusted by signing in as admin within the portal. The default username and password 
 depend on the installation type. It is recommended to change the default credentials after installation.

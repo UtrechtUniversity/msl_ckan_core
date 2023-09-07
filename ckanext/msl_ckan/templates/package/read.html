@@ -58,6 +58,9 @@
   {% block package_tags %}
     {% if pkg.type == 'data-publication' %}
     {% set tags = pkg.tags %}
+    <script>
+      var vocabularyApiEndpoint = "{{ h.msl_ckan_get_vocabulary_api_endpoint() }}";
+    </script>
 
     {% set ns = namespace(previous=[]) %}
     <p>Originally assigned keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="lists only keywords originally assigned by the authors" id='tooltip-original-keywords'></i></p>

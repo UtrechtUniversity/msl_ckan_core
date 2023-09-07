@@ -28,7 +28,7 @@ $(document).ready(function() {
         }
 
         $.ajax({
-          url: "http://epos.test:89/api/vocabularies/term?uri=" + uri,
+          url: vocabularyApiEndpoint + "/term?uri=" + uri,
           type: 'GET',
           dataType: 'json',
           async: true,

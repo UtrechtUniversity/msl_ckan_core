@@ -9,28 +9,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Several small UI changes
-- rename search ordering options
-- change facet names
-- change color of disables nodes in tree(s)
-- add expand and close all buttons to tree(s)
-- add logos to data repositories
-- redirect users when switching trees while filters have been applied before
-- enable facet count(s) in original keyword tree
-- new organization schema replacing ckan default version to add custom fields
-- replace breadcrumb on detail page with back to search results page if user originates from search results
-- add checkbox to hide empty nodes from filter tree(s)
-- change schema, configurations and views to remove specific vocabulary fields in schema. 
+- Rename search ordering options
+- Change facet names
+- Change color of disables nodes in tree(s)
+- Add expand and close all buttons to tree(s)
+- Add logos to data repositories
+- Redirect users when switching trees while filters have been applied before
+- Enable facet count(s) in original keyword tree
+- New organization schema replacing ckan default version to add custom fields
+- Replace breadcrumb on detail page with back to search results page if user originates from search results
+- Add checkbox to hide empty nodes from filter tree(s)
+- Change schema, configurations and views to remove specific vocabulary fields in schema. 
 Replaced by original and enriched repeatable fields with keyword URI and vocabulary URIs
-- update e-mails used in portal to general msl data address
+- Update e-mails used in portal to general msl data address
 - Update explaining tooltips
 - Several updates to lab views
-- add new in development notice
-- rework connection between labs and data-publications for filtering
-- popovers added to keyword to retrieve and display keyword information keyword api
-- highlighting of detected enriched keywords within description and title
-- highlighting of keywords indicating enriched subdomain by hovering subdomain
-- display of source(s) of keyword matching in enriched keyword popover(s)
-- several schema changes to store extra keyword information
+- Add new in development notice
+- Rework connection between labs and data-publications for filtering
+- Popovers added to keyword to retrieve and display keyword information keyword api
+- Highlighting of detected enriched keywords within description and title
+- Highlighting of keywords indicating enriched subdomain by hovering subdomain
+- Display of source(s) of keyword matching in enriched keyword popover(s)
+- Several schema changes to store extra keyword information
+- Add ckan ini setting to store vocabulary api endpoint, add function to retrieve setting in templates
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing
