@@ -103,3 +103,13 @@ a.tag:hover {
 label.no-after:after {
     content: none;
 }
+
+.popover {
+    max-width: 100% !important;
+    width: 500px !important;
+}
+
+.keyword-highlight {
+    background-color: #27A468;
+    color: white;
+}

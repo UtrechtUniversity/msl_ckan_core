@@ -35,8 +35,15 @@
     h.scheming_field_by_name(schema.dataset_fields, 'notes_translated')) and
     pkg.notes%}
     <div class="notes embedded-content" style="border-bottom: 1px solid #ddd;">
-      {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
+      {% if pkg.type == 'data-publication' %}
+        {% autoescape false %}
+          {{ pkg.msl_notes_annotated | replace("\n", "<br/>") }}
+        {% endautoescape %}
+      {% else %}
+        {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
+      {% endif %}
     </div>
+
   {% endif %}
 {% endblock %}
 
@@ -50,7 +57,7 @@
           <td class="col-md-8">
             <ul class="fa-ul">
               {%for i in range(0, pkg.msl_subdomains_interpreted|length)%}
-                <li><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_interpreted[i].msl_subdomain_interpreted }}</li>
+                <li data-toggle="domain-highlight" data-domain="{{ pkg.msl_subdomains_interpreted[i].msl_subdomain_interpreted }}"><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_interpreted[i].msl_subdomain_interpreted }}</li>
               {% endfor %}
             </ul>
           </td>
