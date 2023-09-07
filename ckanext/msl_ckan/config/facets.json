@@ -30,6 +30,7 @@
     "msl_original_keyword_label": "Original keyword label",
     "msl_original_keyword_uri": "Original keyword uri",
     "msl_lab_name":  "Lab name",
+    "msl_lab_id": "Lab identifier",
     "msl_has_lab":  "Research institute",
     "organization":  "Organization",
     "msl_has_organization": "Data repository"

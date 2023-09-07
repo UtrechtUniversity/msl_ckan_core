@@ -43,6 +43,14 @@ dataset_fields:
   required: True
 
 # CKAN
+# DataCite: Title
+- field_name: msl_title_annotated
+  label: Title annotated
+  preset: title
+  form_placeholder: Title of the data publication
+  required: False
+
+# CKAN
 # No DataCite analogue since this concerns an internal CKAN name
 - field_name: name
   label: URL
@@ -170,6 +178,14 @@ dataset_fields:
 # DCAT-mapping: ..
 - field_name: notes
   label: Abstract
+  form_snippet: markdown.html
+  form_placeholder: abstract of the data publication
+  required: False
+
+# CKAN
+# DCAT-mapping: ..
+- field_name: msl_notes_annotated
+  label: Abstract annotated
   form_snippet: markdown.html
   form_placeholder: abstract of the data publication
   required: False
@@ -353,14 +369,18 @@ dataset_fields:
 
 # CUSTOM
 - field_name: msl_enriched_keywords
-  label: Interpretedd keywords
+  label: Interpreted keywords
   repeating_subfields:
     - field_name: msl_enriched_keyword_label
       label: Keyword label
     - field_name: msl_enriched_keyword_uri
       label: Keyword uri
     - field_name: msl_enriched_keyword_vocab_uri
-      label: Vocabualry uri
+      label: Vocabulary uri
+    - field_name: msl_enriched_keyword_associated_subdomains
+      label: Associated subdomains
+    - field_name: msl_enriched_keyword_match_locations
+      label: Match locations
 
 # CUSTOM
 - field_name: msl_original_keywords
@@ -371,7 +391,7 @@ dataset_fields:
     - field_name: msl_original_keyword_uri
       label: Keyword uri
     - field_name: msl_original_keyword_vocab_uri
-      label: Vocabualry uri
+      label: Vocabulary uri
 
 resource_fields:
 - field_name: url

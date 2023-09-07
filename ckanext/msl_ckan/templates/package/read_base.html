@@ -62,6 +62,15 @@
         </section>
       </div>
     {% endif %}
+  {% elif pkg.type == 'lab' %}
+    <div style="background-color: #27A468; padding: 10px; margin: 10px;">
+      <p style="color: white;">
+        The <a href="https://www.epos-eu.org/tcs/multi-scale-laboratories" style="color: white; text-decoration: underline;" target="_blank">
+        EPOS Multi-Scale Laboratories (MSL) community</a> includes a wide range of world-class, Earth scientific
+        laboratories. Interested in how your lab could join MSL? Get in touch with MSL coordinator
+        <a href="mailto:g.w.termaat@uu.nl" style="color: white; text-decoration: underline;">Geertje ter Maat</a>.
+      </p>
+    </div>
   {% else %}
     {% block package_info %}
       {% snippet 'package/snippets/info.html', pkg=pkg %}

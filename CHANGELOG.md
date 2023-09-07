@@ -21,6 +21,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - add checkbox to hide empty nodes from filter tree(s)
 - change schema, configurations and views to remove specific vocabulary fields in schema. 
 Replaced by original and enriched repeatable fields with keyword URI and vocabulary URIs
+- update e-mails used in portal to general msl data address
+- Update explaining tooltips
+- Several updates to lab views
+- add new in development notice
+- rework connection between labs and data-publications for filtering
+- popovers added to keyword to retrieve and display keyword information keyword api
+- highlighting of detected enriched keywords within description and title
+- highlighting of keywords indicating enriched subdomain by hovering subdomain
+- display of source(s) of keyword matching in enriched keyword popover(s)
+- several schema changes to store extra keyword information
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing

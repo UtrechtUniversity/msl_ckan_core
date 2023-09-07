@@ -59,7 +59,8 @@ Add to `<fields>` definitions:
     
     <!-- coming from IPackageController msl_search.MslIndexRepeatedFieldsPlugin::before(index) -->    
 	<field name="msl_author_name" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_author_name_text" type="text" indexed="true" stored="false" multiValued="true"/>	
+	<field name="msl_author_name_text" type="text" indexed="true" stored="false" multiValued="true"/>
+    <field name="msl_lab_id" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_lab_name" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_lab_name_text" type="text" indexed="true" stored="false" multiValued="true"/>			
 	<field name="msl_subdomain" type="string" indexed="true" stored="true" multiValued="true"/>

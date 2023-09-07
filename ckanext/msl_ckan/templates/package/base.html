@@ -10,7 +10,7 @@
 {% block breadcrumb_content %}
   {% if pkg %}
     {% set dataset = h.dataset_display_name(pkg) %}
-    {% if pkg.type == 'data-publication'%}
+    {% if pkg.type == 'data-publication' %}
       <li>{% link_for 'data publications', named_route=pkg.type ~ '.search' %}</li>
     {% elif pkg.type == 'lab'%}
       <li>{% link_for 'labs', named_route=pkg.type ~ '.search' %}</li>
@@ -52,4 +52,15 @@
   {% else %}
       <li>{% link_for _(dataset_type.title()), named_route=dataset_type ~ '.search' %}</li>
   {% endif %}
+{% endblock %}
+
+{% block top_warning %}
+{% if pkg.type == 'data-publication' %}
+  <div class="row wrapper no-nav" style="min-height: 0; margin-bottom: 15px;">
+    <div style="padding-left: 45px; padding-bottom: 5px; padding-top: 5px;">
+        This data catalogue is undergoing continuous development. If you find an error, please contact
+        us <a href="mailto:epos.msl.data@uu.nl" style="color: black; text-decoration: underline;">here</a>.
+    </div>
+  </div>
+{% endif %}
 {% endblock %}

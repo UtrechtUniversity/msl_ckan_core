@@ -35,8 +35,15 @@
     h.scheming_field_by_name(schema.dataset_fields, 'notes_translated')) and
     pkg.notes%}
     <div class="notes embedded-content" style="border-bottom: 1px solid #ddd;">
-      {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
+      {% if pkg.type == 'data-publication' %}
+        {% autoescape false %}
+          {{ pkg.msl_notes_annotated | replace("\n", "<br/>") }}
+        {% endautoescape %}
+      {% else %}
+        {{ h.render_markdown(h.get_translated(pkg, 'notes')) }}
+      {% endif %}
     </div>
+
   {% endif %}
 {% endblock %}
 
@@ -46,11 +53,11 @@
       <tbody>
         {% if pkg.msl_subdomains_interpreted %}
         <tr class="d-flex">
-          <td class="col-md-4">MSL enriched subdomains <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Based on the MSL enriched keywords, enriched sub domains are added based on the originating vocabularies." id='tooltip-interpreted-subdomains'></i></td>
+          <td class="col-md-4">MSL enriched sub domains <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="Based on the MSL enriched keywords, enriched sub domains are added based on the originating vocabularies." id='tooltip-interpreted-subdomains'></i></td>
           <td class="col-md-8">
             <ul class="fa-ul">
               {%for i in range(0, pkg.msl_subdomains_interpreted|length)%}
-                <li><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_interpreted[i].msl_subdomain_interpreted }}</li>
+                <li data-toggle="domain-highlight" data-domain="{{ pkg.msl_subdomains_interpreted[i].msl_subdomain_interpreted }}"><i class="fa-li fa fa-pie-chart"></i>{{ pkg.msl_subdomains_interpreted[i].msl_subdomain_interpreted }}</li>
               {% endfor %}
             </ul>
           </td>
@@ -285,7 +292,7 @@
       </tbody>
     </table>
   {% elif pkg.type == 'lab' %}
-    <a href="{% url_for 'data-publication.search', msl_lab_name=pkg.title %}">View datasets associated with lab.</a>
+    <a href="{% url_for 'data-publication.search', msl_lab_id=pkg.name %}">View datasets associated with lab.</a>
   {% else %}
     {% snippet "scheming/package/snippets/additional_info.html", pkg_dict=pkg, dataset_type=dataset_type, schema=schema %}
   {% endif %}
