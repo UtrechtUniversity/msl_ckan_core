@@ -18,8 +18,7 @@ $(document).ready(function() {
                 matchSources = JSON.parse(this.dataset.sources);
                 if(matchSources.length > 0) {
                     return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>" +
-                    "<hr>" +
-                    "<div>Match origins: " + matchSources.join(", ") + "</div>";
+                    "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>";
                 } else {
                     return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>";
                 }
@@ -70,8 +69,7 @@ $(document).ready(function() {
             matchSources = JSON.parse(this.dataset.sources);
             if(matchSources.length > 0) {
                 return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></i></div>" +
-                "<hr>" +
-                "<div>Match origins: " + matchSources.join(", ") + "</div>";
+                "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>";
             } else {
                 return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></i></div>";
             }
