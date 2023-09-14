@@ -85,7 +85,7 @@
              tabindex="0"
              data-toggle="popover-keyword"
              id="corresponding-popover-{{ i }}"
-             data-filter-link="{% url_for 'data-publication.search', msl_original_keyword_uri=pkg.msl_original_keywords[i].msl_original_keyword_uri %}"
+             data-filterlink="{% url_for 'data-publication.search', msl_original_keyword_uri=pkg.msl_original_keywords[i].msl_original_keyword_uri %}"
              data-uri="{{ pkg.msl_original_keywords[i].msl_original_keyword_uri }}">
             {{ pkg.msl_original_keywords[i].msl_original_keyword_label }}
           </a>
@@ -104,7 +104,7 @@
              tabindex="0"
              data-toggle="popover-keyword"
              id="enriched-popover-{{ i }}"
-             data-filter-link="{% url_for 'data-publication.search', msl_enriched_keyword_uri=pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri %}"
+             data-filterlink="{% url_for 'data-publication.search', msl_enriched_keyword_uri=pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri %}"
              data-uri="{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri }}"
              data-highlight="text-keyword",
              data-sources='{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_match_locations|tojson }}',

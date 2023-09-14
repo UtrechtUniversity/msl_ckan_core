@@ -11,6 +11,7 @@ $(document).ready(function() {
     content: function() {
         let identifier = this.id;
         let uri = this.dataset.uri;
+        let filterUrl = this.dataset.filterlink;
 
         if($('#' + identifier + '-cache').html().length > 0) {
             if(this.dataset.sources) {
@@ -41,7 +42,8 @@ $(document).ready(function() {
             return true;
           },
           success: function(res) {
-            content = "<table class=\"table table-condensed\">";
+            content = "<a class=\"btn btn-sm btn-primary pull-right\" style=\"background-color: #27A468; border-color: #27A468; margin-bottom: 2px;\" href=\"" + filterUrl + "\">View data publications with keyword</a>"
+            content += "<table class=\"table table-condensed\">";
             content += "<tr><td class=\"w-auto\">name</td><td>" + res.name + "</td></tr>";
             content += "<tr><td class=\"w-auto\">indicators</td><td>";
             res.synonyms.forEach((synonym) => {
