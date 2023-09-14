@@ -4,7 +4,7 @@ $(document).ready(function() {
   $('[data-toggle=popover-keyword]').popover({
     container: "body",
     placement: "bottom",
-    trigger: "hover",
+    trigger: "focus",
     html: true,
     sanitize: false,
     title: 'keyword information',

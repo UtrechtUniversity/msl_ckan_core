@@ -81,10 +81,14 @@
       {% for i in range(0, pkg.msl_original_keywords|length) %}
         <li>
           <a class="tag keyword-popover"
+             role="button"
+             tabindex="0"
              data-toggle="popover-keyword"
              id="corresponding-popover-{{ i }}"
-             data-uri="{{ pkg.msl_original_keywords[i].msl_original_keyword_uri }}" href="{% url_for 'data-publication.search', msl_original_keyword_uri=pkg.msl_original_keywords[i].msl_original_keyword_uri %}">
-            {{ pkg.msl_original_keywords[i].msl_original_keyword_label }}</a>
+             data-filter-link="{% url_for 'data-publication.search', msl_original_keyword_uri=pkg.msl_original_keywords[i].msl_original_keyword_uri %}"
+             data-uri="{{ pkg.msl_original_keywords[i].msl_original_keyword_uri }}">
+            {{ pkg.msl_original_keywords[i].msl_original_keyword_label }}
+          </a>
         </li>
       <div id="corresponding-popover-{{ i }}-cache" style="display: none;"></div>
       {% endfor %}
@@ -96,14 +100,17 @@
       {% for i in range(0, pkg.msl_enriched_keywords|length) %}
         <li>
           <a class="tag keyword-popover"
+             role="button"
+             tabindex="0"
              data-toggle="popover-keyword"
              id="enriched-popover-{{ i }}"
+             data-filter-link="{% url_for 'data-publication.search', msl_enriched_keyword_uri=pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri %}"
              data-uri="{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri }}"
              data-highlight="text-keyword",
              data-sources='{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_match_locations|tojson }}',
-             data-associated-subdomains='[{{'\"'|safe + pkg.msl_enriched_keywords[i].msl_enriched_keyword_associated_subdomains|join(',') + '\"'|safe  }}]'
-             href="{% url_for 'data-publication.search', msl_enriched_keyword_uri=pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri %}">
-            {{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_label }}</a>
+             data-associated-subdomains='[{{'\"'|safe + pkg.msl_enriched_keywords[i].msl_enriched_keyword_associated_subdomains|join(',') + '\"'|safe  }}]'>
+            {{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_label }}
+          </a>
         </li>
         <div id="enriched-popover-{{ i }}-cache" style="display: none;"></div>
       {% endfor %}
