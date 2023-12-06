@@ -24,43 +24,21 @@ let counter = 1;
 			$('#sampleKeywords-form-list-group-item-' + now).remove();
 		});
 
-		$("#sampleKeywords-form-list-group").append(
-			'<li class="list-group-item" id="sampleKeywords-form-list-group-item-' + now +'"><i class="bi bi-pen"> ' + text + '<a href="#" id="sampleKeywords-form-list-group-item-delete-' + now + '" title="remove keyword"><i class="bi bi-x text-danger"></i></a></li>'
-		);
-
-		$('#sampleKeywords-form-list-group-item-delete-' + now).bind("click", function(){
-			$('#sampleKeywords-form-list-group-item-' + now).remove();
-			$('#sampleKeywords-modal-list-group-item-' + now).remove();
-		});
-
 		counter = counter + 1;
 	}
 
 	function addModalElement(node) {
 		$("#sampleKeywords-modal-list-group").append(
-			'<li class="list-group-item" id="sampleKeywords-modal-list-group-item-' + node.id +'"><i class="bi bi-book"> ' + node.text + '<a href="#" id="sampleKeywords-modal-list-group-item-delete-' + node.id + '" title="remove keyword"><i class="bi bi-x text-danger"></i></a></li>'
+			'<li class="list-group-item" id="sampleKeywords-modal-list-group-item-' + node.id +'".><i class="bi bi-book"> ' + node.text + '<a href="#" id="sampleKeywords-modal-list-group-item-delete-' + node.id + '" title="remove keyword"><i class="bi bi-x text-danger"></i></a>' +
+			'<input type="hidden" name="sampleKeywords[' + counter + '][text]" value="' + node.text +'">' +
+			'<input type="hidden" name="sampleKeywords[' + counter + '][uri]" value="' + node.original.extra.uri +'">' +
+			'<input type="hidden" name="sampleKeywords[' + counter + '][vocab-uri]" value="' + node.original.extra.vocab_uri + '"></li>'
 		);
 
 		$('#sampleKeywords-modal-list-group-item-delete-' + node.id).bind("click", function(){
 			$('#sampleKeywords-modal-list-group-item-' + node.id).remove();
 			$("#sampleKeywords-tree").jstree("uncheck_node", node.id);
 		});
-	}
-
-	function addFormElement(node) {
-		$("#sampleKeywords-form-list-group").append(
-			'<li class="list-group-item" id="sampleKeywords-form-list-group-item-' + node.id +'"><i class="bi bi-book"> ' + node.text + '<a href="#" id="sampleKeywords-form-list-group-item-delete-' + node.id + '" title="remove keyword"><i class="bi bi-x text-danger"></i></a>' +
-			'<input type="hidden" name="sampleKeywords[' + counter + '][text]" value="' + node.text +'">' +
-			'<input type="hidden" name="sampleKeywords[' + counter + '][uri]" value="' + node.original.extra.uri +'">' +
-			'<input type="hidden" name="sampleKeywords[' + counter + '][vocab-uri]" value="' + node.original.extra.vocab_uri + '"></li>'
-		);
-
-		$('#sampleKeywords-form-list-group-item-delete-' + node.id).bind("click", function(){
-			$('#sampleKeywords-form-list-group-item-' + node.id).remove();
-			$("#sampleKeywords-tree").jstree("uncheck_node", node.id);
-		});
-
-		counter = counter + 1;
 	}
 
 	var data;
@@ -25809,7 +25787,8 @@ let counter = 1;
 		checkbox: {
 			three_state : false, // to avoid that fact that checking a node also check others
 			whole_node : false,  // to avoid checking the box just clicking the node
-			tie_selection : false // for checking without selecting and selecting without checking
+			tie_selection : false, // for checking without selecting and selecting without checking
+			cascade: ''
 		},
 		"search": {
 			"case_sensitive": false,
@@ -25819,10 +25798,13 @@ let counter = 1;
 	.on("check_node.jstree uncheck_node.jstree", function(e, data) {
 		if(e.type == "check_node") {
 			addModalElement(data.node);
-			addFormElement(data.node);
+            // check all parent nodes
+			data.node.parents.forEach((element) => {
+			    $('#sampleKeywords-tree').jstree('check_node', element);
+			});
+
 		} else if (e.type == "uncheck_node") {
 			$('#sampleKeywords-modal-list-group-item-' + data.node.id).remove();
-			$('#sampleKeywords-form-list-group-item-' + data.node.id).remove();
 		}
 	});
 
