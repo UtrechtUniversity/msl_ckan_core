@@ -39,6 +39,8 @@ let counter = 1;
 			$('#sampleKeywords-modal-list-group-item-' + node.id).remove();
 			$("#sampleKeywords-tree").jstree("uncheck_node", node.id);
 		});
+
+		counter = counter + 1;
 	}
 
 	var data;

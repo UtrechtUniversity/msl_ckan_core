@@ -3,7 +3,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import json
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 
 def get_filter_menu_interpreted():
@@ -56,10 +56,18 @@ class MslCkanPlugin(plugins.SingletonPlugin):
     def vocab_view(self):
         return render_template("vocabs.html")
 
+    def keyword_submit(self):
+
+        return request.form
+        return 'wut'
+
     def get_blueprint(self):
         blueprint = Blueprint(self.name, self.__module__)
         blueprint.template_folder = 'templates'
 
         blueprint.add_url_rule('/vocabularies', 'vocabularies', self.vocab_view)
+        blueprint.add_url_rule('/keyword-export', 'keyword-export', self.keyword_submit, methods=['POST'])
+
+        # add route for post request to process keyword form
 
         return blueprint
