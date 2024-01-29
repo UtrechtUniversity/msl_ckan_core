@@ -32,6 +32,7 @@ Replaced by original and enriched repeatable fields with keyword URI and vocabul
 - Display of source(s) of keyword matching in enriched keyword popover(s)
 - Several schema changes to store extra keyword information
 - Add ckan ini setting to store vocabulary api endpoint, add function to retrieve setting in templates
+- Update vocabulary data to 1.2
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing
