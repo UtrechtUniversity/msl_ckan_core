@@ -34,6 +34,7 @@ Replaced by original and enriched repeatable fields with keyword URI and vocabul
 - Add ckan ini setting to store vocabulary api endpoint, add function to retrieve setting in templates
 - Update vocabulary data to 1.2
 - Include SOLR schema within project
+- Replace hoverable enriched keyword popup with clickable popup to prevent mass api calls en add clickable options
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing
