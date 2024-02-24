@@ -47,83 +47,8 @@ To install ckanext-msl_ckan:
 4. Restart CKAN.
 
 ## SOLR changes
-
-Depending on how SOLR was installed combined with CKAN a schema.xml supplied with the CKAN installation has 
-been used. These changes assume the CKAN supplied schema.xml have been used. The following additions should be 
-made to the schema.xml.
-
-Add to `<fields>` definitions:
-
-    <!-- MSL custom fields for indexing and web services -->
-    <field name="msl_hidden_text" type="text" indexed="true" stored="false" multiValued="true"/>
-    
-    <!-- coming from IPackageController msl_search.MslIndexRepeatedFieldsPlugin::before(index) -->    
-	<field name="msl_author_name" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_author_name_text" type="text" indexed="true" stored="false" multiValued="true"/>
-    <field name="msl_lab_id" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_lab_name" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_lab_name_text" type="text" indexed="true" stored="false" multiValued="true"/>			
-	<field name="msl_subdomain" type="string" indexed="true" stored="true" multiValued="true"/>
-    <field name="msl_download_link" type="string" indexed="true" stored="true" multiValued="true"/>
-	
-	<!-- Materials -->	
-	<field name="msl_has_material" type="string" indexed="true" stored="false" />	
-	<field name="msl_has_material_original" type="string" indexed="true" stored="false" />
-	
-	<!-- Porefluids -->	
-	<field name="msl_has_porefluid" type="string" indexed="true" stored="false" />		
-	<field name="msl_has_porefluid_original" type="string" indexed="true" stored="false" />	
-	
-	<!-- Rock physics -->	
-	<field name="msl_has_rockphysic" type="string" indexed="true" stored="false" />	
-	<field name="msl_has_rockphysic_original" type="string" indexed="true" stored="false" />	
-	
-	<!-- Analogue modelling -->	
-	<field name="msl_has_analogue" type="string" indexed="true" stored="false" />	
-	<field name="msl_has_analogue_original" type="string" indexed="true" stored="false" />
-	
-	<!-- Geological age -->	
-	<field name="msl_has_geologicalage" type="string" indexed="true" stored="false" />	
-	<field name="msl_has_geologicalage_original" type="string" indexed="true" stored="false" />
-	
-	<!-- Geological setting -->	
-	<field name="msl_has_geologicalsetting" type="string" indexed="true" stored="false" />
-	<field name="msl_has_geologicalsetting_original" type="string" indexed="true" stored="false" />
-	
-	<!-- Paleomagnetism -->	
-	<field name="msl_has_paleomagnetism" type="string" indexed="true" stored="false" />	
-	<field name="msl_has_paleomagnetism_original" type="string" indexed="true" stored="false" />
-	
-	<!-- Geochemistry -->	
-	<field name="msl_has_geochemistry" type="string" indexed="true" stored="false" />	
-	<field name="msl_has_geochemistry_original" type="string" indexed="true" stored="false" />
-	
-	<!--Microscopy -->
-	<field name="msl_has_microscopy" type="string" indexed="true" stored="false" />	
-	<field name="msl_has_microscopy_original" type="string" indexed="true" stored="false" />
-
-    <!-- Keyword fields -->
-    <field name="msl_enriched_keyword_label" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_enriched_keyword_uri" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_enriched_keyword_vocab_uri" type="string" indexed="true" stored="true" multiValued="true"/>
-	
-	<field name="msl_original_keyword_label" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_original_keyword_uri" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_original_keyword_vocab_uri" type="string" indexed="true" stored="true" multiValued="true"/>
-	
-	<!-- fields for top level facets labs/organizations -->
-	<field name="msl_has_lab" type="string" indexed="true" stored="false" />
-	<field name="msl_has_organization" type="string" indexed="true" stored="false" />	
-
-And to the bottom list with `copyField` definitions add:
-
-      <!-- customizations MSL-->
-      <copyField source="msl_material" dest="text"/>
-      <copyField source="msl_hidden_text" dest="text"/>
-      <copyField source="msl_author_name" dest="text"/>
-      <copyField source="msl_author_name" dest="msl_author_name_text"/>
-      <copyField source="msl_lab_name" dest="text"/>
-      <copyField source="msl_lab_name" dest="msl_lab_name_text"/>
+The SOLR schema needs to be updated to use the additional fields that are used by the schemas within msl_ckan.
+The currently used schema is available at `/config/solr/schema.xml`.
 
 Within the `solrconfig.xml` make sure that the `<str name="q.op">` setting is set to AND for the select request handler:
 

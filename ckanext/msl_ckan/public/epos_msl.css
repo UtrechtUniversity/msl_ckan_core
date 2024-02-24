@@ -100,6 +100,13 @@ a.tag:hover {
     color: white;
 }
 
+a.tag:focus {
+    background-color: #27A468;
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
 label.no-after:after {
     content: none;
 }
