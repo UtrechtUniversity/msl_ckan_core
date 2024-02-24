@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
+## [1.4.0] - 2024-02-24
+
 - Several small UI changes
 - Rename search ordering options
 - Change facet names
@@ -35,6 +38,7 @@ Replaced by original and enriched repeatable fields with keyword URI and vocabul
 - Update vocabulary data to 1.2
 - Include SOLR schema within project
 - Replace hoverable enriched keyword popup with clickable popup to prevent mass api calls en add clickable options
+- Changed vocabulary page information and added keywords form to export selections to csv using direct download option
 
 ## [1.3.0] - 2023-03-29
 - Add msl_download_link field to solr indexing
