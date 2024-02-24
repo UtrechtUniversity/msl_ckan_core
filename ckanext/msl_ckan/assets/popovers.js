@@ -41,8 +41,7 @@ $(document).ready(function() {
             return true;
           },
           success: function(res) {
-            content = "<a class=\"btn btn-sm btn-primary pull-right\" style=\"background-color: #27A468; border-color: #27A468; margin-bottom: 2px;\" href=\"" + filterUrl + "\">View data publications with keyword</a>"
-            content += "<table class=\"table table-condensed\">";
+            content = "<table class=\"table table-condensed\">";
             content += "<tr><td class=\"w-auto\">name</td><td>" + res.name + "</td></tr>";
             content += "<tr><td class=\"w-auto\">indicators</td><td>";
             res.synonyms.forEach((synonym) => {
@@ -69,7 +68,8 @@ $(document).ready(function() {
             matchSources = JSON.parse(this.dataset.sources);
             if(matchSources.length > 0) {
                 return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></i></div>" +
-                "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>";
+                "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>" +
+                "<a class=\"btn btn-sm btn-primary pull-right\" style=\"background-color: #27A468; border-color: #27A468; margin-bottom: 2px;\" href=\"" + filterUrl + "\">View data publications with keyword</a>";
             } else {
                 return "<div id='" + identifier + "-popover-content'>loading <i class='fa fa-spinner fa-spin' style='font-size:24px'></i></div>";
             }
