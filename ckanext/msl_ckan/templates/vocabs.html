@@ -9,32 +9,62 @@
 {% block primary %}
     <article class="module" role="main">
         <div class="module-content">
+            {% block scripts %}
+                {{ super() }}
+            {% endblock %}
+
+            {% asset 'ckanext-msl_ckan/msl_ckan-jstree' %}
+            {% asset 'ckanext-msl_ckan/msl_ckan-keyword-form' %}
+
             {% block about %}
-                <p>The EPOS multi-scale laboratories community publishes and maintains several vocabularies to
-                    harmonize metadata descriptions and in turn improve findability of the data. Currently the
-                    following vocabularies are available:</p>
-                <ul>
-                    <li>Analogue modelling of geological processes</li>
-                    <li>Geochemistry</li>
-                    <li>Geological age</li>
-                    <li>Geological setting</li>
-                    <li>Materials</li>
-                    <li>Microscopy and tomography</li>
-                    <li>Paleomagnetism</li>
-                    <li>Pore fluids</li>
-                    <li>Rock and melt physics</li>
-                </ul>
-            
-            <p><a href="https://github.com/UtrechtUniversity/msl_vocabularies" target="_blank" class="btn btn-primary" style="background-color: #27A468; border-color: #27A468;">Access vocabularies on GitHub</a></p>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+                <p>Here you can explore and select which Multi-Scale Labs keywords apply to your research. When you’re
+                    done, you can export the keywords you selected, so you know which words to assign when you’re
+                    making your next data publication. By adding terms like these (the more the better!), you make it
+                    much easier for us to find your data and to make it discoverable in this catalogue and the EPOS
+                    data portal.</p>
 
-            <p>The vocabularies are used within this catalogues to add 'MSL enriched keywords’ to data publications.
-                This is done by checking the originally assigned keywords, title and abstract for matches with terms
-                and synonyms within the vocabularies. In enriching keyword sets like this, MSL strives to make datasets
-                more findable. Although we strive for optimal results, the methods remains interpretative and as such
-                can lead to errors. See anything odd, or did we miss something?
-                <a href="mailto:epos.msl.data@uu.nl" style="color: black; text-decoration: underline;">Contact us!</a>
-                Together we can attain the best result.</p>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form method="post" action="/keyword-export">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input id="search-input" type="text" class="form-control" placeholder="Search..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" style="background-color: #27A468; border-color: #27A468;" type="button" id="button-add-custom-keyword">Add</button>
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="sampleKeywords-tree"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-group" id="sampleKeywords-modal-list-group"></ul>
+                                </div>
+                            </div>
 
+                            <div class="row">
+                                <hr>
+                                <div class="col-md-6">
+                                    <button class="btn btn-primary" type="submit" style="background-color: #27A468; border-color: #27A468;">
+                                        Export <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="left" title="by exporting your selected keywords, you’ll receive a keyword list in csv format. These are the keywords that you can add as metadata, e.g. ‘keywords’, ‘tags’, or ‘subjects’, when you make your next data publication. The more you add, the easier it becomes for us to find your data, and make it discoverable through EPOS"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+
+                <p>Are you interested in embedding the above keyword selector in the data repository you’re
+                    affiliated to? The keyword selector is published openly on Github! If you’re interested in
+                    using this open source tool, <a href="mailto:epos.msl.data@uu.nl" style="color: black; text-decoration: underline;"title="contact us">do let us know</a> –
+                    we’re very interested to hear who intends to use it. Similarly, if you need support to embed it at
+                    your repository <a href="mailto:epos.msl.data@uu.nl" style="color: black; text-decoration: underline;" title="contact us">get in touch</a>.</p>
+
+                <a href="https://github.com/UtrechtUniversity/msl_vocabularies" target="_blank" class="btn btn-primary" style="background-color: #27A468; border-color: #27A468;">Access vocabularies on GitHub</a>
+                <a href="https://github.com/UtrechtUniversity/msl_vocabularies" target="_blank" class="btn btn-primary pull-right" style="background-color: #27A468; border-color: #27A468;">Keyword selector software on Github</a>
             {% endblock %}
         </div>
     </article>

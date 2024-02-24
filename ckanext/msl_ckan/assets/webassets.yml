@@ -15,3 +15,9 @@ msl_ckan-popovers:
   output: ckanext-msl_ckan/%(version)s-msl_ckan-popovers.js
   contents:
     - popovers.js
+
+msl_ckan-keyword-form:
+  filter: rjsmin
+  output: ckanext-msl_ckan/%(version)s-msl_ckan-keyword-form.js
+  contents:
+    - keyword-form.js
