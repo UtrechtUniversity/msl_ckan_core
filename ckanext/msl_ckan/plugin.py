@@ -3,7 +3,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.common import config
 import json
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, make_response
 
 
 def get_filter_menu_interpreted():
@@ -57,8 +57,24 @@ class MslCkanPlugin(plugins.SingletonPlugin):
         return render_template("vocabs.html")
 
     def keyword_submit(self):
+        textList = request.form.getlist('sampleKeywordsText[]')
+        uriList = request.form.getlist('sampleKeywordsUri[]')
+        vocabUriList = request.form.getlist('sampleKeywordsVocabUri[]')
 
-        return request.form
+        csv = 'label,uri,vocab-uri'
+
+        for i in range(0, len(textList)):
+            csv += '\n'
+            csv += textList[i] + ',' + uriList[i] + ',' + vocabUriList[i]
+
+        response = make_response(csv)
+        cd = 'attachment; filename=keywords.csv'
+        response.headers['Content-Disposition'] = cd
+        response.mimetype = 'text/csv'
+
+        return response
+
+        #return request.form.getlist('sampleKeywords')
         return 'wut'
 
     def get_blueprint(self):
