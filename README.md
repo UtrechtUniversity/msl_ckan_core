@@ -96,8 +96,7 @@ To use the schemas as included within this extension by the scheming plugin the 
 `ckan.ini` file:
 
       scheming.dataset_schemas = ckanext.msl_ckan:schemas/datasets/data_publication.yml ckanext.msl_ckan:schemas/datasets/labs.json
-      scheming.group_schemas = ckanext.msl_ckan:schemas/groups/custom_group_msl_subdomain.json
-      scheming.organization_schemas = ckanext.msl_ckan:schemas/organizations/custom_org_institute.json
+      scheming.organization_schemas = ckanext.msl_ckan:schemas/organizations/organization.json
 
 To use the included facet configuration:
 
