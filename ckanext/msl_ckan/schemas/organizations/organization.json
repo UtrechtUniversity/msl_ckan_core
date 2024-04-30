@@ -33,6 +33,11 @@
       "field_name": "organization_display_name",
       "label": "Organization display name",
       "form_placeholder": "name as displayed on organization page"
+    },
+    {
+      "field_name": "hide",
+      "label": "hide organization from catalog",
+      "form_placeholder": "hide organization from catalog"
     }
   ]
 }
