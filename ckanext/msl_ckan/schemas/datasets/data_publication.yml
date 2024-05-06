@@ -288,6 +288,9 @@ dataset_fields:
   - field_name: msl_wLong
     label: wLong
 
+- field_name: msl_geojson_featurecollection
+  label: geojson containing features
+
 # CUSTOM
 # NOTE: Will be merged with msl_spatial_coordinates once 2-level hierarchy is possible
 # Not found thus far with GFZ

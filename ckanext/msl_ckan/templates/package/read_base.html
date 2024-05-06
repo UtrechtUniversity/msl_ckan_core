@@ -29,6 +29,11 @@
   {% block secondary_help_content %}{% endblock %}
 
   {% if pkg.type == 'data-publication' %}
+    {% set dataset_extent = h.get_pkg_dict_extra(c.pkg_dict, 'spatial', '') %}
+    {% if dataset_extent %}
+      {% snippet "spatial/snippets/dataset_map_sidebar.html", extent=dataset_extent %}
+    {% endif %}
+
     {% if pkg.msl_downloads|length > 0 %}
       <div class="module module-narrow module-shallow context-info">
         <h2 class="module-heading"><i class="fa fa-file-o"></i> Downloads</h2>
