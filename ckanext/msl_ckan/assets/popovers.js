@@ -55,7 +55,7 @@ $(document).ready(function() {
               content += 'none';
             }
             content += "</td></tr>";
-            content += "<tr><td class=\"w-auto\">occurs in vocabulary</td><td>" + res.vocabulary.name + "</td></tr>";
+            content += "<tr><td class=\"w-auto\">occurs in vocabulary</td><td>" + res.vocabulary.display_name + "</td></tr>";
             content += "<tr><td class=\"w-auto\">uri</td><td>" + res.uri + "</td></tr>";
             content += "</table>";
 
