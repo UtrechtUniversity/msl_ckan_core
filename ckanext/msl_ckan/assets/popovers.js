@@ -18,7 +18,8 @@ $(document).ready(function() {
                 matchSources = JSON.parse(this.dataset.sources);
                 if(matchSources.length > 0) {
                     return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>" +
-                    "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>";
+                    "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>" +
+                    "<a class=\"btn btn-sm btn-primary pull-right\" style=\"background-color: #27A468; border-color: #27A468; margin-bottom: 2px;\" href=\"" + filterUrl + "\">View data publications with keyword</a>";
                 } else {
                     return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>";
                 }
