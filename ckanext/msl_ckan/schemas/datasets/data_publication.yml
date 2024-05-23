@@ -220,6 +220,14 @@ dataset_fields:
   preset: tag_string_autocomplete
   form_placeholder: eg. rock physics, analogue materials, etc.
 
+- field_name: msl_tags
+  label: Tags
+  repeating_subfields:
+  - field_name: msl_tag_string
+    label: Tag string
+  - field_name: msl_tag_uris
+    label: Tag uris
+
 - field_name: msl_has_material
   label: Has material
 
