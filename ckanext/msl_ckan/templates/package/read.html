@@ -75,6 +75,16 @@
       {% endfor %}
     </ul>
 
+  {% set tags = pkg.msl_tags %}
+  <p>Originally assigned keywords (new) <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="lists only keywords originally assigned by the authors" id='tooltip-original-keywords'></i></p>
+    <ul class="tag-list well">
+      {% for tag in tags %}
+        <li>
+          <a class="tag" href="{% url_for 'data-publication.search', tags=tag.msl_tag_string %}" data-uris='{{ tag.msl_tag_uris|tojson }}' data-highlight="tag">{{ tag.msl_tag_string }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
     <p>Corresponding MSL vocabulary keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="lists terms from MSL vocabularies that are the same as, or are interpreted indicative for to the originally assigned keywords" id='tooltip-interpreted-keywords'></i></p>
 
     <ul class="tag-list well">
@@ -84,6 +94,7 @@
              role="button"
              tabindex="0"
              data-toggle="popover-keyword"
+             data-highlight="text-keyword"
              id="corresponding-popover-{{ i }}"
              data-filterlink="{% url_for 'data-publication.search', msl_original_keyword_uri=pkg.msl_original_keywords[i].msl_original_keyword_uri %}"
              data-uri="{{ pkg.msl_original_keywords[i].msl_original_keyword_uri }}">
@@ -108,6 +119,7 @@
              data-uri="{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri }}"
              data-highlight="text-keyword",
              data-sources='{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_match_locations|tojson }}',
+             data-matched-child-uris='{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_match_child_uris|tojson }}',
              data-associated-subdomains='[{{'\"'|safe + pkg.msl_enriched_keywords[i].msl_enriched_keyword_associated_subdomains|join(',') + '\"'|safe  }}]'>
             {{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_label }}
           </a>

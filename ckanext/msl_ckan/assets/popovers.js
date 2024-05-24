@@ -83,8 +83,62 @@ $(document).ready(function() {
   $('[data-highlight=text-keyword]').hover(
     function() {
         $("span[data-uris*='\"" + this.dataset.uri + "\"']").addClass("keyword-highlight");
+        $("a[data-uris*='\"" + this.dataset.uri + "\"']").addClass("keyword-highlight");
+        $("a[data-uri=\"" + this.dataset.uri + "\"]").addClass("keyword-highlight");
+
+        if(this.dataset.matchedChildUris !== undefined) {
+            let matchedChildUris = JSON.parse(this.dataset.matchedChildUris);
+
+            if(Array.isArray(matchedChildUris)) {
+                matchedChildUris.forEach((childUri) => {
+                    $("a[data-uri=\"" + childUri + "\"]").addClass("keyword-highlight");
+                    $("a[data-uris*='\"" + childUri + "\"']").addClass("keyword-highlight");
+                    $("span[data-uris*='\"" + childUri + "\"']").addClass("keyword-highlight");
+                });
+            }
+        }
     }, function() {
         $("span[data-uris*='\"" + this.dataset.uri + "\"']").removeClass("keyword-highlight");
+        $("a[data-uris*='\"" + this.dataset.uri + "\"']").removeClass("keyword-highlight");
+        $("a[data-uri=\"" + this.dataset.uri + "\"]").removeClass("keyword-highlight");
+
+        if(this.dataset.matchedChildUris !== undefined) {
+            let matchedChildUris = JSON.parse(this.dataset.matchedChildUris);
+
+            if(Array.isArray(matchedChildUris)) {
+                matchedChildUris.forEach((childUri) => {
+                    $("a[data-uri=\"" + childUri + "\"]").removeClass("keyword-highlight");
+                    $("a[data-uris*='\"" + childUri + "\"']").removeClass("keyword-highlight");
+                    $("span[data-uris*='\"" + childUri + "\"']").removeClass("keyword-highlight");
+                });
+            }
+        }
+    }
+  )
+
+  $('[data-highlight=tag]').hover(
+    function() {
+        if(this.dataset.uris !== undefined) {
+            let matchedUris = JSON.parse(this.dataset.uris);
+
+            if(Array.isArray(matchedUris)) {
+                matchedUris.forEach((uri) => {
+                    $("a[data-uri=\"" + uri + "\"]").addClass("keyword-highlight");
+                    $("a[data-uris*='\"" + uri + "\"']").addClass("keyword-highlight");
+                });
+            }
+        }
+    }, function() {
+        if(this.dataset.uris !== undefined) {
+            let matchedUris = JSON.parse(this.dataset.uris);
+
+            if(Array.isArray(matchedUris)) {
+                matchedUris.forEach((uri) => {
+                    $("a[data-uri=\"" + uri + "\"]").removeClass("keyword-highlight");
+                    $("a[data-uris*='\"" + uri + "\"']").removeClass("keyword-highlight");
+                });
+            }
+        }
     }
   )
 
