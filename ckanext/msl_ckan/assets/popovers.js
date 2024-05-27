@@ -82,9 +82,19 @@ $(document).ready(function() {
 
   $('[data-highlight=text-keyword]').hover(
     function() {
+        let tagsMatched = false;
+        let originalKeywordsMatched = false;
+
         $("span[data-uris*='\"" + this.dataset.uri + "\"']").addClass("keyword-highlight");
         $("a[data-uris*='\"" + this.dataset.uri + "\"']").addClass("keyword-highlight");
+        if($("a[data-uris*='\"" + this.dataset.uri + "\"']").length > 0 ) {
+            tagsMatched = true;
+        }
+
         $("a[data-uri=\"" + this.dataset.uri + "\"]").addClass("keyword-highlight");
+        if($("#original-keywords-panel a[data-uri=\"" + this.dataset.uri + "\"]").length > 0) {
+            originalKeywordsMatched = true;
+        }
 
         if(this.dataset.matchedChildUris !== undefined) {
             let matchedChildUris = JSON.parse(this.dataset.matchedChildUris);
@@ -92,15 +102,45 @@ $(document).ready(function() {
             if(Array.isArray(matchedChildUris)) {
                 matchedChildUris.forEach((childUri) => {
                     $("a[data-uri=\"" + childUri + "\"]").addClass("keyword-highlight");
+                    if(!originalKeywordsMatched) {
+                        if($("#original-keywords-panel a[data-uri=\"" + childUri + "\"]").length > 0) {
+                            originalKeywordsMatched = true;
+                        }
+                    }
+
                     $("a[data-uris*='\"" + childUri + "\"']").addClass("keyword-highlight");
+                    if(!tagsMatched) {
+                        if($("a[data-uris*='\"" + childUri + "\"']").length > 0) {
+                            tagsMatched = true;
+                        }
+                    }
+
                     $("span[data-uris*='\"" + childUri + "\"']").addClass("keyword-highlight");
                 });
+
+                if(tagsMatched) {
+                    $('#tags-header').addClass("keyword-highlight");
+                }
+
+                if(originalKeywordsMatched) {
+                    $('#original-keywords-panel-heading').addClass("keyword-highlight");
+                }
             }
         }
     }, function() {
+        let tagsMatched = false;
+        let originalKeywordsMatched = false;
+
         $("span[data-uris*='\"" + this.dataset.uri + "\"']").removeClass("keyword-highlight");
         $("a[data-uris*='\"" + this.dataset.uri + "\"']").removeClass("keyword-highlight");
+        if($("a[data-uris*='\"" + this.dataset.uri + "\"']").length > 0 ) {
+            tagsMatched = true;
+        }
+
         $("a[data-uri=\"" + this.dataset.uri + "\"]").removeClass("keyword-highlight");
+        if($("#original-keywords-panel a[data-uri=\"" + this.dataset.uri + "\"]").length > 0) {
+            originalKeywordsMatched = true;
+        }
 
         if(this.dataset.matchedChildUris !== undefined) {
             let matchedChildUris = JSON.parse(this.dataset.matchedChildUris);
@@ -108,10 +148,30 @@ $(document).ready(function() {
             if(Array.isArray(matchedChildUris)) {
                 matchedChildUris.forEach((childUri) => {
                     $("a[data-uri=\"" + childUri + "\"]").removeClass("keyword-highlight");
+                    if(!originalKeywordsMatched) {
+                        if($("#original-keywords-panel a[data-uri=\"" + childUri + "\"]").length > 0) {
+                            originalKeywordsMatched = true;
+                        }
+                    }
+
                     $("a[data-uris*='\"" + childUri + "\"']").removeClass("keyword-highlight");
+                    if(!tagsMatched) {
+                        if($("a[data-uris*='\"" + childUri + "\"']").length > 0) {
+                            tagsMatched = true;
+                        }
+                    }
+
                     $("span[data-uris*='\"" + childUri + "\"']").removeClass("keyword-highlight");
                 });
             }
+        }
+
+        if(tagsMatched) {
+            $('#tags-header').removeClass("keyword-highlight");
+        }
+
+        if(originalKeywordsMatched) {
+            $('#original-keywords-panel-heading').removeClass("keyword-highlight");
         }
     }
   )
