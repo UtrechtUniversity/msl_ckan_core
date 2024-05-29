@@ -119,11 +119,15 @@ $(document).ready(function() {
                 });
 
                 if(tagsMatched) {
-                    $('#tags-header').addClass("keyword-highlight");
+                    if(!$('#tags-panel').hasClass('in')) {
+                        $('#tags-header').addClass("keyword-highlight");
+                    }
                 }
 
                 if(originalKeywordsMatched) {
-                    $('#original-keywords-panel-heading').addClass("keyword-highlight");
+                    if(!$('#original-keywords-panel').hasClass('in')) {
+                        $('#original-keywords-panel-heading').addClass("keyword-highlight");
+                    }
                 }
             }
         }
@@ -167,11 +171,15 @@ $(document).ready(function() {
         }
 
         if(tagsMatched) {
-            $('#tags-header').removeClass("keyword-highlight");
+            if(!$('#tags-panel').hasClass('in')) {
+                $('#tags-header').removeClass("keyword-highlight");
+            }
         }
 
         if(originalKeywordsMatched) {
-            $('#original-keywords-panel-heading').removeClass("keyword-highlight");
+            if(!$('#original-keywords-panel').hasClass('in')) {
+                $('#original-keywords-panel-heading').removeClass("keyword-highlight");
+            }
         }
     }
   )
