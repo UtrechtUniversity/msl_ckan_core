@@ -8,6 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Update MSL coordination contact information
+- Adjust keyword tooltip naming
+- Use vocabulary display names in popovers instead of names
+- Implement new tags field to store matched vocabulary URIs
+- Add child-URIs to enriched keywords in data model
+- Add collapsing panels for new tag field display and harmonized keywords sections
+- Add highlighting to keyword panel sections when collapsed
+
+### Fixed
+- bugfix: both vocabulary options (original/enriched) being checked at initial load
+- bugfix: button in vocabulary term missing after using cached popovers
 
 ## [1.4.0] - 2024-02-24
 
