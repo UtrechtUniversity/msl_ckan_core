@@ -18,7 +18,8 @@ $(document).ready(function() {
                 matchSources = JSON.parse(this.dataset.sources);
                 if(matchSources.length > 0) {
                     return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>" +
-                    "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>";
+                    "<table class=\"table table-condensed\"><tr><td class=\"w-auto\">Match origins: </td><td>" + matchSources.join(", ") + "</td></tr></table>" +
+                    "<a class=\"btn btn-sm btn-primary pull-right\" style=\"background-color: #27A468; border-color: #27A468; margin-bottom: 2px;\" href=\"" + filterUrl + "\">View data publications with keyword</a>";
                 } else {
                     return "<div id='" + identifier + "-popover-content'>" + $('#' + identifier + '-cache').html() + "</div>";
                 }
@@ -55,7 +56,7 @@ $(document).ready(function() {
               content += 'none';
             }
             content += "</td></tr>";
-            content += "<tr><td class=\"w-auto\">occurs in vocabulary</td><td>" + res.vocabulary.name + "</td></tr>";
+            content += "<tr><td class=\"w-auto\">occurs in vocabulary</td><td>" + res.vocabulary.display_name + "</td></tr>";
             content += "<tr><td class=\"w-auto\">uri</td><td>" + res.uri + "</td></tr>";
             content += "</table>";
 
@@ -81,9 +82,131 @@ $(document).ready(function() {
 
   $('[data-highlight=text-keyword]').hover(
     function() {
+        let tagsMatched = false;
+        let originalKeywordsMatched = false;
+
         $("span[data-uris*='\"" + this.dataset.uri + "\"']").addClass("keyword-highlight");
+        $("a[data-uris*='\"" + this.dataset.uri + "\"']").addClass("keyword-highlight");
+        if($("a[data-uris*='\"" + this.dataset.uri + "\"']").length > 0 ) {
+            tagsMatched = true;
+        }
+
+        $("a[data-uri=\"" + this.dataset.uri + "\"]").addClass("keyword-highlight");
+        if($("#original-keywords-panel a[data-uri=\"" + this.dataset.uri + "\"]").length > 0) {
+            originalKeywordsMatched = true;
+        }
+
+        if(this.dataset.matchedChildUris !== undefined) {
+            let matchedChildUris = JSON.parse(this.dataset.matchedChildUris);
+
+            if(Array.isArray(matchedChildUris)) {
+                matchedChildUris.forEach((childUri) => {
+                    $("a[data-uri=\"" + childUri + "\"]").addClass("keyword-highlight");
+                    if(!originalKeywordsMatched) {
+                        if($("#original-keywords-panel a[data-uri=\"" + childUri + "\"]").length > 0) {
+                            originalKeywordsMatched = true;
+                        }
+                    }
+
+                    $("a[data-uris*='\"" + childUri + "\"']").addClass("keyword-highlight");
+                    if(!tagsMatched) {
+                        if($("a[data-uris*='\"" + childUri + "\"']").length > 0) {
+                            tagsMatched = true;
+                        }
+                    }
+
+                    $("span[data-uris*='\"" + childUri + "\"']").addClass("keyword-highlight");
+                });
+
+                if(tagsMatched) {
+                    if(!$('#tags-panel').hasClass('in')) {
+                        $('#tags-header').addClass("keyword-highlight");
+                    }
+                }
+
+                if(originalKeywordsMatched) {
+                    if(!$('#original-keywords-panel').hasClass('in')) {
+                        $('#original-keywords-panel-heading').addClass("keyword-highlight");
+                    }
+                }
+            }
+        }
     }, function() {
+        let tagsMatched = false;
+        let originalKeywordsMatched = false;
+
         $("span[data-uris*='\"" + this.dataset.uri + "\"']").removeClass("keyword-highlight");
+        $("a[data-uris*='\"" + this.dataset.uri + "\"']").removeClass("keyword-highlight");
+        if($("a[data-uris*='\"" + this.dataset.uri + "\"']").length > 0 ) {
+            tagsMatched = true;
+        }
+
+        $("a[data-uri=\"" + this.dataset.uri + "\"]").removeClass("keyword-highlight");
+        if($("#original-keywords-panel a[data-uri=\"" + this.dataset.uri + "\"]").length > 0) {
+            originalKeywordsMatched = true;
+        }
+
+        if(this.dataset.matchedChildUris !== undefined) {
+            let matchedChildUris = JSON.parse(this.dataset.matchedChildUris);
+
+            if(Array.isArray(matchedChildUris)) {
+                matchedChildUris.forEach((childUri) => {
+                    $("a[data-uri=\"" + childUri + "\"]").removeClass("keyword-highlight");
+                    if(!originalKeywordsMatched) {
+                        if($("#original-keywords-panel a[data-uri=\"" + childUri + "\"]").length > 0) {
+                            originalKeywordsMatched = true;
+                        }
+                    }
+
+                    $("a[data-uris*='\"" + childUri + "\"']").removeClass("keyword-highlight");
+                    if(!tagsMatched) {
+                        if($("a[data-uris*='\"" + childUri + "\"']").length > 0) {
+                            tagsMatched = true;
+                        }
+                    }
+
+                    $("span[data-uris*='\"" + childUri + "\"']").removeClass("keyword-highlight");
+                });
+            }
+        }
+
+        if(tagsMatched) {
+            if(!$('#tags-panel').hasClass('in')) {
+                $('#tags-header').removeClass("keyword-highlight");
+            }
+        }
+
+        if(originalKeywordsMatched) {
+            if(!$('#original-keywords-panel').hasClass('in')) {
+                $('#original-keywords-panel-heading').removeClass("keyword-highlight");
+            }
+        }
+    }
+  )
+
+  $('[data-highlight=tag]').hover(
+    function() {
+        if(this.dataset.uris !== undefined) {
+            let matchedUris = JSON.parse(this.dataset.uris);
+
+            if(Array.isArray(matchedUris)) {
+                matchedUris.forEach((uri) => {
+                    $("a[data-uri=\"" + uri + "\"]").addClass("keyword-highlight");
+                    $("a[data-uris*='\"" + uri + "\"']").addClass("keyword-highlight");
+                });
+            }
+        }
+    }, function() {
+        if(this.dataset.uris !== undefined) {
+            let matchedUris = JSON.parse(this.dataset.uris);
+
+            if(Array.isArray(matchedUris)) {
+                matchedUris.forEach((uri) => {
+                    $("a[data-uri=\"" + uri + "\"]").removeClass("keyword-highlight");
+                    $("a[data-uris*='\"" + uri + "\"']").removeClass("keyword-highlight");
+                });
+            }
+        }
     }
   )
 
