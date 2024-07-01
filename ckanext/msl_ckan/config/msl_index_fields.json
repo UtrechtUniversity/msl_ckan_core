@@ -30,6 +30,7 @@
         "msl_enriched_keyword_vocab_uri",
         "msl_original_keyword_label",
         "msl_original_keyword_uri",
-        "msl_original_keyword_vocab_uri"
+        "msl_original_keyword_vocab_uri",
+        "msl_surface_area"
     ]
 }

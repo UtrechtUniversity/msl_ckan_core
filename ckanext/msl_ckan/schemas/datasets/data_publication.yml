@@ -294,6 +294,9 @@ dataset_fields:
 - field_name: msl_geojson_featurecollection_points
   label: geojson containing point features
 
+- field_name: msl_surface_area
+  label: surface area total of featurecollection
+
 # CUSTOM
 # NOTE: Will be merged with msl_spatial_coordinates once 2-level hierarchy is possible
 # Not found thus far with GFZ
