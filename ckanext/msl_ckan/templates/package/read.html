@@ -62,60 +62,74 @@
       var vocabularyApiEndpoint = "{{ h.msl_ckan_get_vocabulary_api_endpoint() }}";
     </script>
 
-    {% set ns = namespace(previous=[]) %}
-    <p>Originally assigned keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="lists only keywords originally assigned by the authors" id='tooltip-original-keywords'></i></p>
-    <ul class="tag-list well">
-      {% for tag in tags %}
-        {% if not tag.display_name in ns.previous %}
-        <li>
-          <a class="tag" href="{% url_for 'data-publication.search', tags=tag.name %}">{{ tag.display_name }}</a>
-        </li>
-        {% set ns.previous = ns.previous + [tag.display_name] %}
-        {% endif %}
-      {% endfor %}
-    </ul>
+  {% set tags = pkg.msl_tags %}
+  <div class="panel" style="margin-bottom: 5px;">
+    <div id="tags-header" class="panel-heading" style="padding-left: 8px;">
+      <a role="button" class="keyword-btn keyword-collapse-link collapsed" data-toggle="collapse" href="#tags-panel" aria-expanded="false" aria-controls="tags-panel">Originally assigned keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="lists only keywords originally assigned by the authors" id='tooltip-original-keywords'></i></a>
+    </div>
+    <div id="tags-panel" class="panel-body collapse" style="padding: 0 0 0 0px;">
+      <ul class="tag-list well">
+        {% for tag in tags %}
+          <li>
+            <a class="tag" href="{% url_for 'data-publication.search', tags=tag.msl_tag_string %}" data-uris='{{ tag.msl_tag_uris|tojson }}' data-highlight="tag">{{ tag.msl_tag_string }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 
-    <p>Corresponding MSL vocabulary keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="lists terms from MSL vocabularies that are the same as, or are interpreted synonymous to the originally assigned keywords" id='tooltip-interpreted-keywords'></i></p>
-
-    <ul class="tag-list well">
+  <div class="panel" style="margin-bottom: 5px;">
+    <div id="original-keywords-panel-heading" class="panel-heading" style="padding-left: 8px;">
+      <a role="button" class="keyword-btn keyword-collapse-link collapsed" data-toggle="collapse" href="#original-keywords-panel" aria-expanded="false" aria-controls="original-keywords-panel">Corresponding MSL vocabulary keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="lists terms from MSL vocabularies that are the same as, or are interpreted indicative for to the originally assigned keywords" id='tooltip-interpreted-keywords'></i></a>
+    </div>
+    <div id="original-keywords-panel" class="panel-body collapse" style="padding: 0 0 0 0px;">
+      <ul class="tag-list well">
       {% for i in range(0, pkg.msl_original_keywords|length) %}
         <li>
           <a class="tag keyword-popover"
              role="button"
              tabindex="0"
              data-toggle="popover-keyword"
+             data-highlight="text-keyword"
              id="corresponding-popover-{{ i }}"
              data-filterlink="{% url_for 'data-publication.search', msl_original_keyword_uri=pkg.msl_original_keywords[i].msl_original_keyword_uri %}"
              data-uri="{{ pkg.msl_original_keywords[i].msl_original_keyword_uri }}">
             {{ pkg.msl_original_keywords[i].msl_original_keyword_label }}
           </a>
         </li>
-      <div id="corresponding-popover-{{ i }}-cache" style="display: none;"></div>
+        <div id="corresponding-popover-{{ i }}-cache" style="display: none;"></div>
       {% endfor %}
-    </ul>
+      </ul>
+    </div>
+  </div>
 
-    <p>MSL enriched keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="MSL enriched keywords include MSL vocabulary terms corresponding to the keywords originally assigned by the authors, parent terms, and MSL vocabulary terms corresponding to words used in the data publication title and abstract. In enriching keyword sets like this, MSL strives to make datasets more findable. See anything odd? Contact us at epos.msl.data@uu.nl. MSL vocabularies available on GitHub - see top tab ‘vocabularies'." id='tooltip-interpreted-keywords'></i></p>
-
-    <ul class="tag-list well">
-      {% for i in range(0, pkg.msl_enriched_keywords|length) %}
-        <li>
-          <a class="tag keyword-popover"
-             role="button"
-             tabindex="0"
-             data-toggle="popover-keyword"
-             id="enriched-popover-{{ i }}"
-             data-filterlink="{% url_for 'data-publication.search', msl_enriched_keyword_uri=pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri %}"
-             data-uri="{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri }}"
-             data-highlight="text-keyword",
-             data-sources='{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_match_locations|tojson }}',
-             data-associated-subdomains='[{{'\"'|safe + pkg.msl_enriched_keywords[i].msl_enriched_keyword_associated_subdomains|join(',') + '\"'|safe  }}]'>
-            {{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_label }}
-          </a>
-        </li>
-        <div id="enriched-popover-{{ i }}-cache" style="display: none;"></div>
-      {% endfor %}
-    </ul>
-
+    <div class="panel" style="margin-bottom: 5px;">
+      <div class="panel-heading" style="padding-left: 8px;">
+        MSL enriched keywords <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="MSL enriched keywords include MSL vocabulary terms corresponding to the keywords originally assigned by the authors, parent terms, and MSL vocabulary terms corresponding to words used in the data publication title and abstract. In enriching keyword sets like this, MSL strives to make datasets more findable. See anything odd? Contact us at epos.msl.data@uu.nl. MSL vocabularies available on GitHub - see top tab ‘Find your MSL keyword'." id='tooltip-interpreted-keywords'></i>
+      </div>
+      <div class="panel-body" style="padding: 0 0 0 0px;">
+        <ul class="tag-list well">
+        {% for i in range(0, pkg.msl_enriched_keywords|length) %}
+          <li>
+            <a class="tag keyword-popover"
+               role="button"
+               tabindex="0"
+               data-toggle="popover-keyword"
+               id="enriched-popover-{{ i }}"
+               data-filterlink="{% url_for 'data-publication.search', msl_enriched_keyword_uri=pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri %}"
+               data-uri="{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_uri }}"
+               data-highlight="text-keyword",
+               data-sources='{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_match_locations|tojson }}',
+               data-matched-child-uris='{{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_match_child_uris|tojson }}',
+               data-associated-subdomains='[{{'\"'|safe + pkg.msl_enriched_keywords[i].msl_enriched_keyword_associated_subdomains|join(',') + '\"'|safe  }}]'>
+              {{ pkg.msl_enriched_keywords[i].msl_enriched_keyword_label }}
+            </a>
+          </li>
+          <div id="enriched-popover-{{ i }}-cache" style="display: none;"></div>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
 
     {% if pkg.msl_subdomains_original %}
     <table class="table" style="margin-bottom: 0px;">
