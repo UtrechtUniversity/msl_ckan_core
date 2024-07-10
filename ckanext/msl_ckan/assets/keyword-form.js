@@ -51,7 +51,7 @@ let counter = 1;
 	  $.ajax({
 	    'async': false,
 	    'global': false,
-	    'url': "https://raw.githubusercontent.com/UtrechtUniversity/msl_vocabularies/main/vocabularies/combined/editor/1.2/editor_1-2.json",
+	    'url': "https://raw.githubusercontent.com/UtrechtUniversity/msl_vocabularies/main/vocabularies/combined/editor/1.3/editor_1-3.json",
 	    'dataType': "json",
 	    'success': function(data) {
 	      vocabData = data;
