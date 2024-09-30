@@ -403,6 +403,15 @@ dataset_fields:
     - field_name: msl_original_keyword_vocab_uri
       label: Vocabulary uri
 
+- field_name: msl_geojson_featurecollection
+  label: geojson containing features
+
+- field_name: msl_geojson_featurecollection_points
+  label: geojson containing point features
+
+- field_name: msl_surface_area
+  label: surface area total of featurecollection
+
 resource_fields:
 - field_name: url
   label: URL

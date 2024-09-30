@@ -35,6 +35,8 @@
 	"remove_index_fields": [
 		"msl_tags",
 		"msl_enriched_keywords",
-		"msl_original_keywords"
+		"msl_original_keywords",
+        "msl_geojson_featurecollection",
+        "msl_geojson_featurecollection_points"
 	]
 }

@@ -262,7 +262,6 @@ schema. In this case the version should be set to the next CKAN version number.
 <copyField source="author" dest="text"/>
 
 <!-- customizations MSL-->
-<copyField source="msl_material" dest="text"/>
 <copyField source="msl_hidden_text" dest="text"/>
 
 <copyField source="msl_author_name" dest="text"/>
