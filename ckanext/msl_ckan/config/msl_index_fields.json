@@ -31,5 +31,10 @@
         "msl_original_keyword_label",
         "msl_original_keyword_uri",
         "msl_original_keyword_vocab_uri"
-    ]
+    ],
+	"remove_index_fields": [
+		"msl_tags",
+		"msl_enriched_keywords",
+		"msl_original_keywords"
+	]
 }
