@@ -62,6 +62,10 @@
     {
       "field_name": "msl_location",
       "label": "msl lab location"
+    },
+    {
+      "field_name": "msl_has_spatial_data",
+      "label": "msl indicator for spatial data"
     }
   ],
   "resource_fields": [

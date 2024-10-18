@@ -242,9 +242,10 @@ attribute with the form `ckan-X.Y` -->
 	<field name="msl_has_lab" type="string" indexed="true" stored="false" />
 	<field name="msl_has_organization" type="string" indexed="true" stored="false" />
 
+    <!-- fields for spatial data -->
     <field name="spatial_geom" type="location_rpt" indexed="true" multiValued="true" />
-
     <field name="msl_surface_area" type="int" indexed="true" stored="false"/>
+    <field name="msl_has_spatial_data" type="string" indexed="true" stored="false" />
 </fields>
 
 <uniqueKey>index_id</uniqueKey>
