@@ -56,6 +56,14 @@
       "label": "msl lab address country code"
     },
     {
+      "field_name": "msl_address_country_name",
+      "label": "msl lab address country name"
+    },
+    {
+      "field_name": "msl_organization_name",
+      "label": "msl lab organization name"
+    },
+    {
       "field_name": "msl_domain_name",
       "label": "msl lab domain name"
     },
