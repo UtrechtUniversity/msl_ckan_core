@@ -10,7 +10,7 @@
         "form_attrs": {
           "data-module": "slug-preview-target"
         },
-        "form_placeholder": "lab name"
+        "form_placeholder": "equipment name"
       },
       {
         "field_name": "name",
@@ -25,11 +25,11 @@
       },
       {
         "field_name": "msl_description",
-        "label": "msl lab description"
+        "label": "msl equipment description"
       },
       {
         "field_name": "msl_description_html",
-        "label": "msl lab description html"
+        "label": "msl equipment description html"
       },
       {
         "field_name": "msl_category_name",
