@@ -52,6 +52,18 @@
         "label": "msl equipment brand"
       },
       {
+        "field_name": "msl_organization_name",
+        "label": "msl lab organization name"
+      },
+      {
+        "field_name": "msl_lab_id",
+        "label": "msl lab id"
+      },
+      {
+        "field_name": "msl_lab_ckan_name",
+        "label": "msl lab ckan name id"
+      },
+      {
         "field_name": "msl_website",
         "label": "msl equipment website"
       },
