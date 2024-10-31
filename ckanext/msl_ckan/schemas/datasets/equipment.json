@@ -74,6 +74,58 @@
       {
         "field_name": "msl_has_spatial_data",
         "label": "msl indicator for spatial data"
+      },
+      {
+        "field_name": "msl_original_keywords",
+        "label": "msl keywords from fast vocabulary",
+        "repeating_subfields": [
+          {
+            "field_name": "msl_original_keyword_label",
+            "label": "Keyword label"
+          },
+          {
+            "field_name": "msl_original_keyword_uri",
+            "label": "Keyword uri"
+          },
+          {
+            "field_name": "msl_original_keyword_vocab_uri",
+            "label": "Vocabulary uri"
+          }
+        ]
+      },
+      {
+        "field_name": "msl_equipment_keyword_uri",
+        "label": "uri of equipment keyword uri"
+      },
+      {
+        "field_name": "msl_equipment_keyword_label",
+        "label": "uri of equipment keyword label"
+      },
+      {
+        "field_name": "msl_equipment_addons",
+        "label": "msl equipment addons",
+        "repeating_subfields": [
+          {
+            "field_name": "msl_equipment_addon_description",
+            "label": "addon description"
+          },
+          {
+            "field_name": "msl_equipment_addon_type",
+            "label": "addon type"
+          },
+          {
+            "field_name": "msl_equipment_addon_group",
+            "label": "addon group"
+          },
+          {
+            "field_name": "msl_equipment_addon_keyword_uri",
+            "label": "addon keyword uri"
+          },
+          {
+            "field_name": "msl_equipment_addon_keyword_label",
+            "label": "addon keyword label"
+          }
+        ]
       }
     ],
     "resource_fields": [
