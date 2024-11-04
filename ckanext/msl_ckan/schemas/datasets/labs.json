@@ -24,93 +24,59 @@
       "preset": "dataset_organization"
     },
     {
-      "field_name": "notes",
-      "label": "Description",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "A little information about my group..."
+      "field_name": "msl_description",
+      "label": "msl lab description"
     },
     {
-      "field_name": "city",
-      "label": "city"
+      "field_name": "msl_description_html",
+      "label": "msl lab description html"
     },
     {
-      "field_name": "country",
-      "label": "country",
-      "preset": "select",
-      "choices": [
-        {
-          "value": "nl",
-          "label": "NL"
-        },
-        {
-          "value": "ger",
-          "label": "GER"
-        },
-        {
-          "value": "it",
-          "label": "IT"
-        },
-        {
-          "value": "sp",
-          "label": "SP"
-        },
-        {
-          "value": "por",
-          "label": "POR"
-        },
-        {
-          "value": "uk",
-          "label": "UK"
-        },
-        {
-          "value": "sw",
-          "label": "SW"
-        }
-      ]
+      "field_name": "msl_website",
+      "label": "msl lab website"
     },
     {
-      "field_name": "equipment",
-      "label": "Equipment types",
-      "repeating_subfields": [
-        {
-          "field_name": "apparatus",
-          "label": "Apparatus"
-        }
-      ]
+      "field_name": "msl_address_street_1",
+      "label": "msl lab address street line 1"
     },
     {
-      "field_name": "website",
-      "label": "website",
-      "display_snippet": "link.html",
-      "form_placeholder": "resource_url_upload"
+      "field_name": "msl_address_street_2",
+      "label": "msl lab address street line 2"
     },
     {
-      "field_name": "url",
-      "label": "Image URL",
-      "form_placeholder": "http://example.com/my-image.jpg"
+      "field_name": "msl_address_postalcode",
+      "label": "msl lab address postal code"
+    },
+    {
+      "field_name": "msl_address_city",
+      "label": "msl lab address city"
+    },
+    {
+      "field_name": "msl_address_country_code",
+      "label": "msl lab address country code"
+    },
+    {
+      "field_name": "msl_address_country_name",
+      "label": "msl lab address country name"
+    },
+    {
+      "field_name": "msl_organization_name",
+      "label": "msl lab organization name"
+    },
+    {
+      "field_name": "msl_domain_name",
+      "label": "msl lab domain name"
+    },
+    {
+      "field_name": "msl_location",
+      "label": "msl lab location"
+    },
+    {
+      "field_name": "msl_has_spatial_data",
+      "label": "msl indicator for spatial data"
     }
   ],
   "resource_fields": [
-    {
-      "field_name": "url",
-      "label": "URL",
-      "preset": "resource_url_upload"
-    },
-    {
-      "field_name": "name",
-      "label": "Title",
-      "form_placeholder": "Descriptive name of the resource."
-    },
-    {
-      "field_name": "description",
-      "label": "Description",
-      "form_snippet": "markdown.html",
-      "form_placeholder": "Summary explanation of file contents, purpose, origination, methods and usage guidance."
-    },
-    {
-      "field_name": "format",
-      "label": "Format",
-      "preset": "resource_format_autocomplete"
-    }
+  
   ]
 }
