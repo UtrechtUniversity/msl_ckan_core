@@ -282,6 +282,18 @@ dataset_fields:
 - field_name: msl_has_microscopy_original
   label: Has microscopy
 
+- field_name: msl_has_subsurface
+  label: Has subsurface
+
+- field_name: msl_has_subsurface_original
+  label: Has subsurface
+
+- field_name: msl_has_geoenergy
+  label: Has geoenergy
+
+- field_name: msl_has_geoenergy_original
+  label: Has geoenergy
+
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial
 - field_name: msl_spatial_coordinates
