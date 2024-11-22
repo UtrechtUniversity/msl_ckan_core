@@ -229,7 +229,16 @@ attribute with the form `ckan-X.Y` -->
 	<!--Microscopy -->
 	<field name="msl_has_microscopy" type="string" indexed="true" stored="false" />	
 	<field name="msl_has_microscopy_original" type="string" indexed="true" stored="false" />
-	
+
+    <!--Subsurface -->
+	<field name="msl_has_subsurface" type="string" indexed="true" stored="false" />	
+	<field name="msl_has_subsurface_original" type="string" indexed="true" stored="false" />
+
+    <!--Geo energy -->
+	<field name="msl_has_geoenergy" type="string" indexed="true" stored="false" />	
+	<field name="msl_has_geoenergy_original" type="string" indexed="true" stored="false" />
+
+	<!--Keywords -->
 	<field name="msl_enriched_keyword_label" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_enriched_keyword_uri" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_enriched_keyword_vocab_uri" type="string" indexed="true" stored="true" multiValued="true"/>
