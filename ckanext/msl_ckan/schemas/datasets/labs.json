@@ -74,6 +74,10 @@
     {
       "field_name": "msl_has_spatial_data",
       "label": "msl indicator for spatial data"
+    },
+    {
+      "field_name": "msl_fast_id",
+      "label": "msl fast identifier"
     }
   ],
   "resource_fields": [
