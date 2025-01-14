@@ -1,0 +1,134 @@
+{
+    "scheming_version": 2,
+    "dataset_type": "equipment",
+    "about_url": "http://github.com/ckan/ckanext-scheming",
+    "dataset_fields": [
+      {
+        "field_name": "title",
+        "label": "Name",
+        "form_snippet": "large_text.html",
+        "form_attrs": {
+          "data-module": "slug-preview-target"
+        },
+        "form_placeholder": "equipment name"
+      },
+      {
+        "field_name": "name",
+        "label": "URL",
+        "form_snippet": "slug.html",
+        "form_placeholder": "my-theme"
+      },
+      {
+        "field_name": "owner_org",
+        "label": "Institute",
+        "preset": "dataset_organization"
+      },
+      {
+        "field_name": "msl_description",
+        "label": "msl equipment description"
+      },
+      {
+        "field_name": "msl_description_html",
+        "label": "msl equipment description html"
+      },
+      {
+        "field_name": "msl_category_name",
+        "label": "msl equipment category name"
+      },
+      {
+        "field_name": "msl_type_name",
+        "label": "msl equipment type name"
+      },
+      {
+        "field_name": "msl_domain_name",
+        "label": "msl equipment domain name"
+      },
+      {
+        "field_name": "msl_group_name",
+        "label": "msl equipment group name"
+      },
+      {
+        "field_name": "msl_brand",
+        "label": "msl equipment brand"
+      },
+      {
+        "field_name": "msl_organization_name",
+        "label": "msl lab organization name"
+      },
+      {
+        "field_name": "msl_lab_id",
+        "label": "msl lab id"
+      },
+      {
+        "field_name": "msl_lab_ckan_name",
+        "label": "msl lab ckan name id"
+      },
+      {
+        "field_name": "msl_website",
+        "label": "msl equipment website"
+      },
+      {
+        "field_name": "msl_location",
+        "label": "msl equipment location"
+      },
+      {
+        "field_name": "msl_has_spatial_data",
+        "label": "msl indicator for spatial data"
+      },
+      {
+        "field_name": "msl_original_keywords",
+        "label": "msl keywords from fast vocabulary",
+        "repeating_subfields": [
+          {
+            "field_name": "msl_original_keyword_label",
+            "label": "Keyword label"
+          },
+          {
+            "field_name": "msl_original_keyword_uri",
+            "label": "Keyword uri"
+          },
+          {
+            "field_name": "msl_original_keyword_vocab_uri",
+            "label": "Vocabulary uri"
+          }
+        ]
+      },
+      {
+        "field_name": "msl_equipment_keyword_uri",
+        "label": "uri of equipment keyword uri"
+      },
+      {
+        "field_name": "msl_equipment_keyword_label",
+        "label": "uri of equipment keyword label"
+      },
+      {
+        "field_name": "msl_equipment_addons",
+        "label": "msl equipment addons",
+        "repeating_subfields": [
+          {
+            "field_name": "msl_equipment_addon_description",
+            "label": "addon description"
+          },
+          {
+            "field_name": "msl_equipment_addon_type",
+            "label": "addon type"
+          },
+          {
+            "field_name": "msl_equipment_addon_group",
+            "label": "addon group"
+          },
+          {
+            "field_name": "msl_equipment_addon_keyword_uri",
+            "label": "addon keyword uri"
+          },
+          {
+            "field_name": "msl_equipment_addon_keyword_label",
+            "label": "addon keyword label"
+          }
+        ]
+      }
+    ],
+    "resource_fields": [
+    
+    ]
+  }

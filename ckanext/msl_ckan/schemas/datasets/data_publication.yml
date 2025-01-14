@@ -282,6 +282,18 @@ dataset_fields:
 - field_name: msl_has_microscopy_original
   label: Has microscopy
 
+- field_name: msl_has_subsurface
+  label: Has subsurface
+
+- field_name: msl_has_subsurface_original
+  label: Has subsurface
+
+- field_name: msl_has_geoenergy
+  label: Has geoenergy
+
+- field_name: msl_has_geoenergy_original
+  label: Has geoenergy
+
 # CUSTOM -> will become standard CKAN (extension)
 # NOTE: Will be managed in the future via ckanext-geospatial
 - field_name: msl_spatial_coordinates
@@ -402,6 +414,15 @@ dataset_fields:
       label: Keyword uri
     - field_name: msl_original_keyword_vocab_uri
       label: Vocabulary uri
+
+- field_name: msl_geojson_featurecollection
+  label: geojson containing features
+
+- field_name: msl_geojson_featurecollection_points
+  label: geojson containing point features
+
+- field_name: msl_surface_area
+  label: surface area total of featurecollection
 
 resource_fields:
 - field_name: url
