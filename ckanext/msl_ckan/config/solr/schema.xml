@@ -265,6 +265,8 @@ attribute with the form `ckan-X.Y` -->
     <field name="msl_type_name" type="string" indexed="true" stored="false"/>
     <field name="msl_group_name" type="string" indexed="true" stored="false"/>
 
+    <!-- laboratory search fields -->
+    <field name="msl_laboratory_equipment_title" type="string" indexed="true" stored="true" multiValued="true"/>
 </fields>
 
 <uniqueKey>index_id</uniqueKey>

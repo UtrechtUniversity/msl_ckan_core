@@ -72,12 +72,62 @@
       "label": "msl lab location"
     },
     {
+      "field_name": "msl_latitude",
+      "label": "msl lab location"
+    },
+    {
+      "field_name": "msl_longitude",
+      "label": "msl lab location"
+    },
+    {
+      "field_name": "msl_altitude",
+      "label": "msl lab location"
+    },
+    {
       "field_name": "msl_has_spatial_data",
       "label": "msl indicator for spatial data"
     },
     {
       "field_name": "msl_fast_id",
       "label": "msl fast identifier"
+    },
+    {
+      "field_name": "msl_laboratory_equipment",
+      "label": "equipment of laboratory",
+      "repeating_subfields": [
+        {
+          "field_name": "msl_laboratory_equipment_title",
+          "label": "equipment titel"
+        },
+        {
+          "field_name": "msl_laboratory_equipment_description",
+          "label": "equipment description"
+        },
+        {
+          "field_name": "msl_laboratory_equipment_description_html",
+          "label": "equipment description html"
+        },
+        {
+          "field_name": "msl_laboratory_equipment_domain",
+          "label": "equipment domain"
+        },
+        {
+          "field_name": "msl_laboratory_equipment_category",
+          "label": "equipment category"
+        },
+        {
+          "field_name": "msl_laboratory_equipment_type",
+          "label": "equipment type"
+        },
+        {
+          "field_name": "msl_laboratory_equipment_group",
+          "label": "equipment group"
+        },
+        {
+          "field_name": "msl_laboratory_equipment_brand",
+          "label": "equipment brand"
+        }
+      ]
     }
   ],
   "resource_fields": [
