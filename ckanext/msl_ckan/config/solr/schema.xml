@@ -300,9 +300,9 @@ attribute with the form `ckan-X.Y` -->
 <copyField source="msl_hidden_text" dest="text"/>
 
 <copyField source="msl_author_name" dest="text"/>
-<copyField source="msl_laboratory_equipment_title" dest="msl_laboratory_equipment_text"/>
+<copyField source="msl_author_name" dest="msl_author_name_text"/>
 
-<copyField source="msl_author_name" dest="text"/>
+<copyField source="msl_laboratory_equipment_title" dest="msl_laboratory_equipment_text"/>
 
 <copyField source="msl_lab_name" dest="text"/>
 <copyField source="msl_lab_name" dest="msl_lab_name_text"/>
