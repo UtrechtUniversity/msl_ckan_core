@@ -33,29 +33,239 @@ about_url: https://github.com/ckan/ckanext-scheming
 # - msl_contributors block
 # - msl_publication_date translated into 3 fields for year, month, day
 
+# Title
+# Base CKAN field
 dataset_fields:
-# CKAN
-# DataCite: Title
 - field_name: title
   label: Title
   preset: title
   form_placeholder: Title of the data publication
   required: True
 
-# CKAN
-# DataCite: Title
+# Title annotated
+# MSL custom field
 - field_name: msl_title_annotated
   label: Title annotated
   preset: title
-  form_placeholder: Title of the data publication
+  form_placeholder: Annotated title of the data publication
   required: False
 
-# CKAN
-# No DataCite analogue since this concerns an internal CKAN name
+# Link to source landing page
+# MSL custom field
+- field_name: msl_source
+  label: Source
+  display_snippet: link.html
+  required: False
+
+# Unique identifier for data publication
+# Base CKAN field
 - field_name: name
   label: URL
   preset: dataset_slug
   form_placeholder: eg. full resolvable DOI
+
+# A description of the resource
+# MSL custom field
+- field_name: msl_resource_type
+  label: Resource type
+
+# The general type of a resource
+# MSL custom field
+- field_name: msl_resource_type_general
+  label: Resource type general
+
+# Name of organization in CKAN data publication belongs to
+# Base CKAN field
+- field_name: owner_org
+  label: Publisher
+  preset: dataset_organization
+
+# Abstract text
+# MSL custom field
+- field_name: msl_description_abstract
+  label: Abstract text
+
+# Abstract text annotated
+# MSL custom field
+- field_name: msl_description_abstract_annotated
+  label: Abstract text annotated
+
+# Methods
+# MSL custom field
+- field_name: msl_description_methods
+  label: Methods
+
+# Methods text annotated
+# MSL custom field
+- field_name: msl_description_methods_annotated
+  label: Methods text annotated
+
+# Series information
+# MSL custom field
+- field_name: msl_description_series_information
+  label: Series information
+
+# Series information annotated
+# MSL custom field
+- field_name: msl_description_series_information_annotated
+  label: Series information annotated
+
+# Table of contents
+# MSL custom field
+- field_name: msl_description_table_of_contents
+  label: Table of contents
+
+# Table of contents annotated
+# MSL custom field
+- field_name: msl_description_table_of_contents_annotated
+  label: Table of contents annotated
+
+# Technical info
+# MSL custom field
+- field_name: msl_description_technical_info
+  label: Technical info
+
+# Technical info annotated
+# MSL custom field
+- field_name: msl_description_technical_info_annotated
+  label: Technical info annotated
+
+# Other description
+# MSL custom field
+- field_name: msl_description_other
+  label: Other description
+
+# Other description annotated
+# MSL custom field
+- field_name: msl_description_other_annotated
+  label: Other description annotated
+
+# List of rights / licenses
+# MSL custom field
+- field_name: msl_rights
+  label: Rights
+  repeating_subfields:
+  - field_name: msl_right
+    label: Right
+  - field_name: msl_right_uri
+    label: Right uri
+  - field_name: msl_right_identifier
+    label: Right identifier
+  - field_name: msl_right_identifier_scheme
+    label: Right identifier scheme
+  - field_name: msl_right_scheme_uri
+    label: Right scheme uri
+
+# DOI
+# MSL custom field
+- field_name: msl_doi
+  label: doi
+
+# List of alternate identifiers
+# MSL custom field
+- field_name: msl_alternate_identifiers
+  label: Alternate identifiers
+  repeating_subfields:
+  - field_name: msl_alternate_identifier
+    label: Alternate identifier
+  - field_name: msl_alternate_identifier_type
+    label: Alternate identifier type
+
+# List of related identifiers
+# MSL custom field
+- field_name: msl_related_identifiers
+  label: Related identifiers
+  repeating_subfields:
+  - field_name: msl_related_identifier
+    label: Related identifier
+  - field_name: msl_related_identifier_type
+    label: Related identifier type
+  - field_name: msl_related_identifier_relation_type
+    label: Related identifier relation type
+  - field_name: msl_related_identifier_metadata_scheme
+    label: Related identifier metadata scheme
+  - field_name: msl_related_identifier_metadata_scheme_uri
+    label: Related identifier metadata scheme uri
+  - field_name: msl_related_identifier_metadata_scheme_type
+    label: Related identifier metadata scheme type
+  - field_name: msl_related_identifier_resource_type_general
+    label: Related identifier resource type general
+
+# publication year
+# MSL custom field
+- field_name: msl_publication_year
+  label: Publication year
+
+# List of funding references
+# MSL custom field
+- field_name: msl_funding_references
+  label: Funding references
+  repeating_subfields:
+  - field_name: msl_funding_reference_funder_name
+    label: Funder name
+  - field_name: msl_funding_reference_funder_identifier
+    label: Funder identifier
+  - field_name: msl_funding_reference_funder_identifier_type
+    label: Funder identifier type
+  - field_name: msl_funding_reference_scheme_uri
+    label: Funder scheme uri
+  - field_name: msl_funding_reference_award_number
+    label: Award number
+  - field_name: msl_funding_reference_award_uri
+    label: Award uri
+  - field_name: msl_funding_reference_award_title
+    label: Award title
+
+# Primary language
+# MSL custom field
+- field_name: msl_language
+  label: Primary language
+
+# List of several types of dates
+# MSL custom field
+- field_name: msl_dates
+  label: Dates
+  repeating_subfields:
+  - field_name: msl_date_date
+    label: Date
+  - field_name: msl_date_type
+    label: Date type
+  - field_name: msl_date_information
+    label: Date information
+
+# List of creators
+# MSL custom field
+- field_name: msl_creators
+  label: Creators
+  repeating_subfields:
+  - field_name: msl_creator_name
+    label: Name
+  - field_name: msl_creator_given_name
+    label: Given name
+  - field_name: msl_creator_family_name
+    label: Family name
+  - field_name: msl_creator_name_type
+    label: Name type
+  - field_name: msl_creator_name_identifiers
+    label: Name identifiers
+  - field_name: msl_creator_name_identifiers_schemes
+    label: Name identifier schemes
+  - field_name: msl_creator_name_identifiers_uris
+    label: Name identifier uris
+  - field_name: msl_creator_affiliations_names
+    label: Affiliation names
+  - field_name: msl_creator_affiliation_identifiers
+    label: Affiliation identifiers
+  - field_name: msl_creator_affiliation_identifier_schemes
+    label: Affiliation identifier schemes
+  - field_name: msl_creator_affiliation_scheme_uris
+    label: Affiliation scheme uris
+
+
+
+
+
+
 
 # subdomain / type field
 - field_name: msl_subdomains
@@ -83,10 +293,6 @@ dataset_fields:
   label: doi
 
 # MSL
-- field_name: msl_handle
-  label: handle
-
-# MSL
 - field_name: msl_source
   label: Source
   display_snippet: link.html
@@ -94,14 +300,6 @@ dataset_fields:
 # CUSTOM
 - field_name: msl_publication_year
   label: Publication year
-
-# CUSTOM
-- field_name: msl_publication_month
-  label: Publication month
-
-# CUSTOM
-- field_name: msl_publication_day
-  label: Publication day
 
 # CUSTOM - hidden field for sorting
 - field_name: msl_publication_date
@@ -111,21 +309,6 @@ dataset_fields:
 # DCAT-mapping: ..
 - field_name: msl_citation # retrieved via cite crossref api
   label: Citation
-
-# CUSTOM
-# DCAT-mapping: ..
-- field_name: msl_authors
-  label: Creators
-  repeating_subfields:
-  - field_name: msl_author_name
-    label: Author name
-  - field_name: msl_author_orcid
-    label: Orcid identifier
-  - field_name: msl_author_scopus
-    label: Scopus identifier
-  - field_name: msl_author_affiliation
-    label: Affiliation
-    # TODO: sufficient to allow single affiliation?
 
 # CUSTOM
 # DCAT-mapping: ..
@@ -144,26 +327,6 @@ dataset_fields:
     label: Affiliation
     # TODO: sufficient to allow single affiliation?
 
-# CUSTOM
-# DCAT-mapping: ..
-- field_name: msl_references
-  label: References
-  repeating_subfields:
-  - field_name: msl_reference_doi
-    label: DOI identifier
-  - field_name: msl_reference_handle
-    label: Handle
-  - field_name: msl_reference_title
-    label: Title
-  - field_name: msl_reference_type
-    label: Type
-
-# CKAN
-# DCAT-mapping: ..
-- field_name: owner_org
-  label: Publisher
-  preset: dataset_organization
-
 # field containing possible publisher as stated within source dataset
 - field_name: msl_publisher
   label: Source publisher
@@ -173,30 +336,6 @@ dataset_fields:
 # facet
 - field_name: group
   label: subdomain
-
-# CKAN
-# DCAT-mapping: ..
-- field_name: notes
-  label: Abstract
-  form_snippet: markdown.html
-  form_placeholder: abstract of the data publication
-  required: False
-
-# CKAN
-# DCAT-mapping: ..
-- field_name: msl_notes_annotated
-  label: Abstract annotated
-  form_snippet: markdown.html
-  form_placeholder: abstract of the data publication
-  required: False
-
-# CUSTOM (thus far only provided by CSIC)
-# DCAT-mapping: ..
-- field_name: msl_technical_description
-  label: Technical Description
-  form_snippet: markdown.html
-  form_placeholder: technical description of the data publication
-  required: False
 
 # CUSTOM
 # DCAT-mapping: ..

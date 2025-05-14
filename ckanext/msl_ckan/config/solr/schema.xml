@@ -123,7 +123,12 @@ attribute with the form `ckan-X.Y` -->
     <field name="url" type="string" indexed="true" stored="true" omitNorms="true" />
     <field name="ckan_url" type="string" indexed="true" stored="true" omitNorms="true" />
     <field name="download_url" type="string" indexed="true" stored="true" omitNorms="true" />
-    <field name="notes" type="text" indexed="true" stored="true"/>
+    <field name="msl_description_abstract" type="text" indexed="true" stored="true"/>
+    <field name="msl_description_methods" type="text" indexed="true" stored="true"/>
+    <field name="msl_description_series_information" type="text" indexed="true" stored="true"/>
+    <field name="msl_description_table_of_contents" type="text" indexed="true" stored="true"/>
+    <field name="msl_description_technical_info" type="text" indexed="true" stored="true"/>
+    <field name="msl_description_other" type="text" indexed="true" stored="true"/>
     <field name="author" type="text_general" indexed="true" stored="true" />
     <field name="author_email" type="text_general" indexed="true" stored="true" />
     <field name="maintainer" type="text_general" indexed="true" stored="true" />
@@ -186,8 +191,8 @@ attribute with the form `ckan-X.Y` -->
     <field name="msl_hidden_text" type="text" indexed="true" stored="false" multiValued="true"/>
     
     <!-- coming from IPackageController msl_search.MslIndexRepeatedFieldsPlugin::before(index) -->    
-	<field name="msl_author_name" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_author_name_text" type="text" indexed="true" stored="false" multiValued="true"/>	
+	<field name="msl_creator_name" type="string" indexed="true" stored="true" multiValued="true"/>
+	<field name="msl_creator_name_text" type="text" indexed="true" stored="false" multiValued="true"/>	
 	<field name="msl_lab_id" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_lab_name" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_lab_name_text" type="text" indexed="true" stored="false" multiValued="true"/>			
@@ -286,7 +291,12 @@ attribute with the form `ckan-X.Y` -->
 <copyField source="title" dest="text"/>
 <copyField source="text" dest="text"/>
 <copyField source="license" dest="text"/>
-<copyField source="notes" dest="text"/>
+<copyField source="msl_description_abstract" dest="text"/>
+<copyField source="msl_description_methods" dest="text"/>
+<copyField source="msl_description_series_information" dest="text"/>
+<copyField source="msl_description_table_of_contents" dest="text"/>
+<copyField source="msl_description_technical_info" dest="text"/>
+<copyField source="msl_description_other" dest="text"/>
 <copyField source="tags" dest="text"/>
 <copyField source="groups" dest="text"/>
 <copyField source="organization" dest="text"/>
@@ -299,8 +309,8 @@ attribute with the form `ckan-X.Y` -->
 <!-- <copyField source="msl_material" dest="text"/> -->
 <copyField source="msl_hidden_text" dest="text"/>
 
-<copyField source="msl_author_name" dest="text"/>
-<copyField source="msl_author_name" dest="msl_author_name_text"/>
+<copyField source="msl_creator_name" dest="text"/>
+<copyField source="msl_creator_name" dest="msl_creator_name_text"/>
 
 <copyField source="msl_laboratory_equipment_title" dest="msl_laboratory_equipment_text"/>
 
