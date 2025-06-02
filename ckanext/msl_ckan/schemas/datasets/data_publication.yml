@@ -261,6 +261,127 @@ dataset_fields:
   - field_name: msl_creator_affiliation_scheme_uris
     label: Affiliation scheme uris
 
+# List of contributors
+# MSL custom field
+- field_name: msl_contributors
+  label: Contributors
+  repeating_subfields:
+  - field_name: msl_contributor_name
+    label: Name
+  - field_name: msl_contributor_type
+    label: Type
+  - field_name: msl_contributor_given_name
+    label: Given name
+  - field_name: msl_contributor_family_name
+    label: Family name
+  - field_name: msl_contributor_name_type
+    label: Name type
+  - field_name: msl_contributor_name_identifiers
+    label: Name identifiers
+  - field_name: msl_contributor_name_identifiers_schemes
+    label: Name identifiers schemes
+  - field_name: msl_contributor_name_identifiers_uris
+    label: Name identifiers uris
+  - field_name: msl_contributor_affiliations_names
+    label: Affiliation names
+  - field_name: msl_contributor_affiliation_identifiers
+    label: Affiliation identifiers
+  - field_name: msl_contributor_affiliation_identifier_schemes
+    label: Affiliation identifiers schemes
+  - field_name: msl_contributor_affiliation_scheme_uris
+    label: Affiliation scheme uris
+
+# List of sizes
+# MSL custom field
+- field_name: msl_sizes
+  label: Sizes
+
+# List of formats
+# MSL custom field
+- field_name: msl_formats
+  label: Sizes
+
+# The version number of the resource. Is not definitive information as multiple variants for storing versioning information are available.
+# MSL custom field
+- field_name: msl_datacite_version
+  label: Datacite version
+
+# list of associated labs
+# MSL custom field
+- field_name: msl_laboratories
+  label: labs
+  repeating_label: lab
+  display_snippet: msl_labs_demo.html
+  repeating_subfields:
+  - field_name: msl_lab_name
+    label: Lab name
+  - field_name: msl_lab_id
+    label: Lab identifier
+    display_snippet: msl_lab.html
+
+# list of files
+# MSL custom field
+- field_name: msl_files
+  repeating_subfields:
+  - field_name: msl_file_name
+    label: File name
+  - field_name: msl_download_link
+    label: downloadlink
+  - field_name: msl_extension
+    label: File extension
+  - field_name: msl_timestamp
+    label: Timestamp
+
+# field containing possible publisher as stated within source dataset
+# MSL custom field
+- field_name: msl_publisher
+  label: Source publisher
+
+# citation
+# MSL custom field
+- field_name: msl_citation
+  label: Citation
+
+# Spatial coordinates
+# MSL custom field
+- field_name: msl_spatial_coordinates
+  label: Spatial coordinates
+  repeating_subfields:
+  - field_name: msl_elong
+    label: eLong
+  - field_name: msl_nLat
+    label: nLat
+  - field_name: msl_sLat
+    label: sLat
+  - field_name: msl_wLong
+    label: wLong
+
+# Geojson feature collection string containing spatial features
+# MSL custom field
+- field_name: msl_geojson_featurecollection
+  label: geojson containing features
+
+# Geojson feature collection string containing spatial features converted to points
+# MSL custom field
+- field_name: msl_geojson_featurecollection_points
+  label: geojson containing point features
+
+# Service area of feature collection
+# MSL custom field
+- field_name: msl_surface_area
+  label: surface area total of featurecollection
+
+# Textual described location
+# MSL custom field
+- field_name: msl_geolocations
+  label: Geo location(s)
+  repeating_subfields:
+  - field_name: msl_geolocation_place
+    label: Place
+
+
+
+
 
 
 
@@ -305,27 +426,6 @@ dataset_fields:
 - field_name: msl_publication_date
   label: Publication date
 
-# CUSTOM
-# DCAT-mapping: ..
-- field_name: msl_citation # retrieved via cite crossref api
-  label: Citation
-
-# CUSTOM
-# DCAT-mapping: ..
-- field_name: msl_contributors
-  label: Contributors
-  repeating_subfields:
-  - field_name: msl_contributor_name
-    label: Contributor name
-  - field_name: msl_contributor_role
-    label: Contributor role
-  - field_name: msl_contributor_orcid
-    label: Orcid identifier
-  - field_name: msl_contributor_scopus
-    label: Scopus identifier
-  - field_name: msl_contributor_affiliation
-    label: Affiliation
-    # TODO: sufficient to allow single affiliation?
 
 # field containing possible publisher as stated within source dataset
 - field_name: msl_publisher
