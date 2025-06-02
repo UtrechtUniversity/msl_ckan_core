@@ -30,7 +30,8 @@
         "msl_enriched_keyword_vocab_uri",
         "msl_original_keyword_label",
         "msl_original_keyword_uri",
-        "msl_original_keyword_vocab_uri"
+        "msl_original_keyword_vocab_uri",
+        "msl_laboratory_equipment_title"
     ],
 	"remove_index_fields": [
 		"msl_tags",
