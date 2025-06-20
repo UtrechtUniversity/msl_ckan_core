@@ -291,12 +291,6 @@ attribute with the form `ckan-X.Y` -->
 <copyField source="title" dest="text"/>
 <copyField source="text" dest="text"/>
 <copyField source="license" dest="text"/>
-<copyField source="msl_description_abstract" dest="text"/>
-<copyField source="msl_description_methods" dest="text"/>
-<copyField source="msl_description_series_information" dest="text"/>
-<copyField source="msl_description_table_of_contents" dest="text"/>
-<copyField source="msl_description_technical_info" dest="text"/>
-<copyField source="msl_description_other" dest="text"/>
 <copyField source="tags" dest="text"/>
 <copyField source="groups" dest="text"/>
 <copyField source="organization" dest="text"/>
