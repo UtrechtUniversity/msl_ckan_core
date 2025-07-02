@@ -332,6 +332,8 @@ dataset_fields:
     label: File extension
   - field_name: msl_timestamp
     label: Timestamp
+  - field_name: msl_is_folder
+    label: Is folder
 
 # field containing possible publisher as stated within source dataset
 # MSL custom field
