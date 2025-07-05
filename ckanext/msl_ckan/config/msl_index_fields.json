@@ -31,7 +31,8 @@
         "msl_original_keyword_label",
         "msl_original_keyword_uri",
         "msl_original_keyword_vocab_uri",
-        "msl_laboratory_equipment_title"
+        "msl_laboratory_equipment_title",
+        "msl_contributor_name"
     ],
 	"remove_index_fields": [
 		"msl_tags",
@@ -40,6 +41,8 @@
         "msl_geojson_featurecollection",
         "msl_geojson_featurecollection_points",
         "msl_files",
-        "msl_related_identifiers"
+        "msl_related_identifiers",
+        "msl_contributors",
+        "msl_creators"
 	]
 }
