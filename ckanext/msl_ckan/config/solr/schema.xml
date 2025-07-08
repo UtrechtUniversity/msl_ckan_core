@@ -192,7 +192,11 @@ attribute with the form `ckan-X.Y` -->
     
     <!-- coming from IPackageController msl_search.MslIndexRepeatedFieldsPlugin::before(index) -->    
 	<field name="msl_creator_name" type="string" indexed="true" stored="true" multiValued="true"/>
-	<field name="msl_creator_name_text" type="text" indexed="true" stored="false" multiValued="true"/>	
+	<field name="msl_creator_name_text" type="text" indexed="true" stored="false" multiValued="true"/>
+
+    <field name="msl_contributor_name" type="string" indexed="true" stored="true" multiValued="true"/>
+	<field name="msl_contributor_name_text" type="text" indexed="true" stored="false" multiValued="true"/>
+
 	<field name="msl_lab_id" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_lab_name" type="string" indexed="true" stored="true" multiValued="true"/>
 	<field name="msl_lab_name_text" type="text" indexed="true" stored="false" multiValued="true"/>			
@@ -305,6 +309,9 @@ attribute with the form `ckan-X.Y` -->
 
 <copyField source="msl_creator_name" dest="text"/>
 <copyField source="msl_creator_name" dest="msl_creator_name_text"/>
+
+<copyField source="msl_contributor_name" dest="text"/>
+<copyField source="msl_contributor_name" dest="msl_contributor_name_text"/>
 
 <copyField source="msl_laboratory_equipment_title" dest="msl_laboratory_equipment_text"/>
 
