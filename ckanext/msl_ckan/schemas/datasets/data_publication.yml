@@ -377,10 +377,7 @@ dataset_fields:
 # Textual described location
 # MSL custom field
 - field_name: msl_geolocations
-  label: Geo location(s)
-  repeating_subfields:
-  - field_name: msl_geolocation_place
-    label: Place
+  label: Geo location(s)  
 
 # Tags
 # Base CKAN field
