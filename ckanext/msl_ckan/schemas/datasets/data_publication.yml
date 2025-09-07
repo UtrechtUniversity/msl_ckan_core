@@ -296,11 +296,17 @@ dataset_fields:
 # MSL custom field
 - field_name: msl_sizes
   label: Sizes
+  repeating_subfields:
+  - field_name: msl_size
+    label: Size
 
 # List of formats
 # MSL custom field
 - field_name: msl_formats
-  label: Sizes
+  label: Formats
+  repeating_subfields:
+  - field_name: msl_format
+    label: format
 
 # The version number of the resource. Is not definitive information as multiple variants for storing versioning information are available.
 # MSL custom field
@@ -377,7 +383,10 @@ dataset_fields:
 # Textual described location
 # MSL custom field
 - field_name: msl_geolocations
-  label: Geo location(s)  
+  label: Geo location(s)
+  repeating_subfields:
+  - field_name: msl_geolocation
+    label: textual geolocation
 
 # Tags
 # Base CKAN field
