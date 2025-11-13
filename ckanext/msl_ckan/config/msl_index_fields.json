@@ -1,6 +1,6 @@
 {
     "special_index_fields": [
-        "msl_author_name",
+        "msl_creator_name",
         "msl_lab_name",
         "msl_lab_id",
         "msl_subdomain",
@@ -31,13 +31,18 @@
         "msl_original_keyword_label",
         "msl_original_keyword_uri",
         "msl_original_keyword_vocab_uri",
-        "msl_laboratory_equipment_title"
+        "msl_laboratory_equipment_title",
+        "msl_contributor_name"
     ],
 	"remove_index_fields": [
 		"msl_tags",
 		"msl_enriched_keywords",
 		"msl_original_keywords",
         "msl_geojson_featurecollection",
-        "msl_geojson_featurecollection_points"
+        "msl_geojson_featurecollection_points",
+        "msl_files",
+        "msl_related_identifiers",
+        "msl_contributors",
+        "msl_creators"
 	]
 }
