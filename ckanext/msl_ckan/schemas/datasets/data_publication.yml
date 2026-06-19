@@ -569,13 +569,13 @@ dataset_fields:
 
 # Top level filter field
 # MSL custom field
-- field_name: msl_has_geoenergy
-  label: Has geoenergy
+- field_name: msl_has_fieldscale
+  label: Has fieldscale
 
 # Top level filter field
 # MSL custom field
-- field_name: msl_has_geoenergy_original
-  label: Has geoenergy orginal
+- field_name: msl_has_fieldscale_original
+  label: Has fieldscale orginal
 
 # Top level filter field
 # MSL custom field
